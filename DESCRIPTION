@@ -1,0 +1,15 @@
+Package: tidyverse
+Title: Easily Install and Load Key Packages from the "Tidyverse"
+Version: 0.0.0.9000
+Authors@R: c(
+    person("Hadley", "Wickham", , "hadley@rstudio.com", role = c("aut", "cre")),
+    person("RStudio", role = "cph")
+  )
+Description: The "tidyverse" is a set of packages that work in harmony
+    beucase they share common data representations and API design. This
+    package is designed to make it easy to install and load multiple
+    packages from the tidyverse in a single step.
+Depends: R (>= 3.3.1)
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
