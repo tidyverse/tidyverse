@@ -1,4 +1,4 @@
-load <- c("ggplot2", "tidyr", "readr", "purrr", "tibble", "dplyr")
+load <- c("ggplot2", "tibble", "tidyr", "readr", "purrr", "dplyr")
 
 .onAttach <- function(...) {
   needed <- load[!is_attached(load)]
