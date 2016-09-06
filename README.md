@@ -41,7 +41,16 @@ You can see conflicts created later with `tidyverse_conflicts()`:
 
 ``` r
 library(MASS)
+#> 
+#> Attaching package: 'MASS'
+#> The following object is masked from 'package:dplyr':
+#> 
+#>     select
 tidyverse_conflicts()
+#> Conflicts with tidy packages ----------------------------------------------
+#> filter(): dplyr, stats
+#> lag():    dplyr, stats
+#> select(): dplyr, MASS
 ```
 
 And you can check that all tidyverse pacakges are up-to-date with `tidyverse_update()`:

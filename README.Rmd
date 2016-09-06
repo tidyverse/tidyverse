@@ -41,7 +41,7 @@ library(tidyverse)
 
 You can see conflicts created later with `tidyverse_conflicts()`:
 
-```{r conflicts, message = FALSE}
+```{r conflicts}
 library(MASS)
 tidyverse_conflicts()
 ```
