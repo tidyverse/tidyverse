@@ -43,3 +43,18 @@ You can see conflicts created later with `tidyverse_conflicts()`:
 library(MASS)
 tidyverse_conflicts()
 ```
+
+And you can check that all tidyverse pacakges are up-to-date with `tidyverse_update()`:
+
+``` r
+tidyverse_update()
+#> The following packages are out of date:
+#>  * broom (0.4.0 -> 0.4.1)
+#>  * DBI   (0.4.1 -> 0.5)
+#>  * psych (1.5.8 -> 1.6.6)
+#>  * Rcpp  (0.12.6 -> 0.12.7)
+#> Update now?
+#> 
+#> 1: Yes
+#> 2: No
+```

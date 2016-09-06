@@ -31,7 +31,7 @@ tidyverse_conflicts <- function() {
     purrr::map(~ gsub("^package:", "", .)) %>%
     purrr::map_chr(paste0, collapse = ", ")
 
-  message(paste0(fun, pkg, collapse = "\n"))
+  packageStartupMessage(paste0(fun, pkg, collapse = "\n"))
 }
 
 #' @importFrom magrittr %>%

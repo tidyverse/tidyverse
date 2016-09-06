@@ -1,3 +1,16 @@
+#' Update tidyverse packages
+#'
+#' This will check to see if all tidyverse packages (and optionally, their
+#' dependencies) are up-to-date, and will install after an interactive
+#' confirmation.
+#'
+#' @param recursive If \code{TRUE}, will also check all dependencies of
+#'   tidyverse packages.
+#' @export
+#' @examples
+#' \dontrun{
+#' tidyverse_update()
+#' }
 tidyverse_update <- function(recursive = FALSE) {
 
   deps <- tidyverse_deps(recursive)
