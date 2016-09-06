@@ -32,6 +32,7 @@ It also installs a selection of other tidyverse packages that you're likely to u
 
 -   Working with specific types of vectors:
 
+    -   hms, for times.
     -   stringr, for strings.
     -   lubridate, for date/times.
     -   forcats, for factors.

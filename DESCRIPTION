@@ -16,6 +16,7 @@ Imports:
     forcats,
     ggplot2,
     haven,
+    hms,
     jsonlite,
     lubridate,
     magrittr,
