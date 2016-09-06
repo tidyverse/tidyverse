@@ -19,24 +19,32 @@ You can install tidyverse from github with:
 devtools::install_github("hadley/tidyverse")
 ```
 
-This will install all core tidyverse packages that you are likely to use in almost every analysis:
+This will install the core tidyverse packages that you are likely to use in almost every analysis:
 
--   ggplot2, for data visualisation
--   dplyr, for data manipulation
--   tidyr, for data tidying
--   readr, for data import
--   purrr, for functional programming
--   tibble, for tibbles, a modern re-imagining of data frames
+-   ggplot2, for data visualisation.
+-   dplyr, for data manipulation.
+-   tidyr, for data tidying.
+-   readr, for data import.
+-   purrr, for functional programming.
+-   tibble, for tibbles, a modern re-imagining of data frames.
 
-It also installs a selection of other tidyverse packages that you're likely to use frequently, but probably not in every analysis. This includes packages for special types of data:
+It also installs a selection of other tidyverse packages that you're likely to use frequently, but probably not in every analysis. This includes packages for common vector types:
 
--   stringr, for strings
--   lubridate, for date/times
--   forcats, for factors
+-   stringr, for strings.
+-   lubridate, for date/times.
+-   forcats, for factors.
 
-And useful packages for modelling:
+For special types of data:
 
--   modelr, for modelling in pipelines
+-   DBI, for databases.
+-   haven, for SPSS, SAS and Stata files.
+-   [jsonlite](https://github.com/jeroenooms/jsonlite) for JSON.
+-   readxl, for `.xls` and `.xlsx` files.
+-   xml2, for XML.
+
+And for modelling:
+
+-   modelr, for modelling within a pipeline
 -   [broom](https://github.com/dgrtwo/broom), for turning models into tidy data
 
 Usage
