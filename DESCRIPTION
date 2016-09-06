@@ -20,7 +20,8 @@ Imports:
     lubridate,
     forcats,
     broom,
-    modelr
+    modelr,
+    magrittr
 License: GPL-3
 Encoding: UTF-8
 LazyData: true

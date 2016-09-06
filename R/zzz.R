@@ -8,6 +8,8 @@ load <- c("ggplot2", "tidyr", "readr", "purrr", "tibble", "dplyr")
 
   packageStartupMessage(paste0("Loading tidyverse: ", needed, collapse = "\n"))
   lapply(needed, library, character.only = TRUE, warn.conflicts = FALSE)
+
+  tidyv_conflicts()
 }
 
 is_attached <- function(x) {
