@@ -36,3 +36,10 @@ library(tidyverse)
 #> filter(): dplyr, stats
 #> lag():    dplyr, stats
 ```
+
+You can see conflicts created later with `tidyverse_conflicts()`:
+
+``` r
+library(MASS)
+tidyverse_conflicts()
+```

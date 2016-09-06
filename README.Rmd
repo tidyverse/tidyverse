@@ -38,3 +38,10 @@ Use `library(tidyverse)` to automatically load the tidyverse packages you are li
 ```{r example}
 library(tidyverse)
 ```
+
+You can see conflicts created later with `tidyverse_conflicts()`:
+
+```{r conflicts, message = FALSE}
+library(MASS)
+tidyverse_conflicts()
+```

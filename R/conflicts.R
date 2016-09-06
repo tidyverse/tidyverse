@@ -1,4 +1,12 @@
-tidyv_conflicts <- function() {
+#' Conflicts between the tidyverse and other packages
+#'
+#' This function lists all the conflicts between packages in the tidyverse
+#' and other packages that you have loaded.
+#'
+#' @export
+#' @examples
+#' tidyverse_conflicts()
+tidyverse_conflicts <- function() {
   tidy_names <- paste0("package:", tidyv_packages())
 
   tidy_envs <- intersect(tidy_names, search())
