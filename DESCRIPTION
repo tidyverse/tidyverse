@@ -28,3 +28,6 @@ LazyData: true
 RoxygenNote: 5.0.1.9000
 URL: https://github.com/hadley/tidyverse
 BugReports: https://github.com/hadley/tidyverse/issues
+Suggests: knitr,
+    rmarkdown
+VignetteBuilder: knitr

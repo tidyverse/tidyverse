@@ -1,0 +1,95 @@
+---
+title: "The tidy tools manifesto"
+author: "Hadley Wickham"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{The tidy tools manifesto}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+This document lays out the principles behind a tidy API, the philsophy exemplified by dplyr, tidyr, purrr, and ggplot2. It is aspirational: currently none of my packages meet precisely the criteria laid out below.
+
+There are many other excellent packages that are not part of the tidyverse, because they are designed with a different set of underlying principles. This doesn't make them better or worse, just different. In other words, the complement to the tidyverse is not the messyverse, but many other universes of interrelated packages. The tidyverse is not exclusive: packages can be tidy and still fit in well with other toolsets.
+
+There are five basic principles that a package should 
+
+1.  Use tidy tibbles, where possible.
+
+1.  Write simple functions and compose them with the pipe.
+
+1.  Embrace functional programming.
+
+1.  Design for humans.
+
+This manifesto is living: it isn't a static document, but will change as my understanding of API design changes.
+
+## Use tidy tibbles
+
+Where possible, the primary object for your API should be a tidy tibble:
+
+* A [tibble](https://github.com/hadley/tibble/) is thin wrapper around a
+  data frame. Tibbles take the features of a data frame that time has
+  proven to be useful, and jettison the rest.
+  
+* A tidy tiddle has variables in the columns, and observations in the rows
+  (see the tidy data paper for more details).
+
+Tidy tibbles have the advantage of being an extremely common data structure so there are many tools that already work with them (ggplot2, dplyr, tidyr, all the modelling functions, ...). 
+
+If a tibble is not appropriate, because you're not working with variables and observations, use with a small number of well defined data structures. Some examples:
+
+* purrr: lists and vectors.
+* xml: xml documents, nodes, and node sets.
+* stringr: strings.
+* lubridate: date/times, intervals, periods.
+
+Make sure you clearly document these data structures, and if they are unique to your package, make sure you provide helper methods to convert back-and-forth to more common data structures.
+
+Carefully consider the trade-offs between forcing your data into a tibble vs. creating a custom data structure.
+
+### Prefer formulas to non-standard evaluation
+
+If you have a data frame, and need to refer to variables within the data frame (or functions of those data frames), use the [lazyeval approach](http://rpubs.com/hadley/lazyeval).
+
+## Compose simple pieces with the pipe
+
+Generally, it's easiest to solve complex problem by combining simple operations: you provide the atoms, and a molecular bonding, and the user creates complex molecules. The pipe, `%>%`, is a common molecular bond that works across all packages. The beauty of the pipe is that a package doesn't need to do anything to use it, and if you don't like the pipe, there are other ways to use the package. 
+
+Pipeable APIs play to R's strength as a functional programming language. Most functions should return a modified version of the input object (copy-on-modify). Fuctions called primarily for their side-effects should invisibly return their primary input.
+
+Implicit vs. explicit verbs.
+
+There seem to be two basic families of pipe-able APIs:
+
+1. Transformation APIs where most operations are verbs, like dplyr, or tidyr.
+
+2. Creation APIs where where most operations are nouns, like ggplot1/ggvis.
+  
+Creation APIs tend to be rarer in R, because generally you're transforming something that already exists (e.g. data) rather than creating something new. Visualisation is a notable exception because you're creating a new visualisation, but even then you typically start existing data, not a blank slate. 
+
+Another way of thinking about creation APIs is that every function has the same verb (like "modify", or "add", or "set"), it's more useful to focus on what's the different (the thing being modified), rather than what's the same.
+
+## Embrace functional programming
+
+R is a functional programming language; embrace it, don't fight it. If you're familiar with an object-oriented language like python or C#, this is going to take some adjustment. But in the long run you will be much better of working with the language rather than fighting it.
+
+Generally, this means you should favour:
+
+* Immutable objects and copy-on-modify semantics. 
+
+* Generic functions
+
+* Tools that abstract over for-loops
+
+If you find yourself reaching for R6 over S3, carefully consider why. If you can, keep the R6 classes as an internal implementation detail.
+
+## Design for humans
+
+Invest time in naming your functions. Evocative function names make your API easier to use and remember.
+
+Generally favour explicit, lengthy names, over short, implicit, names. Save the shortest names for the most important operations.
+
+Think about how autocomplete can also make an API that's easy to write. Make sure that function families are identified by a common prefix, not a common suffix. This makes autocomplete more helpful, as you can jog your memory with the prompts. For smaller packages, this may mean that every function has a common prefix (e.g. stringr, xml2, rvest).
+
