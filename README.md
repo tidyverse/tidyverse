@@ -81,7 +81,7 @@ tidyverse_conflicts()
 #> select(): dplyr, MASS
 ```
 
-And you can check that all tidyverse pacakges are up-to-date with `tidyverse_update()`:
+And you can check that all tidyverse packges are up-to-date with `tidyverse_update()`:
 
 ``` r
 tidyverse_update()
