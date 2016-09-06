@@ -13,7 +13,8 @@ tidyv_conflicts <- function() {
   conflicts <- intersect(names(tidy_funs), names(misc_funs))
 
   conflict_funs <- purrr::map2(tidy_funs[conflicts], misc_funs[conflicts], c)
-  conflict_funs <- purrr::map2(purrr::set_names(names(conflict_funs)), conflict_funs, confirm_conflict)
+  conflict_funs <- purrr::map2(purrr::set_names(names(conflict_funs)), conflict_funs,
+    confirm_conflict)
   conflict_funs <- purrr::compact(conflict_funs)
 
   rule("Conflicts with tidy packages")
