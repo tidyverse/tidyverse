@@ -5,7 +5,7 @@ tidyverse
 
 [![Travis-CI Build Status](https://travis-ci.org/hadley/tidyverse.svg?branch=master)](https://travis-ci.org/hadley/tidyverse)
 
-The goal of tidyverse is to make it easy to install and load multiple tidyverse packages in a single command.
+The tidyverse is a set of packages that work in harmony becuase they share common data representations and API design. The **tidyverse** package is designed to make it easy to install and load core packages from the tidyverse in a single command.
 
 Installation
 ------------
@@ -17,7 +17,7 @@ You can install tidyverse from github with:
 devtools::install_github("hadley/tidyverse")
 ```
 
-This will also install tidyverse packages broom, dplyr, forcats, ggplot2, lubridate, magrittr, modelr, purrr, readr, stringr, tibble, and tidyr.
+This will also install all core tidyverse packages: broom, dplyr, forcats, ggplot2, lubridate, magrittr, modelr, purrr, readr, stringr, tibble, and tidyr.
 
 Usage
 -----

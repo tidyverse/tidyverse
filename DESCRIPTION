@@ -6,7 +6,7 @@ Authors@R: c(
     person("RStudio", role = "cph")
   )
 Description: The 'tidyverse' is a set of packages that work in harmony
-    beucase they share common data representations and API design. This
+    becuase they share common data representations and API design. This
     package is designed to make it easy to install and load multiple
     packages from the 'tidyverse' in a single step.
 Imports:
