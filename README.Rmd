@@ -18,7 +18,7 @@ comma <- function(x) {
 
 [![Travis-CI Build Status](https://travis-ci.org/hadley/tidyverse.svg?branch=master)](https://travis-ci.org/hadley/tidyverse)
 
-The tidyverse is a set of packages that work in harmony becuase they share common data representations and API design. The __tidyverse__ package is designed to make it easy to install and load core packages from the tidyverse in a single command.
+The tidyverse is a set of packages that work in harmony because they share common data representations and API design. The __tidyverse__ package is designed to make it easy to install and load core packages from the tidyverse in a single command.
 
 If you'd like to learn how to use the tidyverse effectively, the best place to start is [R for data science](http://r4ds.had.co.nz).
 
@@ -40,7 +40,7 @@ This will install the __core__ tidyverse packages that you are likely to use in 
 * purrr, for functional programming.
 * tibble, for tibbles, a modern re-imagining of data frames.
 
-It also installs a selection of other tidyverse packages that you're likely to use frequently, but probably not in every analysis. This includes packages for :
+It also installs a selection of other tidyverse packages that you're likely to use frequently, but probably not in every analysis. This includes packages for:
 
 *   Working with specific types of vectors:
 
