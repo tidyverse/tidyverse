@@ -3,6 +3,8 @@
 tidyverse
 =========
 
+[![Travis-CI Build Status](https://travis-ci.org/hadley/tidyverse.svg?branch=master)](https://travis-ci.org/hadley/tidyverse)
+
 The goal of tidyverse is to make it easy to install and load multiple tidyverse packages in a single command.
 
 Installation
