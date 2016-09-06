@@ -7,6 +7,8 @@ tidyverse
 
 The tidyverse is a set of packages that work in harmony becuase they share common data representations and API design. The **tidyverse** package is designed to make it easy to install and load core packages from the tidyverse in a single command.
 
+If you'd like to learn how to use the tidyverse effectively, the best place to start is [R for data science](http://r4ds.had.co.nz).
+
 Installation
 ------------
 
@@ -17,7 +19,25 @@ You can install tidyverse from github with:
 devtools::install_github("hadley/tidyverse")
 ```
 
-This will also install all core tidyverse packages: broom, dplyr, forcats, ggplot2, lubridate, magrittr, modelr, purrr, readr, stringr, tibble, and tidyr.
+This will install all core tidyverse packages that you are likely to use in almost every analysis:
+
+-   ggplot2, for data visualisation
+-   dplyr, for data manipulation
+-   tidyr, for data tidying
+-   readr, for data import
+-   purrr, for functional programming
+-   tibble, for tibbles, a modern re-imagining of data frames
+
+It also installs a selection of other tidyverse packages that you're likely to use frequently, but probably not in every analysis. This includes packages for special types of data:
+
+-   stringr, for strings
+-   lubridate, for date/times
+-   forcats, for factors
+
+And useful packages for modelling:
+
+-   modelr, for modelling in pipelines
+-   [broom](https://github.com/dgrtwo/broom), for turning models into tidy data
 
 Usage
 -----
