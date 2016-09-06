@@ -17,7 +17,7 @@ tidyv_conflicts <- function() {
   conflict_funs <- purrr::compact(conflict_funs)
 
   rule("Conflicts with tidy packages")
-  fun <- format(paste0(names(conflict_funs), ": "))
+  fun <- format(paste0(names(conflict_funs), "(): "))
   pkg <- conflict_funs %>%
     purrr::map(~ gsub("^package:", "", .)) %>%
     purrr::map_chr(paste0, collapse = ", ")
