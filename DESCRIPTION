@@ -11,17 +11,22 @@ Description: The 'tidyverse' is a set of packages that work in harmony
     packages from the 'tidyverse' in a single step.
 Imports:
     broom,
+    DBI,
     dplyr,
     forcats,
     ggplot2,
+    haven,
+    jsonlite,
     lubridate,
     magrittr,
     modelr,
     purrr,
     readr,
+    readxl,
     stringr,
     tibble,
-    tidyr
+    tidyr,
+    xml2
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
