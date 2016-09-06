@@ -1,0 +1,38 @@
+---
+output: github_document
+---
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+comma <- function(x) {
+  paste0(paste(x[-length(x)], collapse = ", "), ", and ", x[length(x)])
+}
+```
+
+# tidyverse
+
+The goal of tidyverse is to make it easy to install and load multiple tidyverse packages in a single command.
+
+## Installation
+
+You can install tidyverse from github with:
+
+```{r gh-installation, eval = FALSE}
+# install.packages("devtools")
+devtools::install_github("hadley/tidyverse")
+```
+
+This will also install tidyverse packages `r comma(tidyverse:::tidyv_packages(FALSE))`.
+
+## Usage
+
+Use `library(tidyverse)` to automatically load the tidyverse packages you are likely to use in almost every analysis: `r comma(tidyverse:::load)`. You also get a condensed summary of conflicts with other packages you have loaded:
+
+```{r example}
+library(tidyverse)
+```

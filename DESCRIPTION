@@ -10,18 +10,18 @@ Description: The 'tidyverse' is a set of packages that work in harmony
     package is designed to make it easy to install and load multiple
     packages from the 'tidyverse' in a single step.
 Imports:
-    ggplot2,
-    tidyr,
-    readr,
-    purrr,
-    tibble,
-    dplyr,
-    stringr,
-    lubridate,
-    forcats,
     broom,
+    dplyr,
+    forcats,
+    ggplot2,
+    lubridate,
+    magrittr,
     modelr,
-    magrittr
+    purrr,
+    readr,
+    stringr,
+    tibble,
+    tidyr
 License: GPL-3
 Encoding: UTF-8
 LazyData: true

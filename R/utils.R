@@ -9,12 +9,16 @@ rule <- function(..., pad = "-") {
 }
 
 
-tidyv_packages <- function() {
+tidyv_packages <- function(include_self = TRUE) {
   raw <- packageDescription("tidyverse")$Imports
   imports <- strsplit(raw, ",")[[1]]
   parsed <- gsub("^\\s+|\\s+$", "", imports)
 
-  c(parsed, "tidyverse")
+  if (include_self) {
+    parsed <- c(parsed, "tidyverse")
+  }
+
+  parsed
 }
 
 
