@@ -1,3 +1,7 @@
+bullets <- function(...) {
+  message(paste0(" * ", ..., collapse = "\n"))
+}
+
 rule <- function(..., pad = "-") {
   if (nargs() == 0) {
     title <- ""
