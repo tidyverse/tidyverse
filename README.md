@@ -19,7 +19,7 @@ You can install tidyverse from github with:
 devtools::install_github("hadley/tidyverse")
 ```
 
-This will install the core tidyverse packages that you are likely to use in almost every analysis:
+This will install the **core** tidyverse packages that you are likely to use in almost every analysis:
 
 -   ggplot2, for data visualisation.
 -   dplyr, for data manipulation.
@@ -50,7 +50,7 @@ And for modelling:
 Usage
 -----
 
-Use `library(tidyverse)` to automatically load the tidyverse packages you are likely to use in almost every analysis: ggplot2, tibble, tidyr, readr, purrr, and dplyr. You also get a condensed summary of conflicts with other packages you have loaded:
+Use `library(tidyverse)` to automatically load the core tidyverse packages: ggplot2, tibble, tidyr, readr, purrr, and dplyr. You also get a condensed summary of conflicts with other packages you have loaded:
 
 ``` r
 library(tidyverse)
