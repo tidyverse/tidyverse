@@ -12,7 +12,7 @@ tidyverse_update <- function(recursive = FALSE) {
   bullets(format(behind$package), " (", behind$local, " -> ", behind$cran, ")")
 
   message("Update now?")
-  do_it <- menu(c("Yes", "No")) == 1
+  do_it <- utils::menu(c("Yes", "No")) == 1
 
   if (!do_it) {
     return(invisible())

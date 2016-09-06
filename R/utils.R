@@ -14,7 +14,7 @@ rule <- function(..., pad = "-") {
 
 
 tidyv_packages <- function(include_self = TRUE) {
-  raw <- packageDescription("tidyverse")$Imports
+  raw <- utils::packageDescription("tidyverse")$Imports
   imports <- strsplit(raw, ",")[[1]]
   parsed <- gsub("^\\s+|\\s+$", "", imports)
 
