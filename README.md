@@ -28,29 +28,31 @@ This will install the **core** tidyverse packages that you are likely to use in 
 -   purrr, for functional programming.
 -   tibble, for tibbles, a modern re-imagining of data frames.
 
-It also installs a selection of other tidyverse packages that you're likely to use frequently, but probably not in every analysis. This includes packages for common vector types:
+It also installs a selection of other tidyverse packages that you're likely to use frequently, but probably not in every analysis. This includes packages for :
 
--   stringr, for strings.
--   lubridate, for date/times.
--   forcats, for factors.
+-   Working with specific types of vectors:
 
-For special types of data:
+    -   stringr, for strings.
+    -   lubridate, for date/times.
+    -   forcats, for factors.
+-   Importing other types of data:
 
--   DBI, for databases.
--   haven, for SPSS, SAS and Stata files.
--   [jsonlite](https://github.com/jeroenooms/jsonlite) for JSON.
--   readxl, for `.xls` and `.xlsx` files.
--   xml2, for XML.
+    -   DBI, for databases.
+    -   haven, for SPSS, SAS and Stata files.
+    -   [jsonlite](https://github.com/jeroenooms/jsonlite) for JSON.
+    -   readxl, for `.xls` and `.xlsx` files.
+    -   xml2, for XML.
+-   Modelling
 
-And for modelling:
+    -   modelr, for modelling within a pipeline
+    -   [broom](https://github.com/dgrtwo/broom), for turning models into tidy data
 
--   modelr, for modelling within a pipeline
--   [broom](https://github.com/dgrtwo/broom), for turning models into tidy data
+These packages will be installed along with tidyverse, but you'll load them explicitly with `library()`.
 
 Usage
 -----
 
-Use `library(tidyverse)` to automatically load the core tidyverse packages: ggplot2, tibble, tidyr, readr, purrr, and dplyr. You also get a condensed summary of conflicts with other packages you have loaded:
+`library(tidyverse)` will load the core tidyverse packages: ggplot2, tibble, tidyr, readr, purrr, and dplyr. You also get a condensed summary of conflicts with other packages you have loaded:
 
 ``` r
 library(tidyverse)
