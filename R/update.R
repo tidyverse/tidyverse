@@ -42,7 +42,7 @@ tidyverse_update <- function(recursive = FALSE) {
 
 tidyverse_deps <- function(recursive = FALSE) {
   pkgs <- utils::available.packages()
-  deps <- tools::package_dependencies(tidyv_packages(), pkgs, recursive = recursive)
+  deps <- tools::package_dependencies(tidyverse_packages(), pkgs, recursive = recursive)
 
   pkg_deps <- unique(sort(unlist(deps)))
 

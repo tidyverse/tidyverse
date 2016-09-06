@@ -12,7 +12,7 @@
 #' @examples
 #' tidyverse_conflicts()
 tidyverse_conflicts <- function() {
-  tidy_names <- paste0("package:", tidyv_packages())
+  tidy_names <- paste0("package:", tidyverse_packages())
 
   tidy_envs <- intersect(tidy_names, search())
   names(tidy_envs) <- tidy_envs
