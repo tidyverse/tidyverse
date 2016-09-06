@@ -12,7 +12,6 @@ rule <- function(..., pad = "-") {
   message(title, " ", paste(rep(pad, width, collapse = "")))
 }
 
-
 tidyverse_packages <- function(include_self = TRUE) {
   raw <- utils::packageDescription("tidyverse")$Imports
   imports <- strsplit(raw, ",")[[1]]
@@ -24,7 +23,6 @@ tidyverse_packages <- function(include_self = TRUE) {
 
   parsed
 }
-
 
 invert <- function(x) {
   if (length(x) == 0) return()
