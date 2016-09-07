@@ -16,6 +16,7 @@ Imports:
     forcats,
     ggplot2,
     haven,
+    httr,
     hms,
     jsonlite,
     lubridate,
@@ -27,6 +28,7 @@ Imports:
     stringr,
     tibble,
     tidyr,
+    rvest,
     xml2
 License: GPL-3
 Encoding: UTF-8

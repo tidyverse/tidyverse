@@ -40,8 +40,10 @@ It also installs a selection of other tidyverse packages that you're likely to u
 
     -   DBI, for databases.
     -   haven, for SPSS, SAS and Stata files.
+    -   httr, for web apis.
     -   [jsonlite](https://github.com/jeroenooms/jsonlite) for JSON.
     -   readxl, for `.xls` and `.xlsx` files.
+    -   rvest, for web scraping.
     -   xml2, for XML.
 -   Modelling
 
