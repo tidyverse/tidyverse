@@ -1,14 +1,14 @@
 Package: tidyverse
-Title: Easily Install and Load Key Packages from the "Tidyverse"
+Title: Easily Install and Load 'Tidyverse' Packages
 Version: 1.0.0
 Authors@R: c(
     person("Hadley", "Wickham", , "hadley@rstudio.com", role = c("aut", "cre")),
     person("RStudio", role = "cph")
   )
 Description: The 'tidyverse' is a set of packages that work in harmony
-    becuase they share common data representations and API design. This
+    because they share common data representations and 'API' design. This
     package is designed to make it easy to install and load multiple
-    packages from the 'tidyverse' in a single step.
+    'tidyverse' in a single step.
 Imports:
     broom,
     DBI,
