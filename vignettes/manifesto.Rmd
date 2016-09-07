@@ -9,7 +9,7 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-This document lays out the principles behind a tidy API, the philsophy exemplified by dplyr, tidyr, purrr, and ggplot2. It is aspirational: currently none of my packages meet precisely the criteria laid out below.
+This document lays out the principles behind a tidy API, the philosophy exemplified by dplyr, tidyr, purrr, and ggplot2. It is aspirational: currently none of my packages meet precisely the criteria laid out below.
 
 There are many other excellent packages that are not part of the tidyverse, because they are designed with a different set of underlying principles. This doesn't make them better or worse, just different. In other words, the complement to the tidyverse is not the messyverse, but many other universes of interrelated packages. The tidyverse is not exclusive: packages can be tidy and still fit in well with other toolsets.
 
@@ -38,7 +38,7 @@ Where possible, the primary object for your API should be a tidy tibble:
 
 Tidy tibbles have the advantage of being an extremely common data structure so there are many tools that already work with them (ggplot2, dplyr, tidyr, all the modelling functions, ...). 
 
-If a tibble is not appropriate, because you're not working with variables and observations, use with a small number of well defined data structures. Some examples:
+If a tibble is not appropriate, it's because you're not working with variables and observations, and instead you should use a small number of well defined data structures. Some examples:
 
 * purrr: lists and vectors.
 * xml: xml documents, nodes, and node sets.
@@ -55,9 +55,9 @@ If you have a data frame, and need to refer to variables within the data frame (
 
 ## Compose simple pieces with the pipe
 
-Generally, it's easiest to solve complex problem by combining simple operations: you provide the atoms, and a molecular bonding, and the user creates complex molecules. The pipe, `%>%`, is a common molecular bond that works across all packages. The beauty of the pipe is that a package doesn't need to do anything to use it, and if you don't like the pipe, there are other ways to use the package. 
+Generally, it's easiest to solve complex problems by combining simple operations: you provide the atoms, and a molecular bonding, and the user creates complex molecules. The pipe, `%>%`, is a common molecular bond that works across all packages. The beauty of the pipe is that a package doesn't need to do anything to use it, and if you don't like the pipe, there are other ways to use the package. 
 
-Pipeable APIs play to R's strength as a functional programming language. Most functions should return a modified version of the input object (copy-on-modify). Fuctions called primarily for their side-effects should invisibly return their primary input.
+Pipeable APIs play to R's strength as a functional programming language. Most functions should return a modified version of the input object (copy-on-modify). Functions called primarily for their side-effects should invisibly return their primary input.
 
 Implicit vs. explicit verbs.
 
@@ -67,13 +67,13 @@ There seem to be two basic families of pipe-able APIs:
 
 2. Creation APIs where where most operations are nouns, like ggplot1/ggvis.
   
-Creation APIs tend to be rarer in R, because generally you're transforming something that already exists (e.g. data) rather than creating something new. Visualisation is a notable exception because you're creating a new visualisation, but even then you typically start existing data, not a blank slate. 
+Creation APIs tend to be rarer in R, because generally you're transforming something that already exists (e.g. data) rather than creating something new. Visualisation is a notable exception because you're creating a new visualisation, but even then you typically start with existing data, not a blank slate. 
 
 Another way of thinking about creation APIs is that every function has the same verb (like "modify", or "add", or "set"), it's more useful to focus on what's the different (the thing being modified), rather than what's the same.
 
 ## Embrace functional programming
 
-R is a functional programming language; embrace it, don't fight it. If you're familiar with an object-oriented language like python or C#, this is going to take some adjustment. But in the long run you will be much better of working with the language rather than fighting it.
+R is a functional programming language; embrace it, don't fight it. If you're familiar with an object-oriented language like Python or C#, this is going to take some adjustment. But in the long run you will be much better of working with the language rather than fighting it.
 
 Generally, this means you should favour:
 
