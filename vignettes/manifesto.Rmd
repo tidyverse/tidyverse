@@ -45,7 +45,7 @@ If you need "non-standard scoping", where you refer to variables inside a data f
 
 A powerful strategy for solving complex problems is to combine many simple pieces. Each piece should be easily understood in isolation, and have a standard way to combine with other pieces. In R, this strategy plays out by composing single functions with the pipe. The pipe, `%>%`, is a common composition tool that works across all packages.
 
-Some things to bare in mind when writing functions:
+Some things to bear in mind when writing functions:
 
 *   Strive to keep functions as simple as possible (but no simpler!).
     Generally, each function should do one thing well, and you should be 
