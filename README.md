@@ -12,6 +12,12 @@ If you'd like to learn how to use the tidyverse effectively, the best place to s
 Installation
 ------------
 
+tidyverse is available from CRAN. Install it with:
+
+``` r
+install.packages("tidyverse")
+```
+
 You can install tidyverse from github with:
 
 ``` r
