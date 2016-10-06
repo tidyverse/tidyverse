@@ -63,11 +63,11 @@ Some things to bear in mind when writing functions:
     focus on the noun. A good example of this is ggplot2: almost every
     function adds something to an existing plot.
 
-An advantage of a pipeable API is is not compulsory: if you do not like using the pipe, you can compose functions in whatever way you prepare. Compare this to an operator-overloading approach (such as the `+` in ggplot2), or an object composition approach (such as the `...` approach in httr). 
+An advantage of a pipeable API is that it is not compulsory: if you do not like using the pipe, you can compose functions in whatever way you prepare. Compare this to an operator-overloading approach (such as the `+` in ggplot2), or an object composition approach (such as the `...` approach in httr). 
 
 ## Embrace functional programming
 
-R is a functional programming language; embrace it, don't fight it. If you're familiar with an object-oriented language like Python or C#, this is going to take some adjustment. But in the long run you will be much better of working with the language rather than fighting it.
+R is a functional programming language; embrace it, don't fight it. If you're familiar with an object-oriented language like Python or C#, this is going to take some adjustment. But in the long run you will be much better off working with the language rather than fighting it.
 
 Generally, this means you should favour:
 
