@@ -3,3 +3,15 @@
 language: R
 sudo: false
 cache: packages
+
+addons:
+  apt:
+    packages:
+      - gcc-4.4
+      - g++-4.4
+      - clang
+
+env:
+  - CC=gcc-4.4 CXX=g++-4.4
+  - CC=gcc     CXX=g++
+  - CC=clang   CXX=clang++
