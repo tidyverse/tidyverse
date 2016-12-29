@@ -7,7 +7,9 @@ load <- c("ggplot2", "tibble", "tidyr", "readr", "purrr", "dplyr")
     return()
 
   packageStartupMessage(paste0("Loading tidyverse: ", needed, collapse = "\n"))
-  lapply(needed, library, character.only = TRUE, warn.conflicts = FALSE)
+  suppressPackageStartupMessages(
+    lapply(needed, library, character.only = TRUE, warn.conflicts = FALSE)
+  )
 
   tidyverse_conflicts()
 }

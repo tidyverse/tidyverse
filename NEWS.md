@@ -8,4 +8,5 @@
   * Added feather (#15)
 
 * `suppressPackageStartupMessages()` now suppresses all messages during
-   loading (#19)
+   loading (#19). `suppressPackageStartupMessages()` is called automatically
+   for all tidyverse packages (#27).
