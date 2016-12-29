@@ -12,7 +12,6 @@ Description: The 'tidyverse' is a set of packages that work in harmony
     at <https://github.com/hadley/tidyverse>.
 Imports:
     broom,
-    DBI,
     dplyr,
     forcats,
     ggplot2,
