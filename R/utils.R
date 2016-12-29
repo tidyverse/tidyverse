@@ -18,6 +18,12 @@ rule <- function(..., pad = "-", startup = FALSE) {
   }
 }
 
+#' List all packages in the tidyverse
+#'
+#' @param include_self Include tidyverse in the list?
+#' @export
+#' @examples
+#' tidyverse_packages()
 tidyverse_packages <- function(include_self = TRUE) {
   raw <- utils::packageDescription("tidyverse")$Imports
   imports <- strsplit(raw, ",")[[1]]

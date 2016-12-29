@@ -1,5 +1,9 @@
 # tidyverse 1.0.0.9000
 
+* `tidyverse_deps()` and `tidyverse_packages()` are now exported so you can
+  more easily see the make up of the tidyverse, and what package versions
+  you have (#18, #23)
+
 * Added a `NEWS.md` file to track changes to the package.
 
 * Membership changes:
