@@ -45,7 +45,8 @@ confirm_conflict <- function(name, packages) {
   objs <- packages %>%
     purrr::map(~ get(name, pos = .)) %>%
     purrr::keep(is.function)
-  if (length(objs) == 1)
+
+  if (length(objs) <= 1)
     return()
 
   # Remove identical functions
