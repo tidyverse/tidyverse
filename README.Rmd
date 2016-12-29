@@ -16,7 +16,7 @@ comma <- function(x) {
 
 # tidyverse
 
-[![Travis-CI Build Status](https://travis-ci.org/hadley/tidyverse.svg?branch=master)](https://travis-ci.org/hadley/tidyverse)
+[![Travis-CI Build Status](https://travis-ci.org/tidyverse/tidyverse.svg?branch=master)](https://travis-ci.org/tidyverse/tidyverse)
 
 The tidyverse is a set of packages that work in harmony because they share common data representations and API design. The __tidyverse__ package is designed to make it easy to install and load core packages from the tidyverse in a single command.
 
