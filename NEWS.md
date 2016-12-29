@@ -6,3 +6,6 @@
   
   * Removed DBI (since very different API, #16)
   * Added feather (#15)
+
+* `suppressPackageStartupMessages()` now suppresses all messages during
+   loading (#19)
