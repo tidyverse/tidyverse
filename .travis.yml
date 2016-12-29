@@ -12,6 +12,7 @@ addons:
       - clang
 
 env:
-  - CC=gcc-4.4 CXX=g++-4.4
-  - CC=gcc     CXX=g++
-  - CC=clang   CXX=clang++
+  global:
+    - CC=gcc-4.4 CXX=g++-4.4
+    - CC=gcc     CXX=g++
+    - CC=clang   CXX=clang++
