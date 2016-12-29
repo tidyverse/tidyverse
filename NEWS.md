@@ -5,3 +5,4 @@
 * Membership changes:
   
   * Removed DBI (since very different API, #16)
+  * Added feather (#15)
