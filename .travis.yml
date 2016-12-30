@@ -6,13 +6,15 @@ cache: packages
 
 addons:
   apt:
+    sources:
+      - ubuntu-toolchain-r-test
     packages:
-      - gcc-4.4
-      - g++-4.4
-      - clang
+      - gcc-4.9
+      - g++-4.9
 
-env:
-  global:
-    - CC=gcc-4.4 CXX=g++-4.4
-    - CC=gcc     CXX=g++
-    - CC=clang   CXX=clang++
+before_install: |
+  mkdir ~/.R
+  cat <<EOF > ~/.R/Makevars
+  CXX=g++-4.9
+  CXX1X=g++-4.9
+  CXX1XSTD=-std=c++11
