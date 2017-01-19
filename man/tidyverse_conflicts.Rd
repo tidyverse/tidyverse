@@ -19,4 +19,3 @@ existing code.
 \examples{
 tidyverse_conflicts()
 }
-

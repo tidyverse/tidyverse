@@ -15,4 +15,3 @@ List all packages in the tidyverse
 \examples{
 tidyverse_packages()
 }
-

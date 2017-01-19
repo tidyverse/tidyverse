@@ -13,4 +13,3 @@ tidyverse packages.}
 \description{
 List all tidyverse dependencies
 }
-
