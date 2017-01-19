@@ -1,4 +1,4 @@
-# tidyverse 1.0.0.9000
+# tidyverse 1.1.0
 
 * `tidyverse_deps()` and `tidyverse_packages()` are now exported so you can
   more easily see the make up of the tidyverse, and what package versions
