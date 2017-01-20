@@ -1,6 +1,6 @@
 Package: tidyverse
 Title: Easily Install and Load 'Tidyverse' Packages
-Version: 1.1.0
+Version: 1.1.0.9000
 Authors@R: c(
     person("Hadley", "Wickham", , "hadley@rstudio.com", role = c("aut", "cre")),
     person("RStudio", role = "cph")
