@@ -1,6 +1,6 @@
 Package: tidyverse
 Title: Easily Install and Load 'Tidyverse' Packages
-Version: 1.1.1
+Version: 1.1.1.9000
 Authors@R: c(
     person("Hadley", "Wickham", , "hadley@rstudio.com", role = c("aut", "cre")),
     person("RStudio", role = "cph")
@@ -30,15 +30,13 @@ Imports:
     rvest,
     tidyr,
     xml2
-Suggests:
-    feather
+Suggests: Suggests:
+    knitr,
+    rmarkdown
 License: GPL-3 | file LICENSE
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 5.0.1.9000
 URL: http://tidyverse.org, https://github.com/tidyverse/tidyverse
 BugReports: https://github.com/tidyverse/tidyverse/issues
-Suggests:
-    knitr,
-    rmarkdown
 VignetteBuilder: knitr
