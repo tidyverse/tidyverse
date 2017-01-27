@@ -13,7 +13,6 @@ Description: The 'tidyverse' is a set of packages that work in harmony
 Imports:
     broom,
     dplyr,
-    feather,
     forcats,
     ggplot2,
     haven,
@@ -31,6 +30,8 @@ Imports:
     rvest,
     tidyr,
     xml2
+Suggests:
+    feather
 License: GPL-3 | file LICENSE
 Encoding: UTF-8
 LazyData: true
