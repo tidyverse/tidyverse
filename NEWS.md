@@ -1,4 +1,4 @@
-# tidyverse 1.1.0.9000
+# tidyverse 1.1.1
 
 * Moved feather from Imports to Suggests - feather is part of the tidyverse
   but it's installation requirements (C++11 + little-endian) make it painful
