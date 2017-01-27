@@ -1,5 +1,5 @@
-This is a minor release moving an imported package to suggests, because it's 
-installation requirements are painful.
+This is a minor release moving an imported package to suggests, and
+fixing R CMD check NOTEs
 
 ---
 

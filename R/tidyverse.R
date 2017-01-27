@@ -3,6 +3,7 @@
 
 # Suppress R CMD check note
 #' @importFrom broom tidy
+#' @importFrom forcats as_factor
 #' @importFrom ggplot2 ggplot
 #' @importFrom haven read_sas
 #' @importFrom hms hms
