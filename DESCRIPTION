@@ -30,7 +30,8 @@ Imports:
     rvest,
     tidyr,
     xml2
-Suggests: Suggests:
+Suggests: 
+    feather,
     knitr,
     rmarkdown
 License: GPL-3 | file LICENSE

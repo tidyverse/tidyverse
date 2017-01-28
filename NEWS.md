@@ -1,5 +1,7 @@
 # tidyverse 1.1.1.9000
 
+* Actually move feather to suggests
+
 # tidyverse 1.1.1
 
 * Moved feather from Imports to Suggests - feather is part of the tidyverse
