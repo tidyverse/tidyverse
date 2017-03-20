@@ -39,35 +39,35 @@ devtools::install_github("hadley/tidyverse")
 
 This will install the __core__ tidyverse packages that you are likely to use in almost every analysis:
 
-* ggplot2, for data visualisation.
-* dplyr, for data manipulation.
-* tidyr, for data tidying.
-* readr, for data import.
-* purrr, for functional programming.
-* tibble, for tibbles, a modern re-imagining of data frames.
+* [ggplot2](https://github.com/tidyverse/ggplot2), for data visualisation.
+* [dplyr](https://github.com/hadley/dplyr), for data manipulation.
+* [tidyr](https://github.com/tidyverse/tidyr), for data tidying.
+* [readr](https://github.com/tidyverse/readr), for data import.
+* [purrr](https://github.com/tidyverse/purrr), for functional programming.
+* [tibble](https://github.com/tidyverse/tibble), for tibbles, a modern re-imagining of data frames.
 
 It also installs a selection of other tidyverse packages that you're likely to use frequently, but probably not in every analysis. This includes packages for:
 
 *   Working with specific types of vectors:
 
-    * hms, for times.
-    * stringr, for strings.
-    * lubridate, for date/times.
-    * forcats, for factors.
+    * [hms](https://github.com/rstats-db/hms), for times.
+    * [stringr](https://github.com/tidyverse/stringr), for strings.
+    * [lubridate](https://github.com/hadley/lubridate), for date/times.
+    * [forcats](https://github.com/hadley/forcats), for factors.
 
 *   Importing other types of data:
 
-    * DBI, for databases.
-    * haven, for SPSS, SAS and Stata files.
-    * httr, for web apis.
+    * [DBI](https://github.com/rstats-db/DBI), for databases.
+    * [haven](https://github.com/hadley/haven), for SPSS, SAS and Stata files.
+    * [httr](https://github.com/hadley/httr), for web apis.
     * [jsonlite](https://github.com/jeroenooms/jsonlite) for JSON.
-    * readxl, for `.xls` and `.xlsx` files.
-    * rvest, for web scraping.
-    * xml2, for XML.
+    * [readxl](https://github.com/hadley/readxl), for `.xls` and `.xlsx` files.
+    * [rvest](https://github.com/hadley/rvest), for web scraping.
+    * [xml2](https://github.com/hadley/xml2), for XML.
 
 *   Modelling
 
-    * modelr, for modelling within a pipeline
+    * [modelr](https://github.com/hadley/modelr), for modelling within a pipeline
     * [broom](https://github.com/dgrtwo/broom), for turning models into 
       tidy data
 
