@@ -1,15 +1,15 @@
 Package: tidyverse
-Title: Easily Install and Load 'Tidyverse' Packages
+Title: Easily Install and Load the 'Tidyverse'
 Version: 1.1.1.9000
 Authors@R: c(
     person("Hadley", "Wickham", , "hadley@rstudio.com", role = c("aut", "cre")),
-    person("RStudio", role = "cph")
+    person("RStudio", role = c("cph", "fnd"))
   )
 Description: The 'tidyverse' is a set of packages that work in harmony
     because they share common data representations and 'API' design. This
     package is designed to make it easy to install and load multiple
     'tidyverse' packages in a single step. Learn more about the 'tidyverse'
-    at <https://github.com/hadley/tidyverse>.
+    at <tidyverse.org>.
 Imports:
     broom,
     dplyr,
@@ -38,6 +38,6 @@ License: GPL-3 | file LICENSE
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.0.1
-URL: http://tidyverse.org, https://github.com/tidyverse/tidyverse
+URL: http://tidyverse.tidyverse.org, https://github.com/tidyverse/tidyverse
 BugReports: https://github.com/tidyverse/tidyverse/issues
 VignetteBuilder: knitr
