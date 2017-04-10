@@ -65,85 +65,43 @@
 <div class="contents">
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 <div id="tidyverse" class="section level1">
-<div class="page-header"><h1 class="hasAnchor">
-<a href="#tidyverse" class="anchor"></a>tidyverse <img src="reference/figures/logo.png" align="right">
-</h1></div>
 
+
+<div id="overview" class="section level2">
+<h2 class="hasAnchor">
+<a href="#overview" class="anchor"></a>Overview</h2>
 <p>The tidyverse is a set of packages that work in harmony because they share common data representations and API design. The <strong>tidyverse</strong> package is designed to make it easy to install and load core packages from the tidyverse in a single command.</p>
 <p>If you’d like to learn how to use the tidyverse effectively, the best place to start is <a href="http://r4ds.had.co.nz">R for data science</a>.</p>
+</div>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
-<p>tidyverse is available from CRAN. Install it with:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">"tidyverse"</span>)</code></pre></div>
-<p>You can install tidyverse from github with:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># install.packages("devtools")</span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Install from CRAN</span>
+<span class="kw">install.packages</span>(<span class="st">"tidyverse"</span>)
+
+<span class="co"># Or the development version from GitHub</span>
+<span class="co"># install.packages("devtools")</span>
 devtools::<span class="kw">install_github</span>(<span class="st">"hadley/tidyverse"</span>)</code></pre></div>
-<p>This will install the <strong>core</strong> tidyverse packages that you are likely to use in almost every analysis:</p>
-<ul>
-<li>
-<a href="https://github.com/tidyverse/ggplot2">ggplot2</a>, for data visualisation.</li>
-<li>
-<a href="https://github.com/hadley/dplyr">dplyr</a>, for data manipulation.</li>
-<li>
-<a href="https://github.com/tidyverse/tidyr">tidyr</a>, for data tidying.</li>
-<li>
-<a href="https://github.com/tidyverse/readr">readr</a>, for data import.</li>
-<li>
-<a href="https://github.com/tidyverse/purrr">purrr</a>, for functional programming.</li>
-<li>
-<a href="https://github.com/tidyverse/tibble">tibble</a>, for tibbles, a modern re-imagining of data frames.</li>
-</ul>
-<p>It also installs a selection of other tidyverse packages that you’re likely to use frequently, but probably not in every analysis. This includes packages for:</p>
-<ul>
-<li>
-<p>Working with specific types of vectors:</p>
-<ul>
-<li>
-<a href="https://github.com/rstats-db/hms">hms</a>, for times.</li>
-<li>
-<a href="https://github.com/tidyverse/stringr">stringr</a>, for strings.</li>
-<li>
-<a href="https://github.com/hadley/lubridate">lubridate</a>, for date/times.</li>
-<li>
-<a href="https://github.com/hadley/forcats">forcats</a>, for factors.</li>
-</ul>
-</li>
-<li>
-<p>Importing other types of data:</p>
-<ul>
-<li>
-<a href="https://github.com/rstats-db/DBI">DBI</a>, for databases.</li>
-<li>
-<a href="https://github.com/hadley/haven">haven</a>, for SPSS, SAS and Stata files.</li>
-<li>
-<a href="https://github.com/hadley/httr">httr</a>, for web apis.</li>
-<li>
-<a href="https://github.com/jeroenooms/jsonlite">jsonlite</a> for JSON.</li>
-<li>
-<a href="https://github.com/hadley/readxl">readxl</a>, for <code>.xls</code> and <code>.xlsx</code> files.</li>
-<li>
-<a href="https://github.com/hadley/rvest">rvest</a>, for web scraping.</li>
-<li>
-<a href="https://github.com/hadley/xml2">xml2</a>, for XML.</li>
-</ul>
-</li>
-<li>
-<p>Modelling</p>
-<ul>
-<li>
-<a href="https://github.com/hadley/modelr">modelr</a>, for modelling within a pipeline</li>
-<li>
-<a href="https://github.com/dgrtwo/broom">broom</a>, for turning models into tidy data</li>
-</ul>
-</li>
-</ul>
-<p>These packages will be installed along with tidyverse, but you’ll load them explicitly with <code>library()</code>.</p>
 </div>
 <div id="usage" class="section level2">
 <h2 class="hasAnchor">
 <a href="#usage" class="anchor"></a>Usage</h2>
-<p><code>library(tidyverse)</code> will load the core tidyverse packages: ggplot2, tibble, tidyr, readr, purrr, and dplyr. You also get a condensed summary of conflicts with other packages you have loaded:</p>
+<p><code>library(tidyverse)</code> will load the core tidyverse packages:</p>
+<ul>
+<li>
+<a href="http://ggplot2.tidyverse.org">ggplot2</a>, for data visualisation.</li>
+<li>
+<a href="http://dplyr.tidyverse.org">dplyr</a>, for data manipulation.</li>
+<li>
+<a href="http://tidyr.tidyverse.org">tidyr</a>, for data tidying.</li>
+<li>
+<a href="http://readr.tidyverse.org">readr</a>, for data import.</li>
+<li>
+<a href="http://purrr.tidyverse.org">purrr</a>, for functional programming.</li>
+<li>
+<a href="http://tibble.tidyverse.org">tibble</a>, for tibbles, a modern re-imagining of data frames.</li>
+</ul>
+<p>You also get a condensed summary of conflicts with other packages you have loaded:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tidyverse)
 <span class="co">#&gt; Loading tidyverse: ggplot2</span>
 <span class="co">#&gt; Loading tidyverse: tibble</span>
@@ -177,6 +135,54 @@ devtools::<span class="kw">install_github</span>(<span class="st">"hadley/tidyve
 <span class="co">#&gt; 1: Yes</span>
 <span class="co">#&gt; 2: No</span></code></pre></div>
 </div>
+<div id="packages" class="section level2">
+<h2 class="hasAnchor">
+<a href="#packages" class="anchor"></a>Packages</h2>
+<p>As well as the core tidyverse, installing this package also installs a selection of other packages that you’re likely to use frequently, but probably not in every analysis. This includes packages for:</p>
+<ul>
+<li>
+<p>Working with specific types of vectors:</p>
+<ul>
+<li>
+<a href="https://github.com/rstats-db/hms">hms</a>, for times.</li>
+<li>
+<a href="https://github.com/tidyverse/stringr">stringr</a>, for strings.</li>
+<li>
+<a href="https://github.com/hadley/lubridate">lubridate</a>, for date/times.</li>
+<li>
+<a href="https://github.com/hadley/forcats">forcats</a>, for factors.</li>
+</ul>
+</li>
+<li>
+<p>Importing other types of data:</p>
+<ul>
+<li>
+<a href="http://github.com/wesm/feather">feather</a>, for sharing with Python and other languages.</li>
+<li>
+<a href="https://github.com/hadley/haven">haven</a>, for SPSS, SAS and Stata files.</li>
+<li>
+<a href="https://github.com/hadley/httr">httr</a>, for web apis.</li>
+<li>
+<a href="https://github.com/jeroenooms/jsonlite">jsonlite</a> for JSON.</li>
+<li>
+<a href="https://github.com/hadley/readxl">readxl</a>, for <code>.xls</code> and <code>.xlsx</code> files.</li>
+<li>
+<a href="https://github.com/hadley/rvest">rvest</a>, for web scraping.</li>
+<li>
+<a href="https://github.com/hadley/xml2">xml2</a>, for XML.</li>
+</ul>
+</li>
+<li>
+<p>Modelling</p>
+<ul>
+<li>
+<a href="https://github.com/hadley/modelr">modelr</a>, for modelling within a pipeline</li>
+<li>
+<a href="https://github.com/dgrtwo/broom">broom</a>, for turning models into tidy data</li>
+</ul>
+</li>
+</ul>
+</div>
 </div>
 </div>
   </div>
@@ -189,6 +195,8 @@ devtools::<span class="kw">install_github</span>(<span class="st">"hadley/tidyve
 <li>Browse source code at <br><a href="https://github.com/tidyverse/tidyverse">https://​github.com/​tidyverse/​tidyverse</a>
 </li>
 <li>Report a bug at <br><a href="https://github.com/tidyverse/tidyverse/issues">https://​github.com/​tidyverse/​tidyverse/​issues</a>
+</li>
+<li>Learn more at <br><a href="http://r4ds.had.co.nz">http://​r4ds.had.co.nz</a>
 </li>
 </ul>
 <h2>License</h2>
