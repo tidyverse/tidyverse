@@ -85,7 +85,7 @@
 and other packages that you have loaded.</p>
     
 
-    <pre><span class='fu'>tidyverse_conflicts</span>()</pre>
+    <pre class="usage"><span class='fu'>tidyverse_conflicts</span>()</pre>
         
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
@@ -96,15 +96,10 @@ existing code.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>tidyverse_conflicts</span>()</div><div class='output co'>#&gt; <span class='message'>Conflicts with tidy packages ---------------------------------------------------</span></div><div class='output co'>#&gt; <span class='message'>as.difftime(): lubridate, base</span>
-#&gt; <span class='message'>date():        lubridate, base</span>
-#&gt; <span class='message'>filter():      dplyr, stats</span>
-#&gt; <span class='message'>intersect():   lubridate, base</span>
-#&gt; <span class='message'>is_null():     purrr, testthat</span>
-#&gt; <span class='message'>lag():         dplyr, stats</span>
-#&gt; <span class='message'>matches():     dplyr, testthat</span>
-#&gt; <span class='message'>setdiff():     lubridate, base</span>
-#&gt; <span class='message'>union():       lubridate, base</span></div></pre>
+    <pre class="examples"><div class='input'><span class='fu'>tidyverse_conflicts</span>()</div><div class='output co'>#&gt; <span class='message'>Conflicts with tidy packages ---------------------------------------------------</span></div><div class='output co'>#&gt; <span class='message'>filter():  dplyr, stats</span>
+#&gt; <span class='message'>is_null(): purrr, testthat</span>
+#&gt; <span class='message'>lag():     dplyr, stats</span>
+#&gt; <span class='message'>matches(): dplyr, testthat</span></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

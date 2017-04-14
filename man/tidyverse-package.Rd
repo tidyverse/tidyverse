@@ -4,18 +4,18 @@
 \name{tidyverse-package}
 \alias{tidyverse}
 \alias{tidyverse-package}
-\title{tidyverse: Easily Install and Load 'Tidyverse' Packages}
+\title{tidyverse: Easily Install and Load the 'Tidyverse'}
 \description{
 The 'tidyverse' is a set of packages that work in harmony
 because they share common data representations and 'API' design. This
 package is designed to make it easy to install and load multiple
 'tidyverse' packages in a single step. Learn more about the 'tidyverse'
-at <https://github.com/hadley/tidyverse>.
+at <tidyverse.org>.
 }
 \seealso{
 Useful links:
 \itemize{
-  \item \url{http://tidyverse.org}
+  \item \url{http://tidyverse.tidyverse.org}
   \item \url{https://github.com/tidyverse/tidyverse}
   \item Report bugs at \url{https://github.com/tidyverse/tidyverse/issues}
 }
@@ -26,7 +26,7 @@ Useful links:
 
 Other contributors:
 \itemize{
-  \item RStudio [copyright holder]
+  \item RStudio [copyright holder, funder]
 }
 
 }
