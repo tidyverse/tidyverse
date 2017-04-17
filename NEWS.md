@@ -1,5 +1,8 @@
 # tidyverse 1.1.1.9000
 
+* stringr is now part of the core tidyverse, so is attached when you 
+  `library(tidyverse)`.
+
 * Added reprex to the tidyverse (#47)
 
 * On attach, tidyverse now makes better use of the horizontal space, 
