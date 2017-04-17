@@ -1,5 +1,8 @@
 # tidyverse 1.1.1.9000
 
+* On attach, tidyverse now makes better use of the horizontal space, 
+  printing package versions and some useful info about your session (#59)
+
 * Actually move feather to suggests
 
 # tidyverse 1.1.1

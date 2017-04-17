@@ -30,7 +30,7 @@ tidyverse_conflicts <- function() {
     confirm_conflict)
   conflict_funs <- purrr::compact(conflict_funs)
 
-  rule("Conflicts with tidy packages", startup = TRUE)
+  rule("Conflicts", startup = TRUE)
   fun <- format(paste0(names(conflict_funs), "(): "))
   pkg <- conflict_funs %>%
     purrr::map(~ gsub("^package:", "", .)) %>%
