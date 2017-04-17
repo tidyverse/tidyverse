@@ -2,7 +2,7 @@ core <- c("ggplot2", "tibble", "tidyr", "readr", "purrr", "dplyr", "stringr")
 
 tidyverse_attach <- function() {
   versions <- vapply(core, function(x) as.character(packageVersion(x)), character(1))
-  packages <- paste0(format(core), " ", format(versions))
+  packages <- paste0("+ ", format(core), " ", format(versions))
 
   info <- platform_info()
   info <- paste0(format(paste0(names(info)), justify = "right"), ": ", info)
