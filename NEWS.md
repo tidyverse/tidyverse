@@ -1,5 +1,7 @@
 # tidyverse 1.1.1.9000
 
+* Added reprex to the tidyverse (#47)
+
 * On attach, tidyverse now makes better use of the horizontal space, 
   printing package versions and some useful info about your session (#59)
 
