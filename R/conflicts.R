@@ -17,6 +17,9 @@ tidyverse_conflicts <- function() {
   tidy_envs <- intersect(tidy_names, search())
   names(tidy_envs) <- tidy_envs
 
+  if (length(tidy_envs) == 0)
+    return(invisible())
+
   misc_envs <- setdiff(search(), tidy_envs)
   names(misc_envs) <- misc_envs
 
