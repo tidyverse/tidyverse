@@ -35,9 +35,21 @@ platform_info <- function() {
   c(
     Date = format(Sys.Date()),
     R = paste0(ver$major, ".", ver$minor),
+    OS = os(),
     GUI = ui,
     Locale = Sys.getlocale("LC_COLLATE"),
     TZ = Sys.timezone()
   )
+}
 
+os <- function() {
+  x <- utils::sessionInfo()$running
+
+  # Regexps to clean up long windows strings generated at
+  # https://github.com/wch/r-source/blob/af7f52f70101960861e5d995d3a4bec010bc89e6/src/library/utils/src/windows/util.c
+
+  x <- gsub("Service Pack", "SP", x)
+  x <- gsub(" (build \\d+)", "", x)
+
+  x
 }
