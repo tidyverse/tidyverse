@@ -34,12 +34,18 @@ tidyverse_conflicts <- function() {
   conflict_funs <- purrr::compact(conflict_funs)
 
   rule("Conflicts", startup = TRUE)
-  fun <- format(paste0(names(conflict_funs), "(): "))
-  pkg <- conflict_funs %>%
-    purrr::map(~ gsub("^package:", "", .)) %>%
-    purrr::map_chr(paste0, collapse = ", ")
+  funs <- format(paste0(names(conflict_funs), "(), "))
 
-  packageStartupMessage(paste0(fun, pkg, collapse = "\n"))
+  pkgs <- conflict_funs %>% purrr::map(~ gsub("^package:", "", .))
+  winner <- pkgs %>% purrr::map_chr(1)
+  others <- pkgs %>% purrr::map(`[`, -1)
+  other_calls <- purrr::map2_chr(
+    others, names(others),
+    ~ paste0(.x, "::", .y, "()", collapse = ", ")
+  )
+
+  msg <- paste0("* ", funs, " from ", winner, ", masks ", other_calls, collapse = "\n")
+  packageStartupMessage(msg)
 }
 
 #' @importFrom magrittr %>%

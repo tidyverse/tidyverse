@@ -8,7 +8,7 @@ rule <- function(..., pad = "-", startup = FALSE) {
   } else {
     title <- paste0(...)
   }
-  width <- getOption("width") - nchar(title) - 1
+  width <- min(getOption("width") - nchar(title) - 1, 68)
   text <- paste0(title, " ", paste(rep(pad, width), collapse = ""))
 
   if (startup) {
