@@ -1,4 +1,4 @@
-core <- c("ggplot2", "tibble", "tidyr", "readr", "purrr", "dplyr", "stringr")
+core <- c("ggplot2", "tibble", "tidyr", "readr", "purrr", "dplyr", "stringr", "forcats")
 
 tidyverse_attach <- function() {
   versions <- vapply(core, function(x) as.character(utils::packageVersion(x)), character(1))
