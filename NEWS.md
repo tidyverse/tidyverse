@@ -1,5 +1,8 @@
 # tidyverse 1.1.1.9000
 
+* You can now suppress the startup message by setting 
+  `option(tidyverse.quiet = TRUE)`
+
 * stringr is now part of the core tidyverse, so is attached when you 
   `library(tidyverse)`.
 

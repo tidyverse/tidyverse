@@ -45,7 +45,7 @@ tidyverse_conflicts <- function() {
   )
 
   msg <- paste0("* ", funs, " from ", winner, ", masks ", other_calls, collapse = "\n")
-  packageStartupMessage(msg)
+  startup_message(msg)
 }
 
 #' @importFrom magrittr %>%

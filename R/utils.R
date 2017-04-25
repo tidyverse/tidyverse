@@ -2,6 +2,13 @@ bullets <- function(...) {
   message(paste0(" * ", ..., collapse = "\n"))
 }
 
+startup_message <- function(...) {
+  if (isTRUE(getOption("tidyverse.quiet")))
+    return()
+
+  packageStartupMessage(...)
+}
+
 rule <- function(..., pad = "-", startup = FALSE) {
   if (nargs() == 0) {
     title <- ""
@@ -12,7 +19,7 @@ rule <- function(..., pad = "-", startup = FALSE) {
   text <- paste0(title, " ", paste(rep(pad, width), collapse = ""))
 
   if (startup) {
-    packageStartupMessage(text)
+    startup_message(text)
   } else {
     message(text)
   }

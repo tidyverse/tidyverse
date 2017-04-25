@@ -12,7 +12,7 @@ tidyverse_attach <- function() {
 
   info <- paste0(packages, "      ", info, collapse = "\n")
 
-  packageStartupMessage(info)
+  startup_message(info)
   suppressPackageStartupMessages(
     lapply(core, library, character.only = TRUE, warn.conflicts = FALSE)
   )
