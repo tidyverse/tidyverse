@@ -16,7 +16,8 @@ rule <- function(..., pad = "-", startup = FALSE) {
     title <- paste0(...)
   }
   width <- min(getOption("width") - nchar(title) - 1, 68)
-  text <- paste0(title, " ", paste(rep(pad, width), collapse = ""))
+
+  text <- boxes::rule(left = title, width = width, line_color = "black")
 
   if (startup) {
     startup_message(text)
@@ -47,4 +48,12 @@ invert <- function(x) {
   if (length(x) == 0) return()
   stacked <- utils::stack(x)
   tapply(as.character(stacked$ind), stacked$values, list)
+}
+
+
+style_grey <- function(level, ...) {
+  crayon::style(
+    paste0(...),
+    crayon::make_style(grDevices::grey(level), grey = TRUE)
+  )
 }

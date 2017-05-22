@@ -31,8 +31,10 @@ Imports:
     tibble,
     rvest,
     tidyr,
-    xml2
-Suggests: 
+    xml2,
+    crayon,
+    boxes
+Suggests:
     feather,
     knitr,
     rmarkdown
@@ -43,3 +45,4 @@ RoxygenNote: 6.0.1
 URL: http://tidyverse.tidyverse.org, https://github.com/tidyverse/tidyverse
 BugReports: https://github.com/tidyverse/tidyverse/issues
 VignetteBuilder: knitr
+Remotes: r-pkgs/boxes

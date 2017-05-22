@@ -44,7 +44,12 @@ tidyverse_conflicts <- function() {
     ~ paste0(.x, "::", .y, "()", collapse = ", ")
   )
 
-  msg <- paste0("* ", funs, " from ", winner, ", masks ", other_calls, collapse = "\n")
+  msg <- paste0(
+    crayon::black("* "), funs,
+    crayon::black(" from "), crayon::green(winner),
+    crayon::black(", masks "), other_calls,
+    collapse = "\n"
+  )
   startup_message(msg)
 }
 

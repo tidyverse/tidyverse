@@ -2,10 +2,11 @@ core <- c("ggplot2", "tibble", "tidyr", "readr", "purrr", "dplyr", "stringr", "f
 
 tidyverse_attach <- function() {
   versions <- vapply(core, function(x) as.character(utils::packageVersion(x)), character(1))
-  packages <- paste0("+ ", format(core), " ", format(versions))
+  packages <- paste0(crayon::black("+ "), crayon::green(format(core)), " ", crayon::black(format(versions)))
 
   info <- platform_info()
-  info <- paste0(format(paste0(names(info)), justify = "right"), ": ", info)
+  info_name <- paste0(format(names(info), justify = "right"), ": ")
+  info <- paste0(style_grey(0.6, info_name), style_grey(0.4, info))
 
   n <- max(length(packages), length(info))
   info <- c(info, rep("", n - length(info)))
