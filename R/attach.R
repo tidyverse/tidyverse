@@ -1,8 +1,11 @@
 core <- c("ggplot2", "tibble", "tidyr", "readr", "purrr", "dplyr", "stringr", "forcats")
 
 tidyverse_attach <- function() {
-  versions <- vapply(core, function(x) as.character(utils::packageVersion(x)), character(1))
-  packages <- paste0(crayon::black("+ "), crayon::green(format(core)), " ", crayon::black(format(versions)))
+  versions <- vapply(core, package_version, character(1))
+  packages <- paste0(
+    crayon::black("+ "), crayon::blue(format(core)), " ",
+    crayon::col_align(versions, max(crayon::col_nchar(versions)))
+  )
 
   info <- platform_info()
   info_name <- paste0(format(names(info), justify = "right"), ": ")
@@ -21,6 +24,15 @@ tidyverse_attach <- function() {
   invisible()
 }
 
+
+package_version <- function(x) {
+  version <- as.character(unclass(utils::packageVersion(x))[[1]])
+
+  if (length(version) > 3) {
+    version[4:length(version)] <- crayon::bgRed(crayon::white(as.character(version[4:length(version)])))
+  }
+  crayon::black(paste0(version, collapse = "."))
+}
 
 
 platform_info <- function() {
