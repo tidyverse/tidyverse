@@ -45,9 +45,9 @@ tidyverse_conflicts <- function() {
   )
 
   msg <- paste0(
-    crayon::black("* "), funs,
+    crayon::black("* "), crayon::style(funs, "darkslateblue"),
     crayon::black(" from "), crayon::blue(winner),
-    crayon::black(", masks "), other_calls,
+    crayon::black(", masks "), crayon::style(other_calls, "darkslateblue"),
     collapse = "\n"
   )
   startup_message(msg)
