@@ -24,6 +24,7 @@ tidyverse_conflicts <- function() {
   names(misc_envs) <- misc_envs
 
   tidy_funs <- invert(lapply(tidy_envs, ls_env))
+  if (is.null(tidy_funs)) tidy_funs <- purrr::set_names(list(), character(0))
   misc_funs <- invert(lapply(misc_envs, ls_env))
 
   conflicts <- intersect(names(tidy_funs), names(misc_funs))
