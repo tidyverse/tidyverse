@@ -46,5 +46,5 @@ URL: http://tidyverse.tidyverse.org, https://github.com/tidyverse/tidyverse
 BugReports: https://github.com/tidyverse/tidyverse/issues
 VignetteBuilder: knitr
 Remotes: 
-    r-pkgs/boxes,
+    r-lib/boxes,
     gaborcsardi/crayon
