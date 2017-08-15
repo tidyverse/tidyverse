@@ -58,7 +58,7 @@ tidyverse_deps <- function(recursive = FALSE) {
   )
   pkg_deps <- setdiff(pkg_deps, base_pkgs)
 
-  cran_version <- lapply(pkgs[pkg_deps, "Version"], package_version)
+  cran_version <- lapply(pkgs[pkg_deps, "Version"], base::package_version)
   local_version <- lapply(pkg_deps, utils::packageVersion)
 
   behind <- purrr::map2_lgl(cran_version, local_version, `>`)
