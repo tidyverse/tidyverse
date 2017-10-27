@@ -17,7 +17,7 @@ rule <- function(..., pad = "-", startup = FALSE) {
   }
   width <- min(getOption("width") - nchar(title) - 1, 68)
 
-  text <- cli::rule(left = title, width = width, line_color = "black")
+  text <- cli::rule(left = title, width = width, line_col = "black")
 
   if (startup) {
     startup_message(text)
