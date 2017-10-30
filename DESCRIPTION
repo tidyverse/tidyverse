@@ -33,7 +33,7 @@ Imports:
     tidyr,
     xml2,
     crayon,
-    boxes
+    cli
 Suggests:
     feather,
     knitr,
@@ -46,5 +46,5 @@ URL: http://tidyverse.tidyverse.org, https://github.com/tidyverse/tidyverse
 BugReports: https://github.com/tidyverse/tidyverse/issues
 VignetteBuilder: knitr
 Remotes: 
-    r-lib/boxes,
+    r-lib/cli,
     gaborcsardi/crayon
