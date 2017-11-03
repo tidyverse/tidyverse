@@ -18,6 +18,7 @@ Imports:
     cli,
     crayon,
     dplyr,
+    dbplyr,
     forcats,
     ggplot2,
     haven,
