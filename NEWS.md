@@ -1,5 +1,9 @@
 # tidyverse 1.1.1.9000
 
+* `tidyverse_update()` now just gives you the code you need to update the 
+  packges, since in general it's not possible to update packages that are
+  already loaded.
+
 * You can now suppress the startup message by setting 
   `options(tidyverse.quiet = TRUE)`
 

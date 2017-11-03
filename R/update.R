@@ -24,18 +24,10 @@ tidyverse_update <- function(recursive = FALSE) {
   message("The following packages are out of date:")
   bullets(format(behind$package), " (", behind$local, " -> ", behind$cran, ")")
 
-  message("Update now?")
-  do_it <- utils::menu(c("Yes", "No")) == 1
+  message("Start a clean R session then run:")
 
-  if (!do_it) {
-    return(invisible())
-  }
-
-  utils::install.packages(
-    behind$package,
-    quiet = TRUE,
-    dependencies = if (recursive) FALSE else NA
-  )
+  pkg_str <- paste0(deparse(behind$package), collapse = "\n")
+  message(paste0("install.packages("), pkg_str, ")")
 
   invisible()
 }
