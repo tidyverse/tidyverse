@@ -31,6 +31,7 @@ Imports:
     readr,
     readxl,
     reprex,
+    rlang,
     rstudioapi,
     rvest,
     stringr,
