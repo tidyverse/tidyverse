@@ -1,5 +1,9 @@
 # tidyverse 1.1.1.9000
 
+* `tidyverse_conflicts()` now prints all conflicts that involve at least
+  one tidyverse package. Previously it only omitted any intra-tidyverse
+  conflicts (#26).
+
 * `tidyverse_update()` now just gives you the code you need to update the 
   packges, since in general it's not possible to update packages that are
   already loaded.

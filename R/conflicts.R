@@ -14,23 +14,13 @@
 tidyverse_conflicts <- function() {
   tidy_names <- paste0("package:", tidyverse_packages())
 
-  tidy_envs <- intersect(tidy_names, search())
-  names(tidy_envs) <- tidy_envs
+  envs <- setNames(search(), search())
+  objs <- invert(lapply(envs, ls_env))
 
-  if (length(tidy_envs) == 0)
-    return(invisible())
+  conflicts <- purrr::keep(objs, ~ length(.x) > 1)
+  conflicts <- purrr::keep(conflicts, ~ any(.x %in% tidy_names))
 
-  misc_envs <- setdiff(search(), tidy_envs)
-  names(misc_envs) <- misc_envs
-
-  tidy_funs <- invert(lapply(tidy_envs, ls_env))
-  misc_funs <- invert(lapply(misc_envs, ls_env))
-
-  conflicts <- intersect(names(tidy_funs), names(misc_funs))
-
-  conflict_funs <- purrr::map2(tidy_funs[conflicts], misc_funs[conflicts], c)
-  conflict_funs <- purrr::map2(purrr::set_names(names(conflict_funs)), conflict_funs,
-    confirm_conflict)
+  conflict_funs <- purrr::imap(conflicts, confirm_conflict)
   conflict_funs <- purrr::compact(conflict_funs)
 
   rule("Conflicts", startup = TRUE)
@@ -54,7 +44,7 @@ tidyverse_conflicts <- function() {
 }
 
 #' @importFrom magrittr %>%
-confirm_conflict <- function(name, packages) {
+confirm_conflict <- function(packages, name) {
   # Only look at functions
   objs <- packages %>%
     purrr::map(~ get(name, pos = .)) %>%
