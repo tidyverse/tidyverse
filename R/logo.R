@@ -25,7 +25,7 @@ tidyverse_logo <- function(unicode = l10n_info()$`UTF-8`) {
   cols <- c("red", "yellow", "green", "magenta", "cyan",
             "yellow", "green", "white", "magenta", "cyan")
 
-  col_hexa <- map2(hexa, cols, ~ crayon::make_style(.y)(.x))
+  col_hexa <- purrr::map2(hexa, cols, ~ crayon::make_style(.y)(.x))
 
   for (i in 0:9) {
     pat <- paste0("\\b", i, "\\b")
