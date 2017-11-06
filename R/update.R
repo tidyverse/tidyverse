@@ -17,17 +17,19 @@ tidyverse_update <- function(recursive = FALSE) {
   behind <- dplyr::filter(deps, behind)
 
   if (nrow(behind) == 0) {
-    message("All tidyverse packages up-to-date")
+    cli::cat_line("All tidyverse packages up-to-date")
     return(invisible())
   }
 
-  message("The following packages are out of date:")
-  bullets(format(behind$package), " (", behind$local, " -> ", behind$cran, ")")
+  cli::cat_line("The following packages are out of date:")
+  cli::cat_line()
+  cli::cat_bullet(format(behind$package), " (", behind$local, " -> ", behind$cran, ")")
 
-  message("Start a clean R session then run:")
+  cli::cat_line()
+  cli::cat_line("Start a clean R session then run:")
 
   pkg_str <- paste0(deparse(behind$package), collapse = "\n")
-  message(paste0("install.packages("), pkg_str, ")")
+  cli::cat_line("install.packages(", pkg_str, ")")
 
   invisible()
 }

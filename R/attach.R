@@ -1,9 +1,16 @@
 core <- c("ggplot2", "tibble", "tidyr", "readr", "purrr", "dplyr", "stringr", "forcats")
 
 tidyverse_attach <- function() {
+  msg(
+    cli::rule(
+      left = crayon::bold("Attaching packages"),
+      right = paste0("tidyverse ", utils::packageVersion("tidyverse"))
+    ),
+    startup = TRUE
+  )
   versions <- vapply(core, package_version, character(1))
   packages <- paste0(
-    crayon::black("+ "), crayon::blue(format(core)), " ",
+    crayon::green(cli::symbol$tick), " ", crayon::blue(format(core)), " ",
     crayon::col_align(versions, max(crayon::col_nchar(versions)))
   )
 
@@ -16,7 +23,7 @@ tidyverse_attach <- function() {
 
   info <- paste0(packages, "      ", info, collapse = "\n")
 
-  startup_message(info)
+  msg(info, startup = TRUE)
   suppressPackageStartupMessages(
     lapply(core, library, character.only = TRUE, warn.conflicts = FALSE)
   )
@@ -31,7 +38,7 @@ package_version <- function(x) {
   if (length(version) > 3) {
     version[4:length(version)] <- crayon::bgRed(crayon::white(as.character(version[4:length(version)])))
   }
-  crayon::black(paste0(version, collapse = "."))
+  paste0(version, collapse = ".")
 }
 
 

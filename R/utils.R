@@ -1,29 +1,23 @@
-bullets <- function(...) {
-  message(paste0(" * ", ..., collapse = "\n"))
-}
-
-startup_message <- function(...) {
-  if (isTRUE(getOption("tidyverse.quiet")))
-    return()
-
-  packageStartupMessage(...)
-}
-
-rule <- function(..., pad = "-", startup = FALSE) {
-  if (nargs() == 0) {
-    title <- ""
-  } else {
-    title <- paste0(...)
-  }
-  width <- min(getOption("width") - nchar(title) - 1, 68)
-
-  text <- cli::rule(left = title, width = width, line_col = "black")
-
+msg <- function(..., startup = FALSE) {
   if (startup) {
-    startup_message(text)
+    if (!isTRUE(getOption("tidyverse.quiet"))) {
+      packageStartupMessage(text_col(...))
+    }
   } else {
-    message(text)
+    message(text_col(...))
   }
+}
+
+text_col <- function(x) {
+  # If RStudio not available, messages already printed in black
+  if (!rstudioapi::isAvailable()) {
+    return(x)
+  }
+
+  theme <- rstudioapi::getThemeInfo()
+
+  if (theme$dark) crayon::white(x) else crayon::black(x)
+
 }
 
 #' List all packages in the tidyverse
