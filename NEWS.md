@@ -1,29 +1,32 @@
 # tidyverse 1.1.1.9000
 
+## Changes to tidyverse membership
+
+* stringr is now part of the core tidyverse, so is attached when you 
+  `library(tidyverse)`.
+
+* reprex joins the tidyverse to make it easier to create reproducible
+  examples (#47)
+
+## Other improvements
+
+* On attach, tidyverse now makes better use of the horizontal space, 
+  printing packages and versions in two columns (#59). Development
+  versions are highlighted in red.
+  
+    You can now suppress this startup message by setting 
+    `options(tidyverse.quiet = TRUE)`
+
 * `tidyverse_conflicts()` now prints all conflicts that involve at least
-  one tidyverse package. Previously it only omitted any intra-tidyverse
-  conflicts (#26).
+  one tidyverse package; Previously it only omitted any intra-tidyverse
+  conflicts (#26). I've also tweaked the display of conflicts to hopefully 
+  make it more clear which function is the "winner".
 
 * `tidyverse_update()` now just gives you the code you need to update the 
   packges, since in general it's not possible to update packages that are
   already loaded.
 
-* You can now suppress the startup message by setting 
-  `options(tidyverse.quiet = TRUE)`
-
-* stringr is now part of the core tidyverse, so is attached when you 
-  `library(tidyverse)`.
-
-* Added reprex to the tidyverse (#47)
-
-*   On attach, tidyverse now makes better use of the horizontal space, 
-    printing packages and versions in two columns (#59). Development
-    versions are highlighted in red.
-
-    I've also tweaked the display of conflicts to hopefully make it more
-    clear which function is the "winner".
-
-* Actually move feather to suggests
+* feather is now _actually_ in suggests.
 
 # tidyverse 1.1.1
 
