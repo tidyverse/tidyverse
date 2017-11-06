@@ -14,7 +14,7 @@
 tidyverse_conflicts <- function() {
   tidy_names <- paste0("package:", tidyverse_packages())
 
-  envs <- setNames(search(), search())
+  envs <- stats::setNames(search(), search())
   objs <- invert(lapply(envs, ls_env))
 
   conflicts <- purrr::keep(objs, ~ length(.x) > 1)
