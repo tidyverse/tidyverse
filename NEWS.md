@@ -17,10 +17,9 @@
 * Added reprex to the tidyverse (#47)
 
 *   On attach, tidyverse now makes better use of the horizontal space, 
-    printing package versions and some useful info about your session (#59).
-    It's now more valuable inside reprexes or committed in rendered RMarkdown
-    documents.
-    
+    printing packages and versions in two columns (#59). Development
+    versions are highlighted in red.
+
     I've also tweaked the display of conflicts to hopefully make it more
     clear which function is the "winner".
 
