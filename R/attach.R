@@ -1,6 +1,20 @@
 core <- c("ggplot2", "tibble", "tidyr", "readr", "purrr", "dplyr", "stringr", "forcats")
 
+core_loaded <- function() {
+  search <- paste0("package:", core)
+  core[search %in% search()]
+}
+core_unloaded <- function() {
+  search <- paste0("package:", core)
+  core[!search %in% search()]
+}
+
+
 tidyverse_attach <- function() {
+  to_load <- core_unloaded()
+  if (length(to_load) == 0)
+    return(invisible())
+
   msg(
     cli::rule(
       left = crayon::bold("Attaching packages"),
@@ -8,9 +22,10 @@ tidyverse_attach <- function() {
     ),
     startup = TRUE
   )
-  versions <- vapply(core, package_version, character(1))
+
+  versions <- vapply(to_load, package_version, character(1))
   packages <- paste0(
-    crayon::green(cli::symbol$tick), " ", crayon::blue(format(core)), " ",
+    crayon::green(cli::symbol$tick), " ", crayon::blue(format(to_load)), " ",
     crayon::col_align(versions, max(crayon::col_nchar(versions)))
   )
 
@@ -20,7 +35,7 @@ tidyverse_attach <- function() {
   msg(paste(info, collapse = "\n"), startup = TRUE)
 
   suppressPackageStartupMessages(
-    lapply(core, library, character.only = TRUE, warn.conflicts = FALSE)
+    lapply(to_load, library, character.only = TRUE, warn.conflicts = FALSE)
   )
 
   invisible()
