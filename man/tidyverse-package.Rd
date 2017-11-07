@@ -10,7 +10,7 @@ The 'tidyverse' is a set of packages that work in harmony
 because they share common data representations and 'API' design. This
 package is designed to make it easy to install and load multiple
 'tidyverse' packages in a single step. Learn more about the 'tidyverse'
-at <tidyverse.org>.
+at <https://tidyverse.org>.
 }
 \seealso{
 Useful links:
