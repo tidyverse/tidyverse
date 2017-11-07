@@ -1,19 +1,12 @@
-This is a minor release moving an imported package to suggests, and
-fixing R CMD check NOTEs
-
----
-
 ## Test environments
-* local OS X install, R 3.3.2
-* ubuntu 12.04 (on travis-ci), R 3.3.2
+* local OS X install, R-release
+* ubuntu 14.04 (on travis-ci), R-oldrel, R-release, R-devel
 * win-builder (devel and release)
 
 ## R CMD check results
 
-0 errors | 0 warnings | 0 notes
+0 errors | 0 warnings | 0 note
 
-## Reverse dependencies
+## Revdep check results
 
-I ran R CMD check on all 5 revdeps. I did not see any problems.
-
-Check summary at https://github.com/tidyverse/tidyverse/tree/master/revdep
+I ran R CMD CHECK on all 37 reverse dependencies and did not see any new failures.

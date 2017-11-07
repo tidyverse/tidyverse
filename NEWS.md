@@ -1,4 +1,4 @@
-# tidyverse 1.1.1.9000
+# tidyverse 1.2.0
 
 ## Changes to tidyverse membership
 
@@ -11,8 +11,9 @@
 ## Other improvements
 
 * On attach, tidyverse now makes better use of the horizontal space, 
-  printing packages and versions in two columns (#59). Development
-  versions are highlighted in red.
+  printing packages and versions in two columns (#59). It only prints
+  packages that it attaches, not packages that you've already attached.
+  Development versions are highlighted in red.
   
     You can now suppress this startup message by setting 
     `options(tidyverse.quiet = TRUE)`
