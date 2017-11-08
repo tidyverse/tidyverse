@@ -14,6 +14,10 @@ text_col <- function(x) {
     return(x)
   }
 
+  if (!rstudioapi::hasFun("getThemeInfo")) {
+    return(x)
+  }
+
   theme <- rstudioapi::getThemeInfo()
 
   if (theme$dark) crayon::white(x) else crayon::black(x)

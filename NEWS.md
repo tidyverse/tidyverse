@@ -1,5 +1,7 @@
 # tidyverse 1.2.0.9000
 
+* Work with older versions of RStudio
+
 # tidyverse 1.2.0
 
 ## Changes to tidyverse membership
