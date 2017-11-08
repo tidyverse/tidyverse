@@ -16,7 +16,7 @@ BugReports: https://github.com/tidyverse/tidyverse/issues
 Imports: 
     broom,
     cli,
-    crayon,
+    crayon (>= 1.3.4),
     dplyr,
     dbplyr,
     forcats,
