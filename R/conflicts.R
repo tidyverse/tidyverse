@@ -27,6 +27,8 @@ tidyverse_conflicts <- function() {
 }
 
 tidyverse_conflict_message <- function(x) {
+  if (length(x) == 0) return("")
+
   header <- cli::rule(
     left = crayon::bold("Conflicts"),
     right = "tidyverse_conflicts()"
