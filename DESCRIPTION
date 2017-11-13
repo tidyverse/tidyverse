@@ -14,35 +14,35 @@ License: GPL-3 | file LICENSE
 URL: http://tidyverse.tidyverse.org, https://github.com/tidyverse/tidyverse
 BugReports: https://github.com/tidyverse/tidyverse/issues
 Imports: 
-    broom,
-    cli,
+    broom (>= 0.4.2),
+    cli (>= 1.0.0),
     crayon (>= 1.3.4),
-    dplyr,
-    dbplyr,
-    forcats,
-    ggplot2,
-    haven,
-    hms,
-    httr,
-    jsonlite,
-    lubridate,
-    magrittr,
-    modelr,
-    purrr,
-    readr,
-    readxl,
-    reprex,
-    rlang,
-    rstudioapi,
-    rvest,
-    stringr,
-    tibble,
-    tidyr,
-    xml2
+    dplyr (>= 0.7.4),
+    dbplyr (>= 1.1.0),
+    forcats (>= 0.2.0),
+    ggplot2 (>= 2.2.1),
+    haven (>= 1.1.0),
+    hms (>= 0.3),
+    httr (>= 1.3.1),
+    jsonlite (>= 1.5),
+    lubridate (>= 1.7.1),
+    magrittr (>= 1.5),
+    modelr (>= 0.1.1),
+    purrr (>= 0.2.4),
+    readr (>= 1.1.1),
+    readxl (>= 1.0.0),
+    reprex (>= 0.1.1),
+    rlang (>= 0.1.4),
+    rstudioapi (>= 0.7),
+    rvest (>= 0.3.2),
+    stringr (>= 1.2.0),
+    tibble (>= 1.3.4),
+    tidyr (>= 0.7.2),
+    xml2 (>= 1.1.1)
 Suggests: 
-    feather,
-    knitr,
-    rmarkdown
+    feather (>= 0.3.1),
+    knitr (>= 1.17),
+    rmarkdown (>= 1.7.4)
 VignetteBuilder: knitr
 Encoding: UTF-8
 LazyData: true

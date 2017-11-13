@@ -18,3 +18,8 @@
 #' @importFrom tidyr spread
 #' @importFrom xml2 read_xml
 NULL
+
+
+release_questions <- function() {
+  "Have you run `usethis::use_tidy_versions(TRUE)`?"
+}
