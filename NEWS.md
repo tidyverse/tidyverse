@@ -1,4 +1,4 @@
-# tidyverse 1.2.0.9000
+# tidyverse 1.2.1
 
 * Require modern versions of all packages (#85)
 

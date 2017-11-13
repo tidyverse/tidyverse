@@ -21,5 +21,8 @@ NULL
 
 
 release_questions <- function() {
-  "Have you run `usethis::use_tidy_versions(TRUE)`?"
+  c(
+    "Have you run `usethis::use_tidy_versions(TRUE)`?",
+    "Have you tested with RStudio 1.0?"
+  )
 }
