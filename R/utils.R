@@ -20,7 +20,7 @@ text_col <- function(x) {
 
   theme <- rstudioapi::getThemeInfo()
 
-  if (theme$dark) crayon::white(x) else crayon::black(x)
+  if (isTRUE(theme$dark)) crayon::white(x) else crayon::black(x)
 
 }
 

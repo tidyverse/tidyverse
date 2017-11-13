@@ -2,7 +2,7 @@
 
 * Require modern versions of all packages (#85)
 
-* Work with older versions of RStudio
+* Work with older versions of RStudio (#88).
 
 # tidyverse 1.2.0
 
