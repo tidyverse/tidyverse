@@ -1,3 +1,7 @@
+# tidyverse 1.2.2.9000
+
+* Fixed parse error of tidyverse package names (#93)
+
 # tidyverse 1.2.1
 
 * Require modern versions of all packages (#85)
