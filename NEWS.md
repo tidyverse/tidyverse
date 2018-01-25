@@ -1,6 +1,8 @@
 # tidyverse 1.2.2.9000
 
-* Fixed parse error of tidyverse package names (#93)
+* Eliminate repeats in the package list when loading an odd number of packages (#94, #100, @dchiu911)
+
+* Fixed parse error of tidyverse package names (#93, #106, @coatless)
 
 # tidyverse 1.2.1
 
