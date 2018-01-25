@@ -29,7 +29,10 @@ tidyverse_attach <- function() {
     crayon::col_align(versions, max(crayon::col_nchar(versions)))
   )
 
-  col1 <- 1:floor(length(packages)/2)
+  if (length(packages) %% 2 == 1) {
+    packages <- append(packages, "")
+  }
+  col1 <- seq_len(length(packages) / 2)
   info <- paste0(packages[col1], "     ", packages[-col1])
 
   msg(paste(info, collapse = "\n"), startup = TRUE)
