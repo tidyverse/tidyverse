@@ -28,6 +28,7 @@ Imports:
     lubridate (>= 1.7.1),
     magrittr (>= 1.5),
     modelr (>= 0.1.1),
+    pillar (>= 1.2.0),
     purrr (>= 0.2.4),
     readr (>= 1.1.1),
     readxl (>= 1.0.0),
