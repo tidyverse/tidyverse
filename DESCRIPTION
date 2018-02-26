@@ -37,7 +37,7 @@ Imports:
     rstudioapi (>= 0.7),
     rvest (>= 0.3.2),
     stringr (>= 1.2.0),
-    tibble (>= 1.3.4),
+    tibble (>= 1.4.2),
     tidyr (>= 0.7.2),
     xml2 (>= 1.1.1)
 Suggests: 
