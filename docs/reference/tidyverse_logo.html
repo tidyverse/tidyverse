@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Articles • tidyverse</title>
+<title>The tidyverse logo, using ASCII or Unicode characters — tidyverse_logo • tidyverse</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -33,7 +33,7 @@
   </head>
 
   <body>
-    <div class="container template-vignette-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -89,20 +89,45 @@
       
       </header>
 
-      <div class="page-header">
-  <h1>Articles <small>version&nbsp;1.2.1</small></h1>
-</div>
-
-<div class="row">
-  <div class="col-md-9">
-    <div class="section ">
-      <h3>All vignettes</h3>
-      <p class="section-desc"></p>
-
-      <ul>
-        <li><a href="manifesto.html">The tidy tools manifesto</a></li>
-      </ul>
+      <div class="row">
+  <div class="col-md-9 contents">
+    <div class="page-header">
+    <h1>The tidyverse logo, using ASCII or Unicode characters</h1>
+    <small>Source: <a href='https:/github.com/tidyverse/tidyverse/blob/master/R/logo.R'><code>R/logo.R</code></a></small>
     </div>
+
+    
+    <p>Use <code><a href='http://www.rdocumentation.org/packages/crayon/topics/strip_style'>crayon::strip_style()</a></code> to get rid of the colors.</p>
+    
+
+    <pre class="usage"><span class='fu'>tidyverse_logo</span>(<span class='kw'>unicode</span> <span class='kw'>=</span> <span class='fu'>l10n_info</span>()$<span class='no'>`UTF-8`</span>)</pre>
+    
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>unicode</th>
+      <td><p>Whether to use Unicode symbols. Default is <code>TRUE</code>
+on UTF-8 platforms.</p></td>
+    </tr>
+    </table>
+    
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='fu'>tidyverse_logo</span>()</div><div class='output co'>#&gt; ⬢ __  _    __   .    ⬡           ⬢  . 
+#&gt;  / /_(_)__/ /_ ___  _____ _______ ___ 
+#&gt; / __/ / _  / // / |/ / -_) __(_-&lt;/ -_)
+#&gt; \__/_/\_,_/\_, /|___/\__/_/ /___/\__/ 
+#&gt;      ⬢  . /___/      ⬡      .       ⬢ </div></pre>
+  </div>
+  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+    <h2>Contents</h2>
+    <ul class="nav nav-pills nav-stacked">
+      <li><a href="#arguments">Arguments</a></li>
+            
+      <li><a href="#examples">Examples</a></li>
+    </ul>
+
   </div>
 </div>
 

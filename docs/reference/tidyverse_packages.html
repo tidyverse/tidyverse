@@ -52,13 +52,28 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
         <li>
+  <a href="../index.html">
+    <span class="fa fa-home fa-lg"></span>
+     
+  </a>
+</li>
+<li>
   <a href="../reference/index.html">Reference</a>
 </li>
-<li>
-  <a href="../articles/index.html">Articles</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Articles
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="../articles/manifesto.html">The tidy tools manifesto</a>
+    </li>
+  </ul>
 </li>
 <li>
-  <a href="../news/index.html">News</a>
+  <a href="../news/index.html">Changelog</a>
 </li>
         <li>
   <a href="https://github.com/tidyverse/tidyverse">
@@ -78,6 +93,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>List all packages in the tidyverse</h1>
+    <small>Source: <a href='https:/github.com/tidyverse/tidyverse/blob/master/R/utils.R'><code>R/utils.R</code></a></small>
     </div>
 
     
@@ -97,10 +113,12 @@
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>tidyverse_packages</span>()</div><div class='output co'>#&gt;  [1] "broom"     "dplyr"     "forcats"   "ggplot2"   "haven"     "httr"     
-#&gt;  [7] "hms"       "jsonlite"  "lubridate" "magrittr"  "modelr"    "purrr"    
-#&gt; [13] "readr"     "readxl"    "stringr"   "tibble"    "rvest"     "tidyr"    
-#&gt; [19] "xml2"      "tidyverse"</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'>tidyverse_packages</span>()</div><div class='output co'>#&gt;  [1] "broom"      "cli"        "crayon"     "dplyr"      "dbplyr"    
+#&gt;  [6] "forcats"    "ggplot2"    "haven"      "hms"        "httr"      
+#&gt; [11] "jsonlite"   "lubridate"  "magrittr"   "modelr"     "purrr"     
+#&gt; [16] "readr"      "readxl"     "reprex"     "rlang"      "rstudioapi"
+#&gt; [21] "rvest"      "stringr"    "tibble"     "tidyr"      "xml2"      
+#&gt; [26] "tidyverse" </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -119,8 +137,8 @@
 </div>
 
 <div class="author">
-  <p>Developed by <a href='http://hadley.nz'>Hadley Wickham</a>, <a href='https://www.rstudio.com'><img src='http://tidyverse.org/rstudio-logo.svg' height='24' /></a>.</p>
-  <p>Site built by <a href="http://hadley.github.io/pkgdown/">pkgdown</a>.</p>
+  <p>Developed by <a href='http://hadley.nz'>Hadley Wickham</a>, <a href='https://www.rstudio.com'><img src='http://tidyverse.org/rstudio-logo.svg' alt='RStudio' height='24' /></a>.</p>
+  <p>Site built by <a href="http://pkgdown.r-lib.org">pkgdown</a>.</p>
 </div>
 
 <script>
@@ -137,3 +155,4 @@
 
   </body>
 </html>
+
