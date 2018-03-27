@@ -4,6 +4,8 @@
 
 * Fixed parse error of tidyverse package names (#93, #106, @coatless)
 
+* update manifesto, linking to programming with dplyr and Advanced R instead of lazyeval
+
 # tidyverse 1.2.1
 
 * Require modern versions of all packages (#85)
