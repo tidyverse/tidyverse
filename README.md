@@ -35,7 +35,9 @@ Usage
 -   [readr](http://readr.tidyverse.org), for data import.
 -   [purrr](http://purrr.tidyverse.org), for functional programming.
 -   [tibble](http://tibble.tidyverse.org), for tibbles, a modern re-imagining of data frames.
-
+-   [stringr](https://github.com/tidyverse/stringr), for strings.
+-   [forcats](https://github.com/hadley/forcats), for factors.
+    
 You also get a condensed summary of conflicts with other packages you have loaded:
 
 ``` r
@@ -89,9 +91,7 @@ As well as the core tidyverse, installing this package also installs a selection
 -   Working with specific types of vectors:
 
     -   [hms](https://github.com/rstats-db/hms), for times.
-    -   [stringr](https://github.com/tidyverse/stringr), for strings.
     -   [lubridate](https://github.com/hadley/lubridate), for date/times.
-    -   [forcats](https://github.com/hadley/forcats), for factors.
 -   Importing other types of data:
 
     -   [feather](http://github.com/wesm/feather), for sharing with Python and other languages.
