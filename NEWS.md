@@ -1,4 +1,4 @@
-# tidyverse 1.2.2.9000
+# tidyverse 1.2.1.9000
 
 * Eliminate repeats in the package list when loading an odd number of packages (#94, #100, @dchiu911)
 
