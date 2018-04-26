@@ -7,3 +7,4 @@
 ^revdep$
 ^docs$
 ^_pkgdown\.yml$
+^codecov\.yml$
