@@ -46,7 +46,8 @@ Suggests:
     covr,
     feather (>= 0.3.1),
     knitr (>= 1.20),
-    rmarkdown (>= 1.9)
+    rmarkdown (>= 1.9),
+    testthat
 VignetteBuilder: knitr
 Encoding: UTF-8
 LazyData: true
