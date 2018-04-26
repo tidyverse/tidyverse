@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • tidyverse</title>
+<title>The tidyverse logo, using ASCII or Unicode characters — tidyverse_logo • tidyverse</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -33,7 +33,7 @@
   </head>
 
   <body>
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -90,67 +90,44 @@
       </header>
 
       <div class="row">
-  <div class="col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>The tidyverse logo, using ASCII or Unicode characters</h1>
+    <small>Source: <a href='https://github.com/tidyverse/tidyverse/blob/master/R/logo.R'><code>R/logo.R</code></a></small>
     </div>
 
-    <div class="contents">
-      <table class="ref-index">
+    
+    <p>Use <code><a href='http://www.rdocumentation.org/packages/crayon/topics/strip_style'>crayon::strip_style()</a></code> to get rid of the colors.</p>
+    
 
-      <colgroup>
-        <col class="alias" />
-        <col class="title" />
-      </colgroup>
+    <pre class="usage"><span class='fu'>tidyverse_logo</span>(<span class='kw'>unicode</span> <span class='kw'>=</span> <span class='fu'>l10n_info</span>()$<span class='no'>`UTF-8`</span>)</pre>
+    
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>unicode</th>
+      <td><p>Whether to use Unicode symbols. Default is <code>TRUE</code>
+on UTF-8 platforms.</p></td>
+    </tr>
+    </table>
+    
 
-      <tbody>
-        <tr>
-          <th colspan="2">
-            <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-            <p class="section-desc"></p>
-          </th>
-        </tr>
-        <tr>
-          <!--  -->
-          <td>
-            <p><code><a href="tidyverse_conflicts.html">tidyverse_conflicts()</a></code> </p>
-          </td>
-          <td><p>Conflicts between the tidyverse and other packages</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="tidyverse_deps.html">tidyverse_deps()</a></code> </p>
-          </td>
-          <td><p>List all tidyverse dependencies</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="tidyverse_logo.html">tidyverse_logo()</a></code> </p>
-          </td>
-          <td><p>The tidyverse logo, using ASCII or Unicode characters</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="tidyverse_packages.html">tidyverse_packages()</a></code> </p>
-          </td>
-          <td><p>List all packages in the tidyverse</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="tidyverse_update.html">tidyverse_update()</a></code> </p>
-          </td>
-          <td><p>Update tidyverse packages</p></td>
-        </tr>
-      </tbody>
-      </table>
-    </div>
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='fu'>tidyverse_logo</span>()</div><div class='output co'>#&gt; ⬢ __  _    __   .    ⬡           ⬢  . 
+#&gt;  / /_(_)__/ /_ ___  _____ _______ ___ 
+#&gt; / __/ / _  / // / |/ / -_) __(_-&lt;/ -_)
+#&gt; \__/_/\_,_/\_, /|___/\__/_/ /___/\__/ 
+#&gt;      ⬢  . /___/      ⬡      .       ⬢ </div></pre>
   </div>
-
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#section-all-functions">All functions</a></li>
+      <li><a href="#arguments">Arguments</a></li>
+            
+      <li><a href="#examples">Examples</a></li>
     </ul>
+
   </div>
 </div>
 
