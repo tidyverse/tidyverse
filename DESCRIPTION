@@ -44,9 +44,9 @@ Imports:
     xml2 (>= 1.1.1)
 Suggests: 
     covr,
-    feather (>= 0.3.1),
-    knitr (>= 1.20),
-    rmarkdown (>= 1.9),
+    feather,
+    knitr,
+    rmarkdown,
     testthat
 VignetteBuilder: knitr
 Encoding: UTF-8
