@@ -7,6 +7,8 @@
 Status](https://travis-ci.org/tidyverse/tidyverse.svg?branch=master)](https://travis-ci.org/tidyverse/tidyverse)
 [![Coverage
 status](https://codecov.io/gh/tidyverse/tidyverse/branch/master/graph/badge.svg)](https://codecov.io/github/tidyverse/tidyverse?branch=master)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/tidyverse)](https://cran.r-project.org/package=tidyverse)
 
 ## Overview
 
