@@ -13,12 +13,14 @@ Description: The 'tidyverse' is a set of packages that work in harmony
 License: GPL-3 | file LICENSE
 URL: http://tidyverse.tidyverse.org, https://github.com/tidyverse/tidyverse
 BugReports: https://github.com/tidyverse/tidyverse/issues
+Depends: 
+    R (>= 3.1)
 Imports: 
     broom (>= 0.4.4),
     cli (>= 1.0.0),
     crayon (>= 1.3.4),
-    dplyr (>= 0.7.4),
     dbplyr (>= 1.2.1),
+    dplyr (>= 0.7.4),
     forcats (>= 0.3.0),
     ggplot2 (>= 2.2.1),
     haven (>= 1.1.1),
@@ -41,13 +43,11 @@ Imports:
     tidyr (>= 0.8.0),
     xml2 (>= 1.1.1)
 Suggests: 
+    covr,
     feather (>= 0.3.1),
     knitr (>= 1.20),
-    rmarkdown (>= 1.9),
-    covr
+    rmarkdown (>= 1.9)
 VignetteBuilder: knitr
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.0.1
-Depends: 
-    R (>= 3.1)
