@@ -43,8 +43,11 @@ Imports:
 Suggests: 
     feather (>= 0.3.1),
     knitr (>= 1.20),
-    rmarkdown (>= 1.9)
+    rmarkdown (>= 1.9),
+    covr
 VignetteBuilder: knitr
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.0.1
+Depends: 
+    R (>= 3.1)
