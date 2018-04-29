@@ -1,5 +1,8 @@
 # tidyverse 1.2.0.9000
 
+* `tidyverse_deps()` and `tidyverse_update()` gain a new `repos` argument
+  that gets passed to the base function `available.packages()` (@zkamvar, #82)
+
 # tidyverse 1.2.0
 
 ## Changes to tidyverse membership
