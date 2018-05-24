@@ -5,6 +5,8 @@ sudo: false
 cache: packages
 
 r:
+# - 3.1 # problems: dbplyr, tidyr, broom, modelr
+- 3.2
 - oldrel
 - release
 - devel
@@ -23,3 +25,6 @@ before_install: |
   CXX=g++-4.9
   CXX1X=g++-4.9
   CXX1XSTD=-std=c++11
+
+after_success:
+  - Rscript -e 'covr::codecov()'

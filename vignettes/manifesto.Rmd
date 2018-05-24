@@ -33,7 +33,7 @@ Many R packages (e.g. ggplot2, dplyr, tidyr) work with rectangular datasets made
 
 Some packages work at a lower level, focussing on a single type of variable. For example, __stringr__ for strings, __lubridate__ for date/times, and __forcats__ for factors. Generally prefer existing base R vector types, but when this is not possible, create your own using an S3 class built on top of an atomic vector or list. 
 
-If you need "non-standard scoping", where you refer to variables inside a data frame as if they are in the global environment, prefer formulas over non-standard evaluation. See [lazyeval](http://rpubs.com/hadley/lazyeval) for more details.
+If you need "non-standard scoping", where you refer to variables inside a data frame as if they are in the global environment, prefer tidy evaluation over non-standard evaluation. See [programming with dplyr](http://dplyr.tidyverse.org/articles/programming.html) for an example, and [section IV (metaprogramming) of Advanced R](https://adv-r.hadley.nz/meta.html) for more details.
 
 ## Compose simple functions with the pipe
 
