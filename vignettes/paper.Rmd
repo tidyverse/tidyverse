@@ -1,0 +1,136 @@
+---
+title: 'Tidyverse: An opionated collection of R packages designed for data science'
+output: github_document
+tags:
+- data science
+authors:
+- name: Hadley Wickham
+  orcid: 0000-0000-0000-0000
+  affiliation: 1
+
+affiliations:
+ - name: RStudio
+   index: 1
+date: 25 April 2018
+bibliography: paper.bib
+---
+
+# Introduction
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+```
+
+```{r, eval = FALSE, include = FALSE}
+# authors taken from tidyverse organisation members
+org <- gh::gh("GET /orgs/:org/members", org = "tidyverse")
+org %>% purrr::map_chr("login") %>% clipr::write_clip()
+# author list at https://docs.google.com/spreadsheets/d/1nXW6V5b6UkTjXBbzYvSCgKrF6cfUEyUdtHup88qD5h4/edit#gid=0
+```
+
+```{r, echo = FALSE}
+knitr::include_graphics("man/figures/logo.png")
+```
+
+The tidyverse is an opinionated collection of R packages designed to help you do data science. All packages share an underlying design philosophy, grammar, and data structures. The goal is to create packages in such a way that learning one package makes it easier to learn the next.
+
+<http://tidyverse.org> with a blog of package releases and other news at <https://www.tidyverse.org/articles/>
+
+The scope of the tidyverse is roughly tackle the repeated tasks at the heart of every data science project: get your data into R, get it into a convenient form, and then provide flexible tools for data manipuation and visualisation. Modelling and communication are outside of the scope.
+
+
+
+This paper documents the tidyverse package which provides a convenient way of downloading all tidyverse packages with a single R command:
+
+```{r, eval = FALSE}
+install.packages("tidyverse")
+```
+
+This paper briefly describes our model of data science, and hence the components of the tidyverse, then finishes with 
+
+
+# Components
+
+
+```{r}
+knitr::include_graphics("vignettes/data-science.png")
+```
+
+First you must __import__ your data into R. This typically means that you take data stored in a file, database, or web API, and load it into a data frame in R. If you can't get your data into R, you can't do data science on it!
+
+Once you've imported your data, it is a good idea to __tidy__ it. Tidying your data means storing it in a consistent form that matches the semantics of the dataset with the way it is stored. In brief, when your data is tidy, each column is a variable, and each row is an observation. Tidy data is important because the consistent structure lets you focus your struggle on questions about the data, not fighting to get the data into the right form for different functions.
+
+Once you have tidy data, a common first step is to __transform__ it. Transformation includes narrowing in on observations of interest (like all people in one city, or all data from the last year), creating new variables that are functions of existing variables (like computing velocity from speed and time), and calculating a set of summary statistics (like counts or means). Together, tidying and transforming are called __wrangling__, because getting your data in a form that's natural to work with often feels like a fight!
+
+Once you have tidy data with the variables you need, there are two main engines of knowledge generation: visualisation and modelling. These have complementary strengths and weaknesses so any real analysis will iterate between them many times.
+
+__Visualisation__ is a fundamentally human activity. A good visualisation will show you things that you did not expect, or raise new questions about the data. A good visualisation might also hint that you're asking the wrong question, or you need to collect different data. Visualisations can surprise you, but don't scale particularly well because they require a human to interpret them.
+
+__Models__ are complementary tools to visualisation. Once you have made your questions sufficiently precise, you can use a model to answer them. Models are a fundamentally mathematical or computational tool, so they generally scale well. Even when they don't, it's usually cheaper to buy more computers than it is to buy more brains! But every model makes assumptions, and by its very nature a model cannot question its own assumptions. That means a model cannot fundamentally surprise you.
+
+The last step of data science is __communication__, an absolutely critical part of any data analysis project, but however, it's outside of the scope
+
+Surrounding all these tools is __programming__. Programming is a cross-cutting tool that you use in every part of the project. You don't need to be an expert programmer to be a data scientist, but learning more about programming pays off because becoming a better programmer allows you to automate common tasks, and solve new problems with greater ease.
+
+The core tidyverse includes the packages that you're likely to use in everyday data analyses. As of tidyverse 1.2.0, the following packages are included in the core tidyverse:
+
+```{r, warning = FALSE}
+library(tidyverse)
+```
+
+The goal of the core tidyverse is to provide a set of tools that are you likely to use in almost every analysis. It includes:
+
+* ggplot2 [@ggplot2]
+* 
+
+As well as [readr](http://readr.tidyverse.org), for reading flat files, the tidyverse includes:
+
+* [readxl](http://readxl.tidyverse.org) for `.xls` and `.xlsx` sheets.
+
+* [haven](http://haven.tidyverse.org) for SPSS, Stata, and SAS data.
+
+There are a handful of other packages that are not in the tidyverse, but are tidyverse-adjacent. They are very useful for importing data from other sources:
+
+* [jsonlite](https://github.com/jeroen/jsonlite#jsonlite) for JSON.
+
+* [xml2](https://github.com/r-lib/xml2) for XML.
+
+* [httr](https://github.com/r-lib/httr) for web APIs.
+
+* [rvest](https://github.com/hadley/rvest) for web scraping.
+
+* [DBI](https://github.com/rstats-db/DBI) for relational databases.
+  To connect to a specific database, you'll need to pair DBI with a specific
+  backend like RSQLite, RPostgres, or odbc. Learn more at
+  <http://db.rstudio.com>.
+
+## Wrangle
+
+In addition to [tidyr](http://tidyr.tidyverse.org), and [dplyr](http://dplyr.tidyverse.org), there are five packages (including [stringr](http://stringr.tidyverse.org) and [forcats](http://forcats.tidyverse.org)) which are designed to work with specific types of data:
+
+* [lubridate](http://lubridate.tidyverse.org) for dates and date-times.
+* [hms](https://github.com/tidyverse/hms) for time-of-day values.
+* [blob](https://github.com/tidyverse/blob) for storing blob (binary) data.
+
+## Program
+
+In addition to [purrr](http://purrr.tidyverse.org), which provides very consistent and natural methods for iterating on R objects, there are three tidyverse packages that help with general programming challenges:
+
+* [rlang](http://rlang.tidyverse.org) provides tools to work with core language features of R and the tidyverse
+
+* [magrittr](http://magrittr.tidyverse.org) provides the pipe, `%>%` used
+  throughout the tidyverse. It also provide a number of more specialised
+  piping operators (like `%$%` and `%<>%`) that can be useful in other places.
+
+* [glue](https://github.com/tidyverse/glue) provides an alternative to
+  `paste()` that makes it easier to combine data and strings.
+
+# Philosophy
+
+The [@r4ds]
+
+"Tidy" data frames where every variable is a column (and every column a variable); [@tidy-data].
+
+Pipe-able APIs.
+
+# References
