@@ -52,7 +52,7 @@ tidyverse_deps <- function(recursive = FALSE) {
   )
   pkg_deps <- setdiff(pkg_deps, base_pkgs)
 
-  pkg_installed <- rownames(installed.packages())
+  pkg_installed <- rownames(utils::installed.packages())
   cran_version <- lapply(pkgs[pkg_deps, "Version"], base::package_version)
   local_version <- lapply(pkg_deps, function(x) {
     if (x %in% pkg_installed) {
