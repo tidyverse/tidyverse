@@ -36,9 +36,7 @@ The tidyverse is an opinionated collection of R packages designed to help you do
 
 <http://tidyverse.org> with a blog of package releases and other news at <https://www.tidyverse.org/articles/>
 
-The scope of the tidyverse is roughly tackle the repeated tasks at the heart of every data science project: get your data into R, get it into a convenient form, and then provide flexible tools for data manipuation and visualisation. Modelling and communication are outside of the scope.
-
-
+The scope of the tidyverse roughly covers the repeated tasks at the heart of every data science project: get your data into R, get it into a convenient form, and then provide flexible tools for data manipuation and visualisation. More extensive statistical modelling, and communication fall outside of the scope.
 
 This paper documents the tidyverse package which provides a convenient way of downloading all tidyverse packages with a single R command:
 
