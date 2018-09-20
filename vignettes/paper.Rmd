@@ -32,7 +32,7 @@ org %>% purrr::map_chr("login") %>% clipr::write_clip()
 knitr::include_graphics("man/figures/logo.png")
 ```
 
-The tidyverse is an opinionated collection of R packages designed to help you do data science. All packages share an underlying design philosophy, grammar, and data structures. The goal is to create packages in such a way that learning one package makes it easier to learn the next.
+The tidyverse is an opinionated collection of R packages designed to help you do exploratory data analysis for data science. All packages share an underlying design philosophy, grammar, and data structures. The goal is to create packages in such a way that learning one package makes it easier to learn the next.
 
 <http://tidyverse.org> with a blog of package releases and other news at <https://www.tidyverse.org/articles/>
 
