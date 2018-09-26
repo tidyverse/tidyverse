@@ -105,6 +105,8 @@ The goal of the core tidyverse is to provide a set of tools that are you likely 
 
 The tidyverse also includes many other packages with more specialised usage. They are not attached automatically with `library(tidyverse)`, so you’ll need to load each one with its own call to `library()`.
 
+## Import
+
 In addition to [readr](http://readr.tidyverse.org), for reading flat files, the tidyverse includes:
 
 * [readxl](https://readxl.tidyverse.org) for `.xls` and `.xlsx` sheets [@R-readxl].
