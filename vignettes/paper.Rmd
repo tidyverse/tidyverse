@@ -28,8 +28,8 @@ org %>% purrr::map_chr("login") %>% clipr::write_clip()
 # author list at https://docs.google.com/spreadsheets/d/1nXW6V5b6UkTjXBbzYvSCgKrF6cfUEyUdtHup88qD5h4/edit#gid=0
 ```
 
-```{r, echo = FALSE}
-knitr::include_graphics(here::here("man", "figures", "logo.png"))
+```{r, eval = FALSE, echo = FALSE}
+knitr::include_graphics("man/figures/logo.png")
 ```
 
 The tidyverse is an opinionated collection of R packages designed to help you do exploratory data analysis for data science. All packages share an underlying design philosophy, grammar, and data structures. The goal is to create packages in such a way that learning one package makes it easier to learn the next.
@@ -50,8 +50,8 @@ This paper briefly describes our model of data science, and hence the components
 
 # Components
 
-```{r echo = FALSE}
-knitr::include_graphics(here::here("vignettes", "data-science.png"))
+```{r eval = FALSE, echo = FALSE}
+knitr::include_graphics("vignettes/data-science.png")
 ```
 
 First you must __import__ your data into R. This typically means that you take data stored in a file, database, or web API, and load it into a data frame in R. If you can't get your data into R, you can't do data science on it!
