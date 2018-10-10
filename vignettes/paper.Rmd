@@ -161,11 +161,27 @@ There are a handful of other packages that are not in the tidyverse, but are tid
 
 # Philosophy
 
-The [@r4ds]
+The tidyverse packages are all designed to work with "tidy" data
+frames.[@r4ds] In a tidy data frame: every variable is a column (and every
+column a variable); each row is an observation; and each value has its own
+cell.[@tidy-data]. Using a consistent data structure makes it easier to learn,
+and reason about the tools.
 
-"Tidy" data frames where every variable is a column (and every column a variable); [@tidy-data].
+There are four basic principles behind a tidy API (further expanded upon in [The
+tidy tools
+manifesto](https://tidyverse.tidyverse.org/articles/manifesto.html))[@tidy-tools-manifesto]:
 
-Pipe-able APIs.
+1.  Reuse existing data structures.
+
+2.  Compose simple functions with the pipe.[@Bache2014]
+
+3.  Embrace functional programming.
+
+4.  Design for humans.
+
+These four principles are interrelated. 
+
+<!----- I want to say something here like: by using a consistent data structure, you can use simple functions. The pipe makes things readable, which means you're designing for humans. And, umm, embrace functional programming full-stop ----->
 
 # References
 
