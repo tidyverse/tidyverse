@@ -1,3 +1,4 @@
+^pkgdown$
 ^\.covrignore$
 ^.*\.Rproj$
 ^\.Rproj\.user$
