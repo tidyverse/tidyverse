@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# tidyverse <img src="man/figures/logo.png" align="right" />
+# tidyverse <a href='https:/tidyverse.tidyverse.org'><img src='man/figures/logo.png' align="right" height="138.5" /></a>
 
 [![Travis-CI Build
 Status](https://travis-ci.org/tidyverse/tidyverse.svg?branch=master)](https://travis-ci.org/tidyverse/tidyverse)
@@ -50,16 +50,14 @@ have loaded:
 
 ``` r
 library(tidyverse)
-#> ── Attaching packages ───────────────────────────────────────────────────────────────── tidyverse 1.2.0.9000 ──
-#> ✔ ggplot2 2.2.1.9000     ✔ purrr   0.2.4     
-#> ✔ tibble  1.4.2          ✔ dplyr   0.7.4     
-#> ✔ tidyr   0.8.0          ✔ stringr 1.3.0     
-#> ✔ readr   1.1.1          ✔ forcats 0.3.0
-#> Warning: package 'stringr' was built under R version 3.4.3
-#> ── Conflicts ───────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+#> ── Attaching packages ────────────────────────────────────────────────────────────────────── tidyverse 1.2.1.9000 ──
+#> ✔ ggplot2 3.0.0           ✔ purrr   0.2.5      
+#> ✔ tibble  1.4.99.9005     ✔ dplyr   0.7.99.9000
+#> ✔ tidyr   0.8.1           ✔ stringr 1.3.1      
+#> ✔ readr   1.1.1           ✔ forcats 0.3.0
+#> ── Conflicts ────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
 #> ✖ dplyr::filter() masks stats::filter()
 #> ✖ dplyr::lag()    masks stats::lag()
-#> ✖ dplyr::vars()   masks ggplot2::vars()
 ```
 
 You can see conflicts created later with `tidyverse_conflicts()`:
@@ -72,11 +70,10 @@ library(MASS)
 #> 
 #>     select
 tidyverse_conflicts()
-#> ── Conflicts ───────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+#> ── Conflicts ────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
 #> ✖ dplyr::filter() masks stats::filter()
 #> ✖ dplyr::lag()    masks stats::lag()
 #> ✖ MASS::select()  masks dplyr::select()
-#> ✖ dplyr::vars()   masks ggplot2::vars()
 ```
 
 And you can check that all tidyverse packages are up-to-date with

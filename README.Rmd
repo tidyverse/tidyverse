@@ -11,7 +11,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# tidyverse <img src="man/figures/logo.png" align="right" />
+# tidyverse <a href='https:/tidyverse.tidyverse.org'><img src='man/figures/logo.png' align="right" height="138.5" /></a>
 
 [![Travis-CI Build Status](https://travis-ci.org/tidyverse/tidyverse.svg?branch=master)](https://travis-ci.org/tidyverse/tidyverse)
 [![Coverage status](https://codecov.io/gh/tidyverse/tidyverse/branch/master/graph/badge.svg)](https://codecov.io/github/tidyverse/tidyverse?branch=master)
