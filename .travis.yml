@@ -1,15 +1,18 @@
 # R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
 
 language: R
-sudo: false
 cache: packages
 
-r:
-# - 3.1 # problems: dbplyr, tidyr, broom, modelr
-- 3.2
-- oldrel
-- release
-- devel
+matrix:
+  include:
+  - r: devel
+  - r: release
+    after_success:
+    - Rscript -e 'covr::codecov()'
+  - r: oldrel
+  - r: 3.3
+  - r: 3.2
+  # - 3.1 # problems: dbplyr, tidyr, broom, modelr
 
 addons:
   apt:
@@ -26,5 +29,3 @@ before_install: |
   CXX1X=g++-4.9
   CXX1XSTD=-std=c++11
 
-after_success:
-  - Rscript -e 'covr::codecov()'
