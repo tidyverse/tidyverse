@@ -12,6 +12,7 @@
 #' @importFrom jsonlite fromJSON
 #' @importFrom lubridate ymd
 #' @importFrom modelr add_predictions
+#' @importFrom pillar pillar
 #' @importFrom readr read_csv
 #' @importFrom readxl read_excel
 #' @importFrom reprex reprex
