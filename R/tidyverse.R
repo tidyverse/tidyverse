@@ -3,7 +3,7 @@
 
 # Suppress R CMD check note
 #' @importFrom broom tidy
-#' @importFrom dbplyr show_query
+#' @importFrom dbplyr db_collect
 #' @importFrom forcats fct_c
 #' @importFrom ggplot2 ggplot
 #' @importFrom haven read_sas
