@@ -31,6 +31,9 @@ authors:
 - name: Thomas Lin Pedersen
   orcid: 0000-0002-5147-4711
   affiliation: 1
+- name: Davis Vaughan
+  orcid: 
+  affiliation: 1
 - name: Mara Averick
   orcid: 0000-0001-9659-6192
   affiliation: 1
