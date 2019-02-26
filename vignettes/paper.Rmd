@@ -56,6 +56,18 @@ authors:
 - name: Kohske Takahashi
   orcid: 0000-0001-6076-4828
   affiliation: 9
+- name: Evan Miller
+  orcid: 
+  affiliation: 
+- name: Dana Paige Seidel
+  orcid: 
+  affiliation: 
+- name: Hiroaki Yutani
+  orcid: 
+  affiliation: 
+- name: Alex Hayes
+  orcid: 
+  affiliation: 
 affiliations:
  - name: RStudio
    index: 1
@@ -106,7 +118,8 @@ This paper documents the tidyverse package which provides a convenient way of do
 install.packages("tidyverse")
 ```
 
-<!-- HW: define core and non-core here -->
+The core tidyverse includes the packages that you're likely to use in everyday data analyses. As of tidyverse 1.2.0, the following packages are included in the core tidyverse: ggplot2 [@ggplot2], dplyr [@R-dplyr], tidyr [@R-tidyr], readr [@R-readr],
+purrr [@R-purrr], tibble [@R-tibble], stringr [@R-stringr], and forcats [@R-forcats].
 
 This paper describes the model of data science used by the tidyverse and the packages that support that model. We also touch on some of the underlying philosophy.
 
