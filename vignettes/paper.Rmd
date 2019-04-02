@@ -1,8 +1,9 @@
 ---
-title: 'Tidyverse: An opionated collection of R packages designed for data science'
-output: github_document
+title: 'Welcome to the Tidyverse'
+output: rmarkdown::html_vignette
 tags:
 - data science
+- R
 authors:
 - name: Hadley Wickham
   orcid: 0000-0003-4757-117X
@@ -94,11 +95,11 @@ affiliations:
    index: 11
  - name: University of Wisconsin, Madison
    index: 12
-date: 05 March 2019
+date: 02 April 2019
 bibliography: paper.bib
 ---
 
-# Introduction
+<!-- HW: can you please alphabetise the authors, leaving me as first author? -->
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
@@ -111,94 +112,86 @@ org %>% purrr::map_chr("login") %>% clipr::write_clip()
 # author list at https://docs.google.com/spreadsheets/d/1nXW6V5b6UkTjXBbzYvSCgKrF6cfUEyUdtHup88qD5h4/edit#gid=0
 ```
 
-```{r, eval = FALSE, echo = FALSE}
-knitr::include_graphics("man/figures/logo.png")
+# Introduction
+
+```{r, echo = FALSE}
+knitr::include_graphics("../man/figures/logo.png")
 ```
 
-The tidyverse is an opinionated collection of R packages designed to help you do exploratory data analysis for data science. All packages share an underlying design philosophy, grammar, and data structures. The goal is to create packages in such a way that learning one package makes it easier to learn the next.
+The tidyverse is a language for solving data science challenges with R code. Its primary goal is to facilitate the conversation that a human has with a dataset. All packages in the tidyverse share an underlying design philosophy, grammar, and data structures, with the goal that learning one package makes it easier to learn the next.
 
-The scope of the tidyverse roughly covers the repeated tasks at the heart of every data science project: get your data into R, get it into a convenient form, and then provide flexible tools for data manipuation and visualisation. While critical for good data analysis, more deep statistical modelling and communication fall outside of the scope of the tidyverse. We also expect that most projects will use multiple packages outside of the tidyverse: the goal is to provide tooling for the most common challenges, not solve every possible problem.
+The scope of the tidyverse is the repeated tasks at the heart of every data science project, including data import, wrangling, and visualisation. We expect that almost every project will use multiple packages from outside of the tidyverse: the goal is to provide tooling for the most common challenges, not solve every possible problem. In particular, the tidyverse doesn't include tools for statistical modelling or communication with others. These are both critical for data science projects, but big enough fields that they deserve separate treatment.
 
-This paper documents the tidyverse package which provides a convenient way of downloading all tidyverse packages with a single R command:
+This paper describes the tidyverse package, the components of the tidyverse, and some of the underlying philosophy.
+
+# Tidyverse package
+
+As well as a being a collection of packages, the tidyverse is also itself a package, which provides a convenient way of downloading all tidyverse packages with a single R command:
 
 ```{r, eval = FALSE}
 install.packages("tidyverse")
 ```
 
-The core tidyverse includes the packages that you're likely to use in everyday data analyses. As of tidyverse 1.2.0, the following packages are included in the core tidyverse: ggplot2 [@ggplot2], dplyr [@R-dplyr], tidyr [@R-tidyr], readr [@R-readr],
-purrr [@R-purrr], tibble [@R-tibble], stringr [@R-stringr], and forcats [@R-forcats]. The tidyverse also includes many other packages with more specialised usage. They are not attached automatically with `library(tidyverse)`, so you’ll need to load each one with its own call to `library()`.
+The core tidyverse includes the packages that you're likely to use in everyday data analyses, and these are loaded when you load the tidyverse:
 
-```{r, warning = FALSE, message = FALSE}
+```{r}
 library(tidyverse)
 ```
 
-This paper describes the model of data science used by the tidyverse and the packages that support that model. We also touch on some of the underlying philosophy.
+As of tidyverse 1.2.0, the core packages include ggplot2 [@ggplot2], dplyr [@R-dplyr], tidyr [@R-tidyr], readr [@R-readr], purrr [@R-purrr], tibble [@R-tibble], stringr [@R-stringr], and forcats [@R-forcats]. Non-core packages are installed with `install.packages("tidyverse")` but are not loaded with `library(tidyverse)`. They typically play more specialised roles, so need to loaded individually, as needed.
 
 # Components
 
-The tidyverse packages are introduced and used throughout "R for Data Science" [@r4ds], which uses a model of the tools needed in a typical data science project that looks something like this:
+The tidyverse packages are introduced and used throughout "R for Data Science" [@r4ds], which uses the following model of the tools for most data science projects:
 
-```{r eval = FALSE, echo = FALSE}
-knitr::include_graphics("vignettes/data-science.png")
+```{r, echo = FALSE}
+knitr::include_graphics("data-science.png")
 ```
 
-First you must __import__ your data into R. This typically means that you take data stored in a file, database, or web API, and load it into a data frame in R. If you can't get your data into R, you can't do data science on it! Data import is supported by the core [readr](https://readr.tidyverse.org/) [@R-readr] package for flat files (like csv, tsv, and fwf). Additional non-core packages like [readxl](https://readxl.tidyverse.org) [@R-readxl], [googledrive](https://googledrive.tidyverse.org/) [@R-googledrive], and [haven](https://haven.tidyverse.org) [@R-haven] support other types of data.
+First you must __import__ your data into R. This typically means that you take data stored in a file, database, or web API, and load it into a data frame in R. If you can't get your data into R, you can't do data science on it! Data import is supported by the core [readr](https://readr.tidyverse.org/) [@R-readr] package for flat files (like csv, tsv, and fwf). Additional non-core packages like [readxl](https://readxl.tidyverse.org) [@R-readxl], [googledrive](https://googledrive.tidyverse.org/) [@R-googledrive], and [haven](https://haven.tidyverse.org) [@R-haven] support data stored in other ways.
 
-<!-- HW: can you rewrite the following paragraphs following the template above, and hence eliminate the core and non-core sections? I've deleted the non-core packages that I don't think we need to explicitly mention -->
+<!-- HW: can you please replace googledrive with xml2  -->
 
-<!-- MA: Where does tibble fit in here? Should I skip blob below? -->
+We recommend that you __tidy__ your data, getting it into a consistent form that make the rest of the analysis easier. In a tidy data frame [@tidy-data] every column is variable, every row is an observation, and each cell contains a single value. The [tidyr](https://tidyr.tidyverse.org/) [@R-tidyr] package helps you tidy data, getting it into a form that other tidyverse pacakges work with.
 
-Next you must __tidy__ and __transform__ your data. Together, tidying and transfomring data are called __wrangling__. Data wrangling is supported by the core packages, [tidyr](https://tidyr.tidyverse.org/) [@R-tidyr] and [dplyr](https://dplyr.tidyverse.org/) [@R-dplyr]. There are also packages which are designed to work with specific types of data in the wrangling process. [stringr](https://stringr.tidyverse.org) and [forcats](https://forcats.tidyverse.org)), which help with string and factor variables, respectively, are core packages. [lubridate](https://lubridate.tidyverse.org) [@R-lubridate], [hms](https://hms.tidyverse.org/) [@R-hms], and [blob](https://blob.tidyverse.org/) [@R-blob] support data wrangling for other, less common data types.
+Next comes the __transform__ step. Data transformation is supported by the [dplyr](https://dplyr.tidyverse.org/) [@R-dplyr], which provide verbs that support the most common data frame manipulations. Other packages provide tools for specific types of data: 
 
-__Visualisation__ is a fundamentally human activity, and is used throughout the data-science process. A good visualisation will show you things that you did not expect, or raise new questions about the data. A good visualisation might also hint that you're asking the wrong question, or you need to collect different data. [ggplot2](https://ggplot2.tidyverse.org/) is a system for declaratively creating graphics, based on The Grammar of Graphics [@wilkinson2005]. You provide the data, tell ggplot2 how to map variables to aesthetics, what graphical primitives to use, and it takes care of the details [@ggplot2].
+* [stringr](https://stringr.tidyverse.org) for strings.
+* [forcats](https://forcats.tidyverse.org)) for factors, R's data type of
+  categorical values.
+* [lubridate](https://lubridate.tidyverse.org) [@R-lubridate] for 
+  dates and date-times.
+* [hms](https://hms.tidyverse.org/) [@R-hms] for clock times.
 
-Surrounding all these tools is __programming__. Programming is a cross-cutting tool that you use in every part of the project. [purrr](https://purrr.tidyverse.org/) enhances R’s functional programming (FP) toolkit by providing a complete and consistent set of tools for working with functions and vectors. Once you master the basic concepts, purrr allows you to replace many for loops with code that is easier to write and more expressive [@R-purrr]. 
+Next you'll gain understanding of your data by __visualising__ and __modelling__ it. [ggplot2](https://ggplot2.tidyverse.org/) is a system for declaratively creating graphics, based on The Grammar of Graphics [@wilkinson2005]. You provide the data, tell ggplot2 how to map variables to aesthetics, what graphical primitives to use, and it takes care of the details [@ggplot2]. Modelling is outside the scope of this paper, but is part of the closely affiliated [tidymodels](https://github.com/tidymodels) [@R-tidymodels] project, which shares the underlying design and data structures with the tidyverse  
 
+Finally, you'll need to communicate your results to someone else. __Communication__ is extremely important parts of data science, but is not included within tidyverse. Instead, we expect people will use other R packages like [rmarkdown](https://rmarkdown.rstudio.com/) [@R-rmarkdown] and [shiny](https://shiny.rstudio.com/) [@R-shiny], which support dozens of static and dynamic output formats.
 
-__Modelling__ and __communication__ are extremely important parts of data science, but are sufficiently large and complex that they are outside the scope of the tidyverse. [tidymodels](https://github.com/tidymodels) is a "meta-package" for modeling and statistical analysis that share the underlying design philosophy, grammar, and data structures of the tidyverse [@R-tidymodels]. The [rmarkdown](https://rmarkdown.rstudio.com/) [@R-rmarkdown], and [shiny](https://shiny.rstudio.com/) [@R-shiny] packages are excellent tools for communication, as they support dozens of static and dynamic output formats.
+Surrounding all these tools is __programming__. Programming is a cross-cutting tool that you use in every part of the project. Programming tools in the tidyverse include:
+
+* [purrr](https://purrr.tidyverse.org/) [@R-purrr], which enhances R’s
+  functional programming toolkit.
+
+* [tibble](https://tibble.tidyverse.org/) [@R-tibble], which provides
+  a modern re-imagining of the venerable data frame, keeping what time has
+  proven to be effective, and throwing out what it has not. 
+
+* [reprex](https://reprex.tidyverse.org/) [@R-reprex], which helps 
+  programmers get help when they stuck by easing the creation of reproducible
+  examples.
+
+* [magrittr](https://magrittr.tidyverse.org) [@R-magrittr], which provides 
+  the pipe, `%>%` used throughout the tidyverse. The pipe is a tool for
+  function composition, making it easier to solve large problems by breaking 
+  them into small pieces.
 
 # Philosophy
 
-We are still working to explicitly describe the unifying principles that make the tidyverse so consistent, and you can read our latest thoughts at <https://principles.tidyverse.org/>. There are four underlying principles that are unlikely to change:
+We are still working to explicitly describe the unifying principles that make the tidyverse so consistent, and you can read our latest thoughts at <https://principles.tidyverse.org/>. But there is one very important principle that is worth calling our here underlying principles: the tidyverse is fundamentally human centered.
 
-1.  Human centered.
-
-The tidyverse is designed specifically to support the activities of a human data analyst.
-    
-    To create effective programming tools we must must explicitly recognise and acknowledge the role played by cognitive psychology. This is particularly important for R, because it’s a language that’s used primarily by non-programmers, and we want to make it as easy as possible for first-time and end-user programmers to learn the tidyverse.
-
-This motivates the subsequent principles, __consistent__ and __composable__, which help reduce extraneous cognitive load. 
-
-1.  Consistent.
-    
-    The tidyverse packages are all designed to work with "tidy" data
-    frames.[@r4ds] In a tidy data frame: every variable is a column (and every
-    column a variable); each row is an observation; and each value has its own
-    cell.[@tidy-data]. Using a consistent data structure makes it easier to learn,
-    and reason about the tools.
-    
-The [tibble](https://tibble.tidyverse.org/) package helps enforce such consistency [@R-tibble]. The tibble is a modern re-imagining of the data frame, keeping what time has proven to be effective, and throwing out what it has not. Tibbles are data.frames that are lazy and surly: they do less and complain more forcing you to confront problems earlier, typically leading to cleaner, more expressive code.
-    
-1.  Composable.
-
-    Functions should be composable: each individual function should tackle one well contained problem, and you solve complex real-world problems by composing many individual functions.
-
-The [magrittr](https://magrittr.tidyverse.org) package provides the pipe, `%>%` used throughout the tidyverse [@R-magrittr]. We decompose large problems into smaller, more tractable ones by creating and combining functions that transform data rather than by creating objects whose state changes over time.
-
-
-1.  Functional.
-
-<!-- MA: Did we drop this principle or is it just not in principles yet? -->
-
-
-
-1.  Inclusive
+The tidyverse is designed specifically to support the activities of a human data analyst, and to create effective programming tools we must explicitly recognise that there is a human in the loop. This is particularly important for R, because it’s a language that’s used primarily by non-programmers, and we want to make it as easy as possible for first-time and end-user programmers to learn the tidyverse.
 
 The tidyverse is not just the collection of packages, but it is also the community of people who use them. We want the tidyverse to be a diverse, inclusive, and welcoming community. We develop educational materials accessible to people with many different skill levels.
-
-The [reprex](https://reprex.tidyverse.org/) package helps prepare reproducible examples for posting to GitHub issues, StackOverflow, or Slack snippets [@R-reprex]. Though by no means a panacea, reprex is part of the tidyverse because we believe it helps lower the barrier to effective communication about code.
-
-<!-- Can you take a stab at writing a paragraph for each of the points above? -->
 
 # References
 
