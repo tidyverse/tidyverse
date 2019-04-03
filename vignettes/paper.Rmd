@@ -8,8 +8,8 @@ authors:
 - name: Hadley Wickham
   orcid: 0000-0003-4757-117X
   affiliation: 1
-- name: Jim Hester
-  orcid: 0000-0002-2739-7082
+- name: Mara Averick
+  orcid: 0000-0001-9659-6192
   affiliation: 1
 - name: Jennifer Bryan
   orcid: 0000-0002-6983-2759
@@ -17,59 +17,60 @@ authors:
 - name: Winston Chang
   orcid: 0000-0002-1576-2126
   affiliation: 1
+- name: Lucy D'Agostino McGowan
+  orcid: 0000-0001-7297-9359
+  affiliation: 8
+- name: Romain François
+  orcid: 0000-0002-2444-4226
+  affiliation: 1
 - name: Garrett Grolemund
   orcid: 0000-0002-7765-6011
   affiliation: 1
+- name: Alex Hayes
+  orcid: 0000-0002-4985-5160
+  affiliation: 12
 - name: Lionel Henry
   orcid: 0000-0002-8143-5908
+  affiliation: 1
+- name: Jim Hester
+  orcid: 0000-0002-2739-7082
   affiliation: 1
 - name: Max Kuhn
   orcid: 0000-0003-2402-136X
   affiliation: 1
-- name: Romain François
-  orcid: 0000-0002-2444-4226
-  affiliation: 1
 - name: Thomas Lin Pedersen
   orcid: 0000-0002-5147-4711
   affiliation: 1
-- name: Davis Vaughan
-  orcid: 0000-0003-4777-038X
-  affiliation: 1
-- name: Mara Averick
-  orcid: 0000-0001-9659-6192
-  affiliation: 1
+- name: Evan Miller
+- name: Stephan Milton Bache
+  affiliation: 3
 - name: Kirill Müller
   orcid: 0000-0002-1416-3412
   affiliation: 2
-- name: Stephan Milton Bache
-  affiliation: 3
+- name: David Robinson
+  affiliation: 5
+- name: Dana Paige Seidel
+  orcid: 0000-0002-9088-5767
+  affiliation: 10
 - name: Vitalie Spinu
   orcid: 0000-0002-2138-3413
   affiliation: 4
-- name: David Robinson
-  affiliation: 5
+- name: Kohske Takahashi
+  orcid: 0000-0001-6076-4828
+  affiliation: 9
+- name: Davis Vaughan
+  orcid: 0000-0003-4777-038X
+  affiliation: 1
 - name: Claus Wilke
   orcid: 0000-0002-7470-9261
   affiliation: 6
 - name: Kara Woo
   orcid: 0000-0002-5125-4188
   affiliation: 7
-- name: Lucy D'Agostino McGowan
-  orcid: 0000-0001-7297-9359
-  affiliation: 8
-- name: Kohske Takahashi
-  orcid: 0000-0001-6076-4828
-  affiliation: 9
-- name: Evan Miller
-- name: Dana Paige Seidel
-  orcid: 0000-0002-9088-5767
-  affiliation: 10
 - name: Hiroaki Yutani
   orcid: 0000-0002-3385-7233
   affiliation: 11
-- name: Alex Hayes
-  orcid: 0000-0002-4985-5160
-  affiliation: 12
+
 affiliations:
  - name: RStudio
    index: 1
@@ -98,8 +99,6 @@ affiliations:
 date: 02 April 2019
 bibliography: paper.bib
 ---
-
-<!-- HW: can you please alphabetise the authors, leaving me as first author? -->
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
