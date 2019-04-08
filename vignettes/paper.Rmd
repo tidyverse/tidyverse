@@ -127,7 +127,7 @@ This paper describes the tidyverse package, the components of the tidyverse, and
 
 # Tidyverse package
 
-As well as a being a collection of packages, the tidyverse itself is also a package, which provides a convenient way of downloading all tidyverse packages with a single R command:
+As well as being a collection of packages, the tidyverse itself is also a package, which provides a convenient way of downloading all tidyverse packages with a single R command:
 
 ```{r, eval = FALSE}
 install.packages("tidyverse")
