@@ -104,13 +104,6 @@ bibliography: paper.bib
 knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
 ```
 
-```{r, eval = FALSE, include = FALSE}
-# authors taken from tidyverse organisation members
-org <- gh::gh("GET /orgs/:org/members", org = "tidyverse")
-org %>% purrr::map_chr("login") %>% clipr::write_clip()
-# author list at https://docs.google.com/spreadsheets/d/1nXW6V5b6UkTjXBbzYvSCgKrF6cfUEyUdtHup88qD5h4/edit#gid=0
-```
-
 # Introduction
 
 ```{r, echo = FALSE}
