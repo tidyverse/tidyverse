@@ -1,0 +1,106 @@
+---
+author:
+  - name: Hadley Wickham
+    affiliation: RStudio, Inc.
+    address: >
+      250 Northern Ave 
+      Boston, MA 02210
+    email: \email{hadley@rstudio.com}
+    orcid: 0000-0003-4757-117X
+    url: https://rstudio.com
+  - name: Mara Averick
+    orcid: 0000-0001-9659-6192
+    affiliation: RStudio, Inc.
+  - name: Jennifer Bryan
+    orcid: 0000-0002-6983-2759
+    affiliation: RStudio, Inc.
+  - name: Winston Chang
+    orcid: 0000-0002-1576-2126
+    affiliation: RStudio, Inc.
+  - name: Lucy D'Agostino McGowan
+    orcid: 0000-0001-7297-9359
+    affiliation: Department of Biostatistics, Johns Hopkins Bloomberg School of Public Health
+  - name: Romain François
+    orcid: 0000-0002-2444-4226
+    affiliation: RStudio, Inc.
+  - name: Garrett Grolemund
+    orcid: 0000-0002-7765-6011
+    affiliation: RStudio, Inc.
+  - name: Alex Hayes
+    orcid: 0000-0002-4985-5160
+    affiliation: University of Wisconsin, Madison
+  - name: Lionel Henry
+    orcid: 0000-0002-8143-5908
+    affiliation: RStudio, Inc.
+  - name: Jim Hester
+    orcid: 0000-0002-2739-7082
+    affiliation: RStudio, Inc.
+  - name: Max Kuhn
+    orcid: 0000-0003-2402-136X
+    affiliation: RStudio, Inc.
+  - name: Thomas Lin Pedersen
+    orcid: 0000-0002-5147-4711
+    affiliation: RStudio, Inc.
+  - name: Evan Miller
+  - name: Stephan Milton Bache
+    affiliation: Redbubble
+  - name: Kirill Müller
+    orcid: 0000-0002-1416-3412
+    affiliation: datatools
+  - name: David Robinson
+    affiliation: DataCamp
+  - name: Dana Paige Seidel
+    orcid: 0000-0002-9088-5767
+    affiliation: Department of Environmental Science, Policy, & Management, University of California, Berkeley
+  - name: Vitalie Spinu
+    orcid: 0000-0002-2138-3413
+    affiliation: Erasmus University Rotterdam
+  - name: Kohske Takahashi
+    orcid: 0000-0001-6076-4828
+    affiliation: Chukyo University, Japan
+  - name: Davis Vaughan
+    orcid: 0000-0003-4777-038X
+    affiliation: RStudio, Inc.
+  - name: Claus Wilke
+    orcid: 0000-0002-7470-9261
+    affiliation: Department of Integrative Biology, The University of Texas at Austin
+  - name: Kara Woo
+    orcid: 0000-0002-5125-4188
+    affiliation: Sage Bionetworks
+  - name: Hiroaki Yutani
+    orcid: 0000-0002-3385-7233
+    affiliation: LINE Corporation
+title:
+  formatted: "Welcome to the Tidyverse"
+  short:     "Welcome to the Tidyverse"
+abstract: >
+  The abstract of the article.
+keywords:
+  # at least one keyword must be supplied
+  formatted: [data science, "\\proglang{R}"]
+  plain:     [data science, R]
+preamble: >
+  \usepackage{amsmath}
+output: rticles::jss_article
+---
+
+# Introduction
+
+This template demonstrates some of the basic latex you'll need to know to create a JSS article.
+
+## Code formatting
+
+Don't use markdown, instead use the more precise latex commands:
+
+* \proglang{Java}
+* \pkg{plyr}
+* \code{print("abc")}
+
+# R code
+
+Can be inserted in regular R markdown blocks.
+
+```{r}
+x <- 1:10
+x
+```
