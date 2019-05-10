@@ -1,4 +1,22 @@
-# tidyverse 1.2.0.9000
+# tidyverse 1.2.1.9000
+
+* `tidyverse_deps()` now succeeds even if a dependency of a depedency 
+  is missing (#152, @PoGibas)
+
+* Packages attached from same library they were initially loaded from 
+  (#171, @gabrocsardi)
+
+* If conflicted package is loaded, omit display of conflicts
+
+* Eliminate repeats in the package list when loading an odd number of packages (#94, #100, @dchiu911)
+
+* Fixed parse error of tidyverse package names (#93, #106, @coatless)
+
+# tidyverse 1.2.1
+
+* Require modern versions of all packages (#85)
+
+* Work with RStudio 1.0 and earlier (#88).
 
 * `tidyverse_deps()` and `tidyverse_update()` gain a new `repos` argument
   that gets passed to the base function `available.packages()` (@zkamvar, #82)
@@ -7,8 +25,8 @@
 
 ## Changes to tidyverse membership
 
-* stringr is now part of the core tidyverse, so is attached when you 
-  `library(tidyverse)`.
+* stringr and forcats have been added to the core tidyverse, so they are
+  attached by `library(tidyverse)`.
 
 * reprex joins the tidyverse to make it easier to create reproducible
   examples (#47)

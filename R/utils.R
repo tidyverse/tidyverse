@@ -14,9 +14,13 @@ text_col <- function(x) {
     return(x)
   }
 
+  if (!rstudioapi::hasFun("getThemeInfo")) {
+    return(x)
+  }
+
   theme <- rstudioapi::getThemeInfo()
 
-  if (theme$dark) crayon::white(x) else crayon::black(x)
+  if (isTRUE(theme$dark)) crayon::white(x) else crayon::black(x)
 
 }
 
@@ -30,12 +34,13 @@ tidyverse_packages <- function(include_self = TRUE) {
   raw <- utils::packageDescription("tidyverse")$Imports
   imports <- strsplit(raw, ",")[[1]]
   parsed <- gsub("^\\s+|\\s+$", "", imports)
+  names <- vapply(strsplit(parsed, "\\s+"), "[[", 1, FUN.VALUE = character(1))
 
   if (include_self) {
-    parsed <- c(parsed, "tidyverse")
+    names <- c(names, "tidyverse")
   }
 
-  parsed
+  names
 }
 
 invert <- function(x) {

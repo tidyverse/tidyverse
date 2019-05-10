@@ -33,7 +33,7 @@ Many R packages (e.g. ggplot2, dplyr, tidyr) work with rectangular datasets made
 
 Some packages work at a lower level, focussing on a single type of variable. For example, __stringr__ for strings, __lubridate__ for date/times, and __forcats__ for factors. Generally prefer existing base R vector types, but when this is not possible, create your own using an S3 class built on top of an atomic vector or list. 
 
-If you need "non-standard scoping", where you refer to variables inside a data frame as if they are in the global environment, prefer formulas over non-standard evaluation. See [lazyeval](http://rpubs.com/hadley/lazyeval) for more details.
+If you need "non-standard scoping", where you refer to variables inside a data frame as if they are in the global environment, prefer tidy evaluation over non-standard evaluation. See the examples in [Tidy evaluation](https://tidyeval.tidyverse.org) and [the metaprogramming chapters in Advanced R](https://adv-r.hadley.nz/meta-big-picture.html) for more details.
 
 ## Compose simple functions with the pipe
 
@@ -63,11 +63,11 @@ Some things to bear in mind when writing functions:
     focus on the noun. A good example of this is ggplot2: almost every
     function adds something to an existing plot.
 
-An advantage of a pipeable API is that it is not compulsory: if you do not like using the pipe, you can compose functions in whatever way you prepare. Compare this to an operator-overloading approach (such as the `+` in ggplot2), or an object composition approach (such as the `...` approach in httr). 
+An advantage of a pipeable API is that it is not compulsory: if you do not like using the pipe, you can compose functions in whatever way you prepare. Compare this to an operator-overloading approach (such as the `+` in ggplot2), or an object-composition approach (such as the `...` approach in httr). 
 
 ## Embrace functional programming
 
-R is a functional programming language; embrace it, don't fight it. If you're familiar with an object-oriented language like Python or C#, this is going to take some adjustment. But in the long run you will be much better off working with the language rather than fighting it.
+R is a functional programming language; embrace it, don't fight it. If you're familiar with an object-oriented language like Python or C#, this is going to take some adjustment. But in the long run you will be much better off working with the language, rather than fighting it.
 
 Generally, this means you should favour:
 

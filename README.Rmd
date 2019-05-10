@@ -11,9 +11,13 @@ knitr::opts_chunk$set(
 )
 ```
 
-# tidyverse <img src="man/figures/logo.png" align="right" />
+# tidyverse <a href='https:/tidyverse.tidyverse.org'><img src='man/figures/logo.png' align="right" height="138.5" /></a>
 
-[![Travis-CI Build Status](https://travis-ci.org/tidyverse/tidyverse.svg?branch=master)](https://travis-ci.org/tidyverse/tidyverse)
+<!-- badges: start -->
+[![CRAN status](https://www.r-pkg.org/badges/version/tidyverse)](https://cran.r-project.org/package=tidyverse)
+[![Travis build status](https://travis-ci.org/tidyverse/tidyverse.svg?branch=master)](https://travis-ci.org/tidyverse/tidyverse)
+[![Codecov test coverage](https://codecov.io/gh/tidyverse/tidyverse/branch/master/graph/badge.svg)](https://codecov.io/gh/tidyverse/tidyverse?branch=master)
+<!-- badges: end -->
 
 ## Overview
 
@@ -42,6 +46,8 @@ devtools::install_github("hadley/tidyverse")
 * [readr](http://readr.tidyverse.org), for data import.
 * [purrr](http://purrr.tidyverse.org), for functional programming.
 * [tibble](http://tibble.tidyverse.org), for tibbles, a modern re-imagining of data frames.
+* [stringr](https://github.com/tidyverse/stringr), for strings.
+* [forcats](https://github.com/hadley/forcats), for factors.
 
 You also get a condensed summary of conflicts with other packages you have loaded:
 
@@ -77,10 +83,8 @@ As well as the core tidyverse, installing this package also installs a selection
 *   Working with specific types of vectors:
 
     * [hms](https://github.com/rstats-db/hms), for times.
-    * [stringr](https://github.com/tidyverse/stringr), for strings.
     * [lubridate](https://github.com/hadley/lubridate), for date/times.
-    * [forcats](https://github.com/hadley/forcats), for factors.
-
+    
 *   Importing other types of data:
 
     * [feather](http://github.com/wesm/feather), for sharing with Python and other languages.
