@@ -9,14 +9,14 @@ core_unloaded <- function() {
   core[!search %in% search()]
 }
 
-## Attach the package from the same package library it was
-## loaded from before. https://github.com/tidyverse/tidyverse/issues/171
-
+# Attach the package from the same package library it was
+# loaded from before. https://github.com/tidyverse/tidyverse/issues/171
 same_library <- function(pkg) {
   loc <- if (pkg %in% loadedNamespaces()) dirname(getNamespaceInfo(pkg, "path"))
   do.call(
     "library",
-    list(pkg, lib.loc = loc, character.only = TRUE, warn.conflicts = FALSE))
+    list(pkg, lib.loc = loc, character.only = TRUE, warn.conflicts = FALSE)
+  )
 }
 
 tidyverse_attach <- function() {
