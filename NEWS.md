@@ -1,5 +1,8 @@
 # tidyverse 1.2.1.9000
 
+* `tidyverse_deps()` and `tidyverse_update()` gain a new `repos` argument
+  that gets passed to the base function `available.packages()` (@zkamvar, #82)
+
 * `tidyverse_deps()` now succeeds even if a dependency of a depedency 
   is missing (#152, @PoGibas)
 
