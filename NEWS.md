@@ -1,5 +1,8 @@
 # tidyverse 1.2.1.9000
 
+* `tidyverse_deps()` now succeeds even if a dependency of a depedency 
+  is missing (#152, @PoGibas)
+
 * Packages attached from same library they were initially loaded from 
   (#171, @gabrocsardi)
 
