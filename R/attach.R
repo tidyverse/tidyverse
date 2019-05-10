@@ -1,9 +1,5 @@
 core <- c("ggplot2", "tibble", "tidyr", "readr", "purrr", "dplyr", "stringr", "forcats")
 
-core_loaded <- function() {
-  search <- paste0("package:", core)
-  core[search %in% search()]
-}
 core_unloaded <- function() {
   search <- paste0("package:", core)
   core[!search %in% search()]
