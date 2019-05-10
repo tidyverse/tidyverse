@@ -4,14 +4,14 @@
 \alias{tidyverse_update}
 \title{Update tidyverse packages}
 \usage{
-tidyverse_update(recursive = FALSE, repos = getOptions("repos"))
+tidyverse_update(recursive = FALSE, repos = getOption("repos"))
 }
 \arguments{
-\item{recursive}{If \code{TRUE}, will also check all dependencies of
+\item{recursive}{If \code{TRUE}, will also list all dependencies of
 tidyverse packages.}
 
-\item{repos}{the base URL(s) of the repositories to use to check for updates.
-Defaults to \code{getOptions("repos")}}
+\item{repos}{The repositories to use to check for updates.
+Defaults to \code{getOptions("repos")}.}
 }
 \description{
 This will check to see if all tidyverse packages (and optionally, their

@@ -4,16 +4,13 @@
 #' dependencies) are up-to-date, and will install after an interactive
 #' confirmation.
 #'
-#' @param recursive If \code{TRUE}, will also check all dependencies of
-#'   tidyverse packages.
-#' @param repos the base URL(s) of the repositories to use to check for updates.
-#'   Defaults to \code{getOptions("repos")}
+#' @inheritParams tidyverse_deps
 #' @export
 #' @examples
 #' \dontrun{
 #' tidyverse_update()
 #' }
-tidyverse_update <- function(recursive = FALSE, repos = getOptions("repos")) {
+tidyverse_update <- function(recursive = FALSE, repos = getOption("repos")) {
 
   deps <- tidyverse_deps(recursive, repos)
   behind <- dplyr::filter(deps, behind)
@@ -40,10 +37,10 @@ tidyverse_update <- function(recursive = FALSE, repos = getOptions("repos")) {
 #'
 #' @param recursive If \code{TRUE}, will also list all dependencies of
 #'   tidyverse packages.
-#' @param repos the base URL(s) of the repositories to use. Defaults to
-#'   \code{getOptions("repos")}
+#' @param repos The repositories to use to check for updates.
+#'   Defaults to \code{getOptions("repos")}.
 #' @export
-tidyverse_deps <- function(recursive = FALSE, repos = getOptions("repos")) {
+tidyverse_deps <- function(recursive = FALSE, repos = getOption("repos")) {
   pkgs <- utils::available.packages(repos = repos)
   deps <- tools::package_dependencies("tidyverse", pkgs, recursive = recursive)
 
