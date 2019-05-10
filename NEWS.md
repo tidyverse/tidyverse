@@ -1,5 +1,8 @@
 # tidyverse 1.2.1.9000
 
+* Packages attached from same library they were initially loaded from 
+  (#171, @gabrocsardi)
+
 * If conflicted package is loaded, omit display of conflicts
 
 * Eliminate repeats in the package list when loading an odd number of packages (#94, #100, @dchiu911)
