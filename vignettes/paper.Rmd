@@ -104,6 +104,8 @@ bibliography: paper.bib
 knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
 ```
 
+<!-- should we just change introduction to summary? -->
+
 # Introduction
 
 ```{r, echo = FALSE}
@@ -112,7 +114,7 @@ knitr::include_graphics("../man/figures/logo.png")
 
 At a high level, the tidyverse is a language for solving data science challenges with R code. Its primary goal is to facilitate a conversation between a human and a computer about data. Less abstractly, the tidyverse is a collection of R packages that share an underlying design philosophy, grammar, and data structures, with the aim that learning one package makes it easier to learn the next. 
 
-The tidyverse encompasses the repeated tasks at the heart of every data science project: data import, tidying, manipulation, visualisation, and programming. We expect that almost every project will use multiple domain specific packages outside of the tidyverse: our goal is to provide tooling for the most common challenges, not to solve every possible problem. Notably, the tidyverse doesn't include tools for statistical modelling or communication. These toolkits are critical for data science, but big enough domains that they merit separate treatment.
+The tidyverse encompasses the repeated tasks at the heart of every data science project: data import, tidying, manipulation, visualisation, and programming. We expect that almost every project will use multiple domain-specific packages outside of the tidyverse: our goal is to provide tooling for the most common challenges, not to solve every possible problem. Notably, the tidyverse doesn't include tools for statistical modelling or communication. These toolkits are critical for data science, but big enough domains that they merit separate treatment.
 
 This paper describes the tidyverse package, the components of the tidyverse, and some of the underlying philosophy.
 
@@ -180,6 +182,8 @@ We are still working to explicitly describe the unifying principles that make th
 
 This is particularly important for R, because it’s a language that’s used primarily by non-programmers, and we want to make it as easy as possible for first-time and end-user programmers to learn the tidyverse. This means that we spend a lot of time thinking about interface design, and have recently started experimenting with [surveys](https://github.com/hadley/table-shapes) to help guide interface choices.
 
-Similarly, the tidyverse is not just the collection of packages --- it is also the community of people who use them. We want the tidyverse to be a diverse, inclusive, and welcoming community. We are still developing our skills in this area, but our existing approaches include active use of twitter to [solicit feedback](https://twitter.com/hadleywickham/status/948722811232751617), [announce updated](https://twitter.com/dataandme/status/998692786772873216), and generally listen to the community. We also keeping users apprised of major upcoming changes through the [tidyverse blog](https://www.tidyverse.org/articles/), run [developer days](https://www.tidyverse.org/articles/2018/08/tidyverse-developer-day/), and support lively discussions on [RStudio community](https://community.rstudio.com).
+Similarly, the tidyverse is not just the collection of packages --- it is also the community of people who use them. We want the tidyverse to be a diverse, inclusive, and welcoming community. We are still developing our skills in this area, but our existing approaches include active use of twitter to [solicit feedback](https://twitter.com/hadleywickham/status/948722811232751617), [announce updates](https://twitter.com/dataandme/status/998692786772873216), and generally listen to the community. We also keeping users apprised of major upcoming changes through the [tidyverse blog](https://www.tidyverse.org/articles/), run [developer days](https://www.tidyverse.org/articles/2018/08/tidyverse-developer-day/), and support lively discussions on [RStudio community](https://community.rstudio.com).
+
+# Acknowledgements
 
 # References
