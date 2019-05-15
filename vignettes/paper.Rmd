@@ -96,7 +96,7 @@ affiliations:
    index: 11
  - name: University of Wisconsin, Madison
    index: 12
-date: 02 April 2019
+date: 17 May 2019
 bibliography: paper.bib
 ---
 
@@ -104,13 +104,9 @@ bibliography: paper.bib
 knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
 ```
 
-<!-- should we just change introduction to summary? -->
+# Summary
 
-# Introduction
-
-```{r, echo = FALSE}
-knitr::include_graphics("../man/figures/logo.png")
-```
+![](tidyverse-logo.png)
 
 At a high level, the tidyverse is a language for solving data science challenges with R code. Its primary goal is to facilitate a conversation between a human and a computer about data. Less abstractly, the tidyverse is a collection of R packages that share an underlying design philosophy, grammar, and data structures, with the aim that learning one package makes it easier to learn the next. 
 
@@ -138,9 +134,7 @@ As of tidyverse 1.2.0, the core packages include ggplot2 [@ggplot2], dplyr [@R-d
 
 How do the component packages of the tidyverse fit together? We use the model of data science tools from "R for Data Science" [@r4ds]:
 
-```{r, echo = FALSE}
-knitr::include_graphics("data-science.png")
-```
+![](data-science.png)
 
 Every analysis starts with data __import__: if you can't get your data into R, you can't do data science on it! Data import takes data stored in a file, database, or web API, and reads it into a data frame in R. Data import is supported by the core [readr](https://readr.tidyverse.org/) [@R-readr] package for flat files (like csv, tsv, and fwf). Additional non-core packages, such as [readxl](https://readxl.tidyverse.org) [@R-readxl], [rvest](https://rvest.tidyverse.org/) [@R-rvest], and [haven](https://haven.tidyverse.org) [@R-haven], make it possible to import data stored in other forms.
 
@@ -182,8 +176,10 @@ We are still working to explicitly describe the unifying principles that make th
 
 This is particularly important for R, because it’s a language that’s used primarily by non-programmers, and we want to make it as easy as possible for first-time and end-user programmers to learn the tidyverse. This means that we spend a lot of time thinking about interface design, and have recently started experimenting with [surveys](https://github.com/hadley/table-shapes) to help guide interface choices.
 
-Similarly, the tidyverse is not just the collection of packages --- it is also the community of people who use them. We want the tidyverse to be a diverse, inclusive, and welcoming community. We are still developing our skills in this area, but our existing approaches include active use of twitter to [solicit feedback](https://twitter.com/hadleywickham/status/948722811232751617), [announce updates](https://twitter.com/dataandme/status/998692786772873216), and generally listen to the community. We also keeping users apprised of major upcoming changes through the [tidyverse blog](https://www.tidyverse.org/articles/), run [developer days](https://www.tidyverse.org/articles/2018/08/tidyverse-developer-day/), and support lively discussions on [RStudio community](https://community.rstudio.com).
+Similarly, the tidyverse is not just the collection of packages --- it is also the community of people who use them. We want the tidyverse to be a diverse, inclusive, and welcoming community. We are still developing our skills in this area, but our existing approaches include active use of twitter to [solicit feedback](https://twitter.com/hadleywickham/status/948722811232751617), announce updates, and generally listen to the community. We also keeping users apprised of major upcoming changes through the [tidyverse blog](https://www.tidyverse.org/articles/), run [developer days](https://www.tidyverse.org/articles/2018/08/tidyverse-developer-day/), and support lively discussions on [RStudio community](https://community.rstudio.com).
 
-# Acknowledgements
+# Acknowledgments
+
+We are grateful for the financial support of [RStudio, Inc](https://www.rstudio.com/).
 
 # References
