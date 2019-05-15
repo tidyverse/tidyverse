@@ -1,6 +1,8 @@
 ---
 title: 'Welcome to the Tidyverse'
-output: rmarkdown::html_vignette
+output:
+  rmarkdown::html_vignette:
+    keep_md: TRUE
 tags:
 - data science
 - R
@@ -70,7 +72,6 @@ authors:
 - name: Hiroaki Yutani
   orcid: 0000-0002-3385-7233
   affiliation: 11
-
 affiliations:
  - name: RStudio
    index: 1
