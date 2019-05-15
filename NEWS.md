@@ -1,5 +1,7 @@
 # tidyverse 1.2.1.9000
 
+* `tidyverse_conflicts()` now works if the conflicted package is loaded (#136).
+
 * `tidyverse_deps()` and `tidyverse_update()` gain a new `repos` argument
   that gets passed to the base function `available.packages()` (@zkamvar, #82)
 
