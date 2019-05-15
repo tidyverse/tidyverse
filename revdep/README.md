@@ -2,134 +2,112 @@
 
 |field    |value                        |
 |:--------|:----------------------------|
-|version  |R version 3.4.2 (2017-09-28) |
-|os       |macOS Sierra 10.12.6         |
+|version  |R version 3.5.2 (2018-12-20) |
+|os       |macOS Mojave 10.14.3         |
 |system   |x86_64, darwin15.6.0         |
 |ui       |RStudio                      |
 |language |(EN)                         |
 |collate  |en_US.UTF-8                  |
+|ctype    |en_US.UTF-8                  |
 |tz       |America/Chicago              |
-|date     |2017-11-07                   |
+|date     |2019-05-15                   |
 
 # Dependencies
 
 |package      |old      |new        |Δ  |
 |:------------|:--------|:----------|:--|
-|tidyverse    |1.1.1    |1.1.1.9000 |*  |
-|assertthat   |0.2.0    |0.2.0      |   |
-|backports    |NA       |1.1.1      |*  |
-|base64enc    |NA       |0.1-3      |*  |
-|BH           |1.65.0-1 |1.65.0-1   |   |
-|bindr        |0.1      |0.1        |   |
-|bindrcpp     |0.2      |0.2        |   |
-|bitops       |NA       |1.0-6      |*  |
-|broom        |0.4.2    |0.4.2      |   |
-|callr        |NA       |1.0.0      |*  |
-|caTools      |NA       |1.17.1     |*  |
+|tidyverse    |1.2.1    |1.2.1.9000 |*  |
+|askpass      |1.1      |1.1        |   |
+|assertthat   |0.2.1    |0.2.1      |   |
+|backports    |1.1.4    |1.1.4      |   |
+|base64enc    |0.1-3    |0.1-3      |   |
+|BH           |1.69.0-1 |1.69.0-1   |   |
+|broom        |0.5.2    |0.5.2      |   |
+|callr        |3.2.0    |3.2.0      |   |
 |cellranger   |1.1.0    |1.1.0      |   |
-|cli          |NA       |1.0.0      |*  |
-|clipr        |NA       |0.4.0      |*  |
-|colorspace   |1.3-2    |1.3-2      |   |
-|crayon       |NA       |1.3.4      |*  |
-|curl         |3.0      |3.0        |   |
-|DBI          |NA       |0.7        |*  |
-|dbplyr       |NA       |1.1.0      |*  |
-|dichromat    |2.0-0    |2.0-0      |   |
-|digest       |0.6.12   |0.6.12     |   |
-|dplyr        |0.7.4    |0.7.4      |   |
-|evaluate     |NA       |0.10.1     |*  |
-|forcats      |0.2.0    |0.2.0      |   |
-|ggplot2      |2.2.1    |2.2.1      |   |
-|glue         |1.2.0    |1.2.0      |   |
-|gtable       |0.2.0    |0.2.0      |   |
-|haven        |1.1.0    |1.1.0      |   |
-|highr        |NA       |0.6        |*  |
-|hms          |0.3      |0.3        |   |
-|htmltools    |NA       |0.3.6      |*  |
-|httr         |1.3.1    |1.3.1      |   |
-|jsonlite     |1.5      |1.5        |   |
-|knitr        |NA       |1.17       |*  |
+|cli          |1.1.0    |1.1.0      |   |
+|clipr        |0.6.0    |0.6.0      |   |
+|crayon       |1.3.4    |1.3.4      |   |
+|curl         |3.3      |3.3        |   |
+|DBI          |1.0.0    |1.0.0      |   |
+|dbplyr       |1.4.0    |1.4.0      |   |
+|digest       |0.6.18   |0.6.18     |   |
+|dplyr        |0.8.0.1  |0.8.0.1    |   |
+|ellipsis     |0.1.0    |0.1.0      |   |
+|evaluate     |0.13     |0.13       |   |
+|fansi        |0.4.0    |0.4.0      |   |
+|forcats      |0.4.0    |0.4.0      |   |
+|fs           |1.3.1    |1.3.1      |   |
+|generics     |0.0.2    |0.0.2      |   |
+|ggplot2      |3.1.1    |3.1.1      |   |
+|glue         |1.3.1    |1.3.1      |   |
+|haven        |2.1.0    |2.1.0      |   |
+|highr        |0.8      |0.8        |   |
+|hms          |0.4.2    |0.4.2      |   |
+|htmltools    |0.3.6    |0.3.6      |   |
+|httr         |1.4.0    |1.4.0      |   |
+|jsonlite     |1.6      |1.6        |   |
+|knitr        |1.22     |1.22       |   |
 |labeling     |0.3      |0.3        |   |
-|lazyeval     |0.2.1    |0.2.1      |   |
-|lubridate    |1.7.1    |1.7.1      |   |
+|lazyeval     |0.2.2    |0.2.2      |   |
+|lubridate    |1.7.4    |1.7.4      |   |
 |magrittr     |1.5      |1.5        |   |
-|markdown     |NA       |0.8        |*  |
-|mime         |0.5      |0.5        |   |
-|mnormt       |1.5-5    |1.5-5      |   |
-|modelr       |0.1.1    |0.1.1      |   |
-|munsell      |0.4.3    |0.4.3      |   |
-|openssl      |0.9.8    |0.9.8      |   |
-|pkgconfig    |2.0.1    |2.0.1      |   |
-|plogr        |0.1-1    |0.1-1      |   |
+|markdown     |0.9      |0.9        |   |
+|mime         |0.6      |0.6        |   |
+|modelr       |0.1.4    |0.1.4      |   |
+|munsell      |0.5.0    |0.5.0      |   |
+|openssl      |1.3      |1.3        |   |
+|pillar       |1.4.0    |1.4.0      |   |
+|pkgconfig    |2.0.2    |2.0.2      |   |
+|plogr        |0.2.0    |0.2.0      |   |
 |plyr         |1.8.4    |1.8.4      |   |
-|psych        |1.7.8    |1.7.8      |   |
-|purrr        |0.2.4    |0.2.4      |   |
-|R6           |2.2.2    |2.2.2      |   |
+|prettyunits  |1.0.2    |1.0.2      |   |
+|processx     |3.3.1    |3.3.1      |   |
+|progress     |1.2.1    |1.2.1      |   |
+|ps           |1.3.0    |1.3.0      |   |
+|purrr        |0.3.2    |0.3.2      |   |
+|R6           |2.4.0    |2.4.0      |   |
 |RColorBrewer |1.1-2    |1.1-2      |   |
-|Rcpp         |0.12.13  |0.12.13    |   |
-|readr        |1.1.1    |1.1.1      |   |
-|readxl       |1.0.0    |1.0.0      |   |
+|Rcpp         |1.0.1    |1.0.1      |   |
+|readr        |1.3.1    |1.3.1      |   |
+|readxl       |1.3.1    |1.3.1      |   |
 |rematch      |1.0.1    |1.0.1      |   |
-|reprex       |NA       |0.1.1      |*  |
-|reshape2     |1.4.2    |1.4.2      |   |
-|rlang        |0.1.4    |0.1.4      |   |
-|rmarkdown    |NA       |1.6        |*  |
-|rprojroot    |NA       |1.2        |*  |
-|rstudioapi   |NA       |0.7        |*  |
-|rvest        |0.3.2    |0.3.2      |   |
-|scales       |0.5.0    |0.5.0      |   |
-|selectr      |0.3-1    |0.3-1      |   |
-|stringi      |1.1.5    |1.1.5      |   |
-|stringr      |1.2.0    |1.2.0      |   |
-|tibble       |1.3.4    |1.3.4      |   |
-|tidyr        |0.7.2    |0.7.2      |   |
-|tidyselect   |0.2.3    |0.2.3      |   |
-|viridisLite  |0.2.0    |0.2.0      |   |
-|whisker      |NA       |0.3-2      |*  |
-|xml2         |1.1.1    |1.1.1      |   |
-|yaml         |NA       |2.1.14     |*  |
+|reprex       |0.2.1    |0.2.1      |   |
+|reshape2     |1.4.3    |1.4.3      |   |
+|rlang        |0.3.4    |0.3.4      |   |
+|rmarkdown    |1.12     |1.12       |   |
+|rstudioapi   |0.10     |0.10       |   |
+|rvest        |0.3.3    |0.3.3      |   |
+|scales       |1.0.0    |1.0.0      |   |
+|selectr      |0.4-1    |0.4-1      |   |
+|stringi      |1.4.3    |1.4.3      |   |
+|stringr      |1.4.0    |1.4.0      |   |
+|sys          |3.2      |3.2        |   |
+|tibble       |2.1.1    |2.1.1      |   |
+|tidyr        |0.8.3    |0.8.3      |   |
+|tidyselect   |0.2.5    |0.2.5      |   |
+|tinytex      |0.13     |0.13       |   |
+|utf8         |1.1.4    |1.1.4      |   |
+|vctrs        |0.1.0    |0.1.0      |   |
+|viridisLite  |0.3.0    |0.3.0      |   |
+|whisker      |0.3-2    |0.3-2      |   |
+|withr        |2.1.2    |2.1.2      |   |
+|xfun         |0.7      |0.7        |   |
+|xml2         |1.2.0    |1.2.0      |   |
+|yaml         |2.2.0    |2.2.0      |   |
+|zeallot      |0.1.0    |0.1.0      |   |
 
 # Revdeps
 
-## All (37)
+## Failed to check (7)
 
-|package                                            |version |error |warning |note |
-|:--------------------------------------------------|:-------|:-----|:-------|:----|
-|[alphavantager](problems.md#alphavantager)         |0.1.0   |1     |        |1    |
-|bioset                                             |0.2.0   |      |        |     |
-|blscrapeR                                          |3.0.1   |      |        |     |
-|ciTools                                            |0.2.1   |      |        |     |
-|cvequality                                         |0.1.1   |      |        |     |
-|[dplyrAssist](problems.md#dplyrassist)             |0.1.0   |      |        |1    |
-|[epitable](problems.md#epitable)                   |0.1.2   |      |        |1    |
-|fbar                                               |0.3.4   |      |        |     |
-|[fivethirtyeight](problems.md#fivethirtyeight)     |0.3.0   |      |        |2    |
-|furniture                                          |1.6.0   |      |        |     |
-|[ggconf](problems.md#ggconf)                       |0.1     |      |        |1    |
-|ggjoy                                              |0.4.0   |      |        |     |
-|[ggplotAssist](problems.md#ggplotassist)           |0.1.0   |      |        |1    |
-|[ggridges](problems.md#ggridges)                   |0.4.1   |      |        |1    |
-|[ggthemes](problems.md#ggthemes)                   |3.4.0   |      |        |1    |
-|[learningCurve](problems.md#learningcurve)         |1.1.1   |      |        |1    |
-|[mdsr](problems.md#mdsr)                           |0.1.4   |      |        |3    |
-|mortAAR                                            |1.0.0   |      |        |     |
-|[mosaicModel](problems.md#mosaicmodel)             |0.3.0   |      |        |1    |
-|[neuropsychology](problems.md#neuropsychology)     |0.5.0   |      |        |1    |
-|passport                                           |0.1.1   |      |        |     |
-|[perccalc](problems.md#perccalc)                   |1.0.0   |      |        |1    |
-|pinnacle.data                                      |0.1.4   |      |        |     |
-|pipeliner                                          |0.1.1   |      |        |     |
-|pkggraph                                           |0.2.2   |      |        |     |
-|pollstR                                            |2.0.0   |      |        |     |
-|[psycho](problems.md#psycho)                       |0.0.2   |      |        |1    |
-|[RBesT](problems.md#rbest)                         |1.2-3   |      |        |1    |
-|rgeopat2                                           |0.1.2   |      |        |     |
-|[rmsfuns](problems.md#rmsfuns)                     |0.0.0.2 |      |        |1    |
-|[sjstats](problems.md#sjstats)                     |0.12.0  |      |        |1    |
-|[statesRcontiguous](problems.md#statesrcontiguous) |0.1.0   |      |        |2    |
-|[sweep](problems.md#sweep)                         |0.2.0   |      |        |1    |
-|[tidyquant](problems.md#tidyquant)                 |0.5.3   |1     |1       |1    |
-|[timekit](problems.md#timekit)                     |0.3.1   |      |        |1    |
-|[timetk](problems.md#timetk)                       |0.1.0   |      |        |1    |
-|Zelig                                              |5.1-4   |      |        |     |
+|package      |version |error |warning |note |
+|:------------|:-------|:-----|:-------|:----|
+|CNPBayes     |1.12.0  |1     |        |1    |
+|CVE          |1.8.0   |1     |        |     |
+|heatwaveR    |0.3.6   |1     |        |     |
+|martini      |1.2.0   |1     |        |     |
+|specklestar  |0.0.1.7 |1     |        |     |
+|updog        |1.0.1   |1     |        |     |
+|weibulltools |1.0.1   |1     |        |     |
 

@@ -7,16 +7,20 @@
 
 ## R CMD check results
 
-0 errors | 0 warnings | 1 note
+0 errors | 0 warnings | 0 notes
 
-*   Days since last update: 6
- 
-    This a patch release because I discovered I had inadvertently depended on 
-    RStudio >1.1 (via the rstudioapi package). My automatic tests did not 
-    discover this because they're always run from the console. To prevent
-    this happening in the future, I've added a step to the release process
-    to always test in older versions of RStudio.
+## revdepcheck results
 
-## Revdep check results
+We checked 67 reverse dependencies (62 from CRAN + 5 from BioConductor), comparing R CMD check results across CRAN and dev versions of this package.
 
-Since this only affects RStudio, I did not retest revdeps.
+ * We saw 0 new problems
+ * We failed to check 4 packages
+
+Issues with CRAN packages are summarised below.
+
+### Failed to check
+
+* heatwaveR    (NA)
+* specklestar  (NA)
+* updog        (NA)
+* weibulltools (NA)
