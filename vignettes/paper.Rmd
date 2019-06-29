@@ -146,7 +146,7 @@ Next, we recommend that you __tidy__ your data, getting it into a consistent for
 Data __transformation__ is supported by the core [dplyr](https://dplyr.tidyverse.org/) [@R-dplyr] package. dplyr provides verbs that work with whole data frames, such as `mutate()` to create new variables, `filter()` to find observations matching given criteria, and `left_join()` and friends to combine multiple tables. dplyr is paired with packages that provide tools for specific column types: 
 
 * [stringr](https://stringr.tidyverse.org) for strings.
-* [forcats](https://forcats.tidyverse.org)) for factors, R's categorical data 
+* [forcats](https://forcats.tidyverse.org) for factors, R's categorical data 
   type.
 * [lubridate](https://lubridate.tidyverse.org) [@R-lubridate] for dates and 
   date-times.
