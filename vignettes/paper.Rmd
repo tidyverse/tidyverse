@@ -109,9 +109,9 @@ knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
 
 ![](tidyverse-logo.png)
 
-At a high level, the tidyverse is a language for solving data science challenges with R code. Its primary goal is to facilitate a conversation between a human and a computer about data. Less abstractly, the tidyverse is a collection of R packages that share an underlying design philosophy, grammar, and data structures, with the aim that learning one package makes it easier to learn the next. 
+At a high level, the tidyverse is a language for solving data science challenges with R code. Its primary goal is to facilitate a conversation between a human and a computer about data. Less abstractly, the tidyverse is a collection of R packages that share an underlying design philosophy, grammar, and data structures, so that learning one package should make it easier to learn the next. 
 
-The tidyverse encompasses the repeated tasks at the heart of every data science project: data import, tidying, manipulation, visualisation, and programming. We expect that almost every project will use multiple domain-specific packages outside of the tidyverse: our goal is to provide tooling for the most common challenges, not to solve every possible problem. Notably, the tidyverse doesn't include tools for statistical modelling or communication. These toolkits are critical for data science, but big enough domains that they merit separate treatment.
+The tidyverse encompasses the repeated tasks at the heart of every data science project: data import, tidying, manipulation, visualisation, and programming. We expect that almost every project will use multiple domain-specific packages outside of the tidyverse: our goal is to provide tooling for the most common challenges, not to solve every possible problem. Notably, the tidyverse doesn't include tools for statistical modelling or communication. These toolkits are critical for data science, but are so large that they merit separate treatment.
 
 This paper describes the tidyverse package, the components of the tidyverse, and some of the underlying philosophy.
 
@@ -123,13 +123,15 @@ As well as being a collection of packages, the tidyverse itself is also a packag
 install.packages("tidyverse")
 ```
 
-The core tidyverse includes the packages that you're likely to use in everyday data analyses, and these are loaded when you load the tidyverse:
+The core tidyverse includes the packages that you're likely to use in everyday data analyses, and these are loaded when you load the tidyverse package:
 
 ```{r}
 library(tidyverse)
 ```
 
-As of tidyverse 1.2.0, the core packages include ggplot2 [@ggplot2], dplyr [@R-dplyr], tidyr [@R-tidyr], readr [@R-readr], purrr [@R-purrr], tibble [@R-tibble], stringr [@R-stringr], and forcats [@R-forcats]. Non-core packages are installed with `install.packages("tidyverse")`, but are not loaded with `library(tidyverse)`. They play more specialised roles, so are loaded individually as needed.
+As of tidyverse 1.2.0, the core packages include ggplot2 [@ggplot2], dplyr [@R-dplyr], tidyr [@R-tidyr], readr [@R-readr], purrr [@R-purrr], tibble [@R-tibble], stringr [@R-stringr], and forcats [@R-forcats]. 
+
+Non-core packages are installed with `install.packages("tidyverse")`, but are not loaded with `library(tidyverse)`. They play more specialised roles, so will be individually loaded by the analyst as needed.
 
 # Components
 
@@ -137,11 +139,12 @@ How do the component packages of the tidyverse fit together? We use the model of
 
 ![](data-science.png)
 
-Every analysis starts with data __import__: if you can't get your data into R, you can't do data science on it! Data import takes data stored in a file, database, or web API, and reads it into a data frame in R. Data import is supported by the core [readr](https://readr.tidyverse.org/) [@R-readr] package for flat files (like csv, tsv, and fwf). Additional non-core packages, such as [readxl](https://readxl.tidyverse.org) [@R-readxl], [rvest](https://rvest.tidyverse.org/) [@R-rvest], and [haven](https://haven.tidyverse.org) [@R-haven], make it possible to import data stored in other forms.
+Every analysis starts with data __import__: if you can't get your data into R, you can't do data science on it! Data import takes data stored in a file, database, or web API, and reads it into a data frame in R. Data import is supported by the core [readr](https://readr.tidyverse.org/) [@R-readr] package for flat files (like csv, tsv, and fwf). Additional non-core packages, such as [readxl](https://readxl.tidyverse.org) [@R-readxl], [rvest](https://rvest.tidyverse.org/) [@R-rvest], and [haven](https://haven.tidyverse.org) [@R-haven], make it possible to import data stored in other common formats.
 
-Next, we recommend that you __tidy__ your data, getting it into a consistent form that makes the rest of the analysis easier. The tidyverse is designed around tidy data [@tidy-data], where every column is a variable, every row is an observation, and every cell contains a single value. If your data is not already in this form (almost always!), the core [tidyr](https://tidyr.tidyverse.org/) [@R-tidyr] provides tools to tidy it up.
+Next, we recommend that you __tidy__ your data, getting it into a consistent form that makes the rest of the analysis easier. Most funtions in tidyverse work with tidy data [@tidy-data], where every column is a variable, every row is an observation, and every cell contains a single value. If your data is not already in this form (almost always!), the core [tidyr](https://tidyr.tidyverse.org/) [@R-tidyr] provides tools to tidy it up.
 
 Data __transformation__ is supported by the core [dplyr](https://dplyr.tidyverse.org/) [@R-dplyr] package. dplyr provides verbs that work with whole data frames, such as `mutate()` to create new variables, `filter()` to find observations matching given criteria, and `left_join()` and friends to combine multiple tables. dplyr is paired with packages that provide tools for specific column types: 
+
 * [stringr](https://stringr.tidyverse.org) for strings.
 * [forcats](https://forcats.tidyverse.org)) for factors, R's categorical data 
   type.
@@ -149,11 +152,11 @@ Data __transformation__ is supported by the core [dplyr](https://dplyr.tidyverse
   date-times.
 * [hms](https://hms.tidyverse.org/) [@R-hms] for clock times.
 
-There are two main toolk for understanding data: __visualisation__ and __modelling__. The tidyverse provides the [ggplot2](https://ggplot2.tidyverse.org/) [@ggplot2] package for visualisation. ggplot2 is a system for declaratively creating graphics, based on The Grammar of Graphics [@wilkinson2005]. You provide the data, tell ggplot2 how to map variables to aesthetics, what graphical primitives to use, and it takes care of the details. Modelling is outside the scope of this paper, but is part of the closely affiliated [tidymodels](https://github.com/tidymodels) [@R-tidymodels] project, which shares interface design and data structures with the tidyverse.
+There are two main tools for understanding data: __visualisation__ and __modelling__. The tidyverse provides the [ggplot2](https://ggplot2.tidyverse.org/) [@ggplot2] package for visualisation. ggplot2 is a system for declaratively creating graphics, based on The Grammar of Graphics [@wilkinson2005]. You provide the data, tell ggplot2 how to map variables to aesthetics, what graphical primitives to use, and it takes care of the details. Modelling is outside the scope of this paper, but is part of the closely affiliated [tidymodels](https://github.com/tidymodels) [@R-tidymodels] project, which shares interface design and data structures with the tidyverse.
 
 Finally, you'll need to communicate your results to someone else. __Communication__ is one of the most important parts of data science, but is not included within tidyverse. Instead, we expect people will use other R packages, like [rmarkdown](https://rmarkdown.rstudio.com/) [@R-rmarkdown] and [shiny](https://shiny.rstudio.com/) [@R-shiny], which support dozens of static and dynamic output formats.
 
-Surrounding all these tools is __programming__. Programming is a cross-cutting tool that you use in every part of the project. Programming tools in the tidyverse include:
+Surrounding all these tools is __programming__. Programming is a cross-cutting tool that you use in every part of a data science project. Programming tools in the tidyverse include:
 
 * [purrr](https://purrr.tidyverse.org/) [@R-purrr], which enhances R’s
   functional programming toolkit.
@@ -173,7 +176,7 @@ Surrounding all these tools is __programming__. Programming is a cross-cutting t
 
 # Philosophy
 
-We are still working to explicitly describe the unifying principles that make the tidyverse so consistent, and you can read our latest thoughts at <https://principles.tidyverse.org/>. But there is one important principle worth calling our here: the tidyverse is fundamentally __human centered__. The tidyverse is designed to support the activities of a human data analyst, so to be effective tool builders, we must explicitly recognise and acknowledge the strengths and weaknesses of human cognition.
+We are still working to explicitly describe the unifying principles that make the tidyverse so consistent, and you can read our latest thoughts at <https://principles.tidyverse.org/>. But there is one particularly important principle that I want to call out here: the tidyverse is fundamentally __human centered__. That is, the tidyverse is designed to support the activities of a human data analyst, so to be effective tool builders, we must explicitly recognise and acknowledge the strengths and weaknesses of human cognition.
 
 This is particularly important for R, because it’s a language that’s used primarily by non-programmers, and we want to make it as easy as possible for first-time and end-user programmers to learn the tidyverse. This means that we spend a lot of time thinking about interface design, and have recently started experimenting with [surveys](https://github.com/hadley/table-shapes) to help guide interface choices.
 
