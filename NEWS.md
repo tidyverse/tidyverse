@@ -1,8 +1,22 @@
 # tidyverse 1.2.1.9000
 
-* Eliminate repeats in the package list when loading an odd number of packages (#94, #100, @dchiu911)
+* Eliminate repeats in the package list when loading an odd number of 
+  packages (#94, #100, @dchiu911)
 
-* Fixed parse error of tidyverse package names (#93, #106, @coatless)
+* Packages attached from same library they were initially loaded from 
+  (#171, @gabrocsardi)
+
+* If conflicted package is loaded, omit display of conflicts. 
+  This includes fix to `tidyverse_conflicts()` to avoid accidentally
+  triggering conflited shims (#136).
+
+* `tidyverse_deps()` now succeeds even if a dependency of a depedency 
+  is missing (#152, @PoGibas)
+
+* `tidyverse_deps()` and `tidyverse_update()` gain a new `repos` argument
+  that gets passed to the base function `available.packages()` (@zkamvar, #82)
+
+* `tidyverse_packages()` corrently returns packages names (#93, #106, @coatless)
 
 # tidyverse 1.2.1
 

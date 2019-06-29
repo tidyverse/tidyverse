@@ -1,15 +1,25 @@
 # R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
 
 language: R
-sudo: false
 cache: packages
 
-r:
-- 3.1
-- 3.2
-- oldrel
-- release
-- devel
+matrix:
+  include:
+  - r: devel
+  - r: release
+    after_success:
+    - Rscript -e 'covr::codecov()'
+    before_cache:
+    - Rscript -e 'remotes::install_cran("pkgdown")'
+    - Rscript -e 'remotes::install_github("tidyverse/tidytemplate")'
+    deploy:
+      provider: script
+      script: Rscript -e 'pkgdown::deploy_site_github(verbose = TRUE)'
+      skip_cleanup: true
+  - r: oldrel
+  - r: 3.4
+  - r: 3.3
+  - r: 3.2
 
 addons:
   apt:
@@ -25,6 +35,3 @@ before_install: |
   CXX=g++-4.9
   CXX1X=g++-4.9
   CXX1XSTD=-std=c++11
-
-after_success:
-  - Rscript -e 'covr::codecov()'

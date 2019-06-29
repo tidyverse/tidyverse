@@ -4,11 +4,14 @@
 \alias{tidyverse_deps}
 \title{List all tidyverse dependencies}
 \usage{
-tidyverse_deps(recursive = FALSE)
+tidyverse_deps(recursive = FALSE, repos = getOption("repos"))
 }
 \arguments{
 \item{recursive}{If \code{TRUE}, will also list all dependencies of
 tidyverse packages.}
+
+\item{repos}{The repositories to use to check for updates.
+Defaults to \code{getOptions("repos")}.}
 }
 \description{
 List all tidyverse dependencies

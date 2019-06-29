@@ -12,7 +12,8 @@
 #' @examples
 #' tidyverse_conflicts()
 tidyverse_conflicts <- function() {
-  envs <- purrr::set_names(search())
+  envs <- grep("^package:", search(), value = TRUE)
+  envs <- purrr::set_names(envs)
   objs <- invert(lapply(envs, ls_env))
 
   conflicts <- purrr::keep(objs, ~ length(.x) > 1)

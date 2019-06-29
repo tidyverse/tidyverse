@@ -1,3 +1,5 @@
+^pkgdown$
+^\.covrignore$
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^README\.Rmd$
@@ -9,3 +11,4 @@
 ^_pkgdown\.yml$
 ^codecov\.yml$
 ^codemeta\.json$
+^\.github$
