@@ -35,4 +35,3 @@ before_install: |
   CXX=g++-4.9
   CXX1X=g++-4.9
   CXX1XSTD=-std=c++11
-
