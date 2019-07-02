@@ -33,8 +33,9 @@ text_col <- function(x) {
 tidyverse_packages <- function(include_self = TRUE) {
   raw <- utils::packageDescription("tidyverse")$Imports
   imports <- strsplit(raw, ",")[[1]]
-  parsed <- gsub("^\\s+|\\s+$", "", imports)
-  names <- vapply(strsplit(parsed, "\\s+"), "[[", 1, FUN.VALUE = character(1))
+  parsed <- gsub("\\n", "", imports)
+  parsed <- gsub("(\\(.*?\\))", "", parsed)
+  names <- gsub("^\\s+|\\s+$", "", parsed)
 
   if (include_self) {
     names <- c(names, "tidyverse")
