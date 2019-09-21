@@ -81,7 +81,7 @@ affiliations:
    index: 3
  - name: Erasmus University Rotterdam
    index: 4
- - name: DataCamp
+ - name: Flatiron Health
    index: 5
  - name: Department of Integrative Biology, The University of Texas at Austin
    index: 6
