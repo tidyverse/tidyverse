@@ -50,6 +50,7 @@ authors:
   orcid: 0000-0002-1416-3412
   affiliation: 2
 - name: David Robinson
+  affiliation: 5
 - name: Dana Paige Seidel
   orcid: 0000-0002-9088-5767
   affiliation: 10
@@ -80,6 +81,8 @@ affiliations:
    index: 3
  - name: Erasmus University Rotterdam
    index: 4
+ - name: DataCamp
+   index: 5
  - name: Department of Integrative Biology, The University of Texas at Austin
    index: 6
  - name: Sage Bionetworks
