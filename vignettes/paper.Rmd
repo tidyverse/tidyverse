@@ -129,8 +129,11 @@ The core tidyverse includes the packages that you're likely to use in everyday d
 library(tidyverse)
 ```
 
-As of tidyverse version 1.2.0, the core packages include dplyr [@R-dplyr], forcats [@R-forcats], ggplot2 [@ggplot2], purrr [@R-purrr], readr [@R-readr], stringr [@R-stringr], tibble [@R-tibble], and tidyr [@R-tidyr]. 
+As of tidyverse version 1.2.0, the core packages include dplyr [@R-dplyr], forcats [@R-forcats], ggplot2 [@ggplot2], purrr [@R-purrr], readr [@R-readr], stringr [@R-stringr], tibble [@R-tibble], and tidyr [@R-tidyr]. Using `library(tidyverse)` ensures that the packages are attached in the correct order, and provides a concise summary of namespace conflicts. 
+
 <!--  JH: Firstly, attaching the tidyverse R package will ensure that tidyverse packages are attached in the correct order. This is not trivial for beginners (e.g. attaching the plyr and dplyr R packages in the incorrect order will cause issues). Secondly, attaching the tidyverse R package will inform the user about namespace conflicts in a concise and informative manner. This is very useful when many tidyverse and non-tidyverse packages are attached. -->
+<!-- MGA: I want to take care of the above with LD comment below -->
+<!-- Discussing the pros and cons of using the "tidyverse" package versus loading individual packages would be useful. It is stated that the "tidyverse" is intended for the general workflow of a data project. However, it might be worth mentioning that it probably is not ideal for using as a dependency in package development. I'm sure there are other examples and issues that should be considered. -->
 
 <!-- Is the tidyverse R package not a core tidyverse package? It is not listed as a core package in Line 129. Maybe it would be useful to explicitly state if the tidyverse R package is a core package or not? --> 
 <!-- MGA re. above: This would make the tidyverse like recursively core...clearly we're not describing it well, but I'm not sure how to clarify -->
@@ -139,6 +142,8 @@ As of tidyverse version 1.2.0, the core packages include dplyr [@R-dplyr], forca
 <!-- MGA I tried the above as a parenthetical-- too long --seems unnatural here-->
 
 Non-core packages are installed with `install.packages("tidyverse")`, but are not attached by `library(tidyverse)`. They play more specialised roles, so will be attached by the analyst as needed. The non-core packages are: blob [@R-blob], glue [@R-glue], googledrive [@R-googledrive], haven [@R-haven], hms [@R-hms], lubridate [@R-lubridate], magrittr [@R-magrittr], modelr [@R-modelr], readxl [@R-readxl], reprex [@R-reprex], and rvest [@R-rvest].
+
+The tidyverse package is designed for interactive use, and should not be imported for package-development purposes. The `tidyverse_deps()` function returns a tibble of the package's dependencies. Its one argument, `recursive`, can be set to `TRUE` to include the dependencies of the tidyverse packages--totalling 87, as of this writing. We recommend that package developers import, suggest, or depend on component packages.
 
 # Components
 
