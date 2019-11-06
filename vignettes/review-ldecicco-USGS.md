@@ -1,5 +1,7 @@
 > The paper "Welcome to the tidyverse" is a 3 page introduction to the tidyverse R package. The tidyverse R package includes 8 core packages and other non-core packages. I am familiar with these tools, and my initial reaction was "this paper is entirely too short". Many of my questions on "tidyverse"-ness however were addressed in the link https://principles.tidyverse.org. Perhaps it would be worth moving that link into the introduction.
 
+I've added a sentence to the intro with more details on what we cover. I've left the link to <https://design.tidyverse.org> (formerly https://principles.tidyverse.org) in the last section, but have renamed it make more clear that you'll get to that at the end of the paper.
+
 > The JOSS review is not just on the 3 page paper, it is on the entire software ecosystem. In this case, that includes a massive amount of useful resources. Each core package has adaquate to excellent documentation and links to external resources.
 
 > My impression is this will be a useful paper for people to cite when they used tidyverse tools in their analysis. It is a short paper, but contains many useful links and references. I would recommend this paper to be published, but I offer the following impressions (they can be addressed or ignored):
