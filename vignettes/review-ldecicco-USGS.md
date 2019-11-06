@@ -8,6 +8,8 @@ I've added a sentence to the intro with more details on what we cover. I've left
 
 > 1. Discussing the pros and cons of using the "tidyverse" package versus loading individual packages would be useful. It is stated that the "tidyverse" is intended for the general workflow of a data project. However, it might be worth mentioning that it probably is not ideal for using as a dependency in package development. I'm sure there are other examples and issues that should be considered.
 
+We've added a sentence clarifying the advantages of `library(tidyverse)`, and another on why you should avoid importing in from another package.
+
 > 2. Related to #1... I think it would be useful to have a sentence or two addressing using tidyverse as it relates to package development. The tidyverse is such a nice introduction to R....and then the new-tidyverse user becomes a little more confident and wants to make an R package...The first thing they do is wrap their tidyverse code into some functions. Alerting them to some of the considerations would be great. Perhaps a link to http://r-pkgs.had.co.nz and https://dplyr.tidyverse.org/articles/programming.html (there are probably other great resources...those are the 2 I've used over the years).
 
 > 3. Listing the full list of dependencies somehow would be useful (either directly in the text, or an obvious link). It might be worth addressing the fact that...yes...there are a lot of packages...but using the "tidyverse" package does simplify installation and helps prevent conflicts. Basically, having a reference to pass on to help ease the weary "IT admin" who has a knee jerk reaction to installing anything with too many dependencies would be great.
