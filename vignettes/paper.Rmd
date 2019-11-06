@@ -141,7 +141,7 @@ This is a convenient shortcut for attaching the cores packages, produces a short
 <!-- Line 131: I wonder if it is worth listing all of the non-core packages in the tidyverse? -->
 <!-- MGA I tried the above as a parenthetical-- too long --seems unnatural here-->
 
-Non-core packages are installed with `install.packages("tidyverse")`, but are not attached by `library(tidyverse)`. They play more specialised roles, so will be attached by the analyst as needed. The non-core packages are: blob [@R-blob], glue [@R-glue], googledrive [@R-googledrive], haven [@R-haven], hms [@R-hms], lubridate [@R-lubridate], magrittr [@R-magrittr], modelr [@R-modelr], readxl [@R-readxl], reprex [@R-reprex], and rvest [@R-rvest].
+Non-core packages are installed with `install.packages("tidyverse")`, but are not attached by `library(tidyverse)`. They play more specialised roles, so will be attached by the analyst as needed. The non-core packages are: blob [@R-blob], feather [@R-feather], glue [@R-glue], googledrive [@R-googledrive], haven [@R-haven], hms [@R-hms], lubridate [@R-lubridate], magrittr [@R-magrittr], modelr [@R-modelr], readxl [@R-readxl], reprex [@R-reprex], and rvest [@R-rvest].
 
 The tidyverse package is designed with an eye for teaching: `install.packages("tidyverse")` gets you a "batteries-included" set of 87 packages (at time of writing). This large set of dependencies means that it is not appropriate to use the tidyverse package within another package; instead we recommend that package authors import only the specific packages that they use.
 
