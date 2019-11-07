@@ -125,3 +125,9 @@ probably not in every analysis. This includes packages for:
         a pipeline
       - [broom](https://github.com/dgrtwo/broom), for turning models
         into tidy data
+
+## Code of Conduct
+
+Please note that the tidyverse project is released with a [Contributor Code of Conduct](https://tidyverse.tidyverse.org/CODE_OF_CONDUCT.html). 
+By contributing to this project, you agree to abide by its terms.
+
