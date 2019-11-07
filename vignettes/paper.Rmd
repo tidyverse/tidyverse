@@ -129,17 +129,21 @@ The core tidyverse includes the packages that you're likely to use in everyday d
 library(tidyverse)
 ```
 
-This is a convenient shortcut for attaching the cores packages, produces a short report that gives the package versions you're using, and succintly informs you of any conflicts with packages you've previously loaded. As of tidyverse version 1.2.0, the core packages include dplyr [@R-dplyr], forcats [@R-forcats], ggplot2 [@ggplot2], purrr [@R-purrr], readr [@R-readr], stringr [@R-stringr], tibble [@R-tibble], and tidyr [@R-tidyr]. 
+This is a convenient shortcut for attaching the core packages, produces a short report that gives the package versions you're using, and succinctly informs you of any conflicts with previously loaded packages. As of tidyverse version 1.2.0, the core packages include dplyr [@R-dplyr], forcats [@R-forcats], ggplot2 [@ggplot2], purrr [@R-purrr], readr [@R-readr], stringr [@R-stringr], tibble [@R-tibble], and tidyr [@R-tidyr]. 
 
 <!--  JH: Firstly, attaching the tidyverse R package will ensure that tidyverse packages are attached in the correct order. This is not trivial for beginners (e.g. attaching the plyr and dplyr R packages in the incorrect order will cause issues). Secondly, attaching the tidyverse R package will inform the user about namespace conflicts in a concise and informative manner. This is very useful when many tidyverse and non-tidyverse packages are attached. -->
 <!-- MGA: I want to take care of the above with LD comment below -->
+<!-- HW: I think this looks good now - can you proof read once more? -->
+
 <!-- Discussing the pros and cons of using the "tidyverse" package versus loading individual packages would be useful. It is stated that the "tidyverse" is intended for the general workflow of a data project. However, it might be worth mentioning that it probably is not ideal for using as a dependency in package development. I'm sure there are other examples and issues that should be considered. -->
 
 <!-- Is the tidyverse R package not a core tidyverse package? It is not listed as a core package in Line 129. Maybe it would be useful to explicitly state if the tidyverse R package is a core package or not? --> 
 <!-- MGA re. above: This would make the tidyverse like recursively core...clearly we're not describing it well, but I'm not sure how to clarify -->
+<!-- HW: agreed; we should handle in our response -->
 
 <!-- Line 131: I wonder if it is worth listing all of the non-core packages in the tidyverse? -->
 <!-- MGA I tried the above as a parenthetical-- too long --seems unnatural here-->
+<!-- HW: looks fine to me -->
 
 Non-core packages are installed with `install.packages("tidyverse")`, but are not attached by `library(tidyverse)`. They play more specialised roles, so will be attached by the analyst as needed. The non-core packages are: blob [@R-blob], feather [@R-feather], glue [@R-glue], googledrive [@R-googledrive], haven [@R-haven], hms [@R-hms], lubridate [@R-lubridate], magrittr [@R-magrittr], modelr [@R-modelr], readxl [@R-readxl], reprex [@R-reprex], and rvest [@R-rvest].
 
@@ -153,11 +157,13 @@ How do the component packages of the tidyverse fit together? We use the model of
 
 Every analysis starts with data __import__: if you can't get your data into R, you can't do data science on it! Data import takes data stored in a file, database, or through a web application programming interface (API), and reads it into a data frame in R. Data import is supported by the core [readr](https://readr.tidyverse.org/) [@R-readr] package for flat files (like csv, tsv, and fwf). 
 <!-- Lines 139 and 141: It appears that the term "data" is being used to refer to a singular entity, though some would argue that the term "data" is a plural. I do not know the grammar rules to which this journal subscribes, so I thought I would raise this point just in case. --->
+<!-- HW: we'll just let the editors take this -->
 
 Additional non-core packages, such as [readxl](https://readxl.tidyverse.org) [@R-readxl], [haven](https://haven.tidyverse.org) [@R-haven], [googledrive](https://googledrive.tidyverse.org/) [@R-googledrive], and [rvest](https://rvest.tidyverse.org/) [@R-rvest], make it possible to import data stored in other common formats or directly from the web.
 
 <!-- Line 139 and elsewhere: The manuscript contains many embedded links which mean that URLs are not shown in the text (e.g. like this). I am not familiar enough with the correct reference style for this journal, so I thought I would raise this point just in case. -->
 <!-- MGA response: I think we do this consistently with citations to the packages, which also give the pkgdown URLs -->
+<!-- HW: yeah, I don't think we care -->
 
 Next, we recommend that you __tidy__ your data, getting it into a consistent form that makes the rest of the analysis easier. Most functions in the tidyverse work with tidy data [@tidy-data], where every column is a variable, every row is an observation, and every cell contains a single value. If your data is not already in this form (almost always!), the core [tidyr](https://tidyr.tidyverse.org/) [@R-tidyr] package provides tools to tidy it up.
 
@@ -177,6 +183,7 @@ Data __transformation__ is supported by the core [dplyr](https://dplyr.tidyverse
 
 There are two main tools for understanding data: __visualisation__ and __modelling__. The tidyverse provides the [ggplot2](https://ggplot2.tidyverse.org/) [@ggplot2] package for visualisation. ggplot2 is a system for declaratively creating graphics, based on The Grammar of Graphics [@wilkinson2005].
 <!-- References: The reference for Bache & Wickham (2014) has a lower case "r" in the title when referring to the R programming language. -->
+<!-- HW: fixed -->
 
 You provide the data, tell ggplot2 how to map variables to aesthetics, what graphical primitives to use, and it takes care of the details. Modelling is outside the scope of this paper, but is part of the closely affiliated [tidymodels](https://github.com/tidymodels) [@R-tidymodels] project, which shares interface design and data structures with the tidyverse.
 
