@@ -48,7 +48,7 @@ We've tried to work around this by saying "behind a web API".
 
 > My impression is that terms like "data frame" and "flat file" will be very useful for individuals with experience in programming _R_, _Python_, or _SQL_. If such individuals are the intended audience for this manuscript, then using such terminology is ideal. If a broader audience is intended, then perhaps using different terms (or clarifying these terms) will be useful (e.g. terms like "tabular" or "spreadsheet" may be more informative for a broader audience).
 
-We agree that "tabular" is a bit than "flat" so we've changed this.
+We agree that "tabular" is a bit clearer than "flat," so we've changed this.
 
 > It appears that the term "data" is being used to refer to a singular entity, though some would argue that the term "data" is a plural. I do not know the grammar rules to which this journal subscribes, so I thought I would raise this point just in case.
 
