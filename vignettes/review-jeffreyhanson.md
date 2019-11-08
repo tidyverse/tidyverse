@@ -40,7 +40,7 @@ Packages are now listed in alphabetical order.
 
 > Perhaps "application programming interface (API)" instead of "API" for clarity?
 
-Done!
+We don't believe that spelling API out makes it any easier to understand.
 
 > This is a bit nitpicky but I do not think that data are necessarily "stored" in an API? I would say that data are accessed through an API? Apologies if I'm just plain wrong.
 
