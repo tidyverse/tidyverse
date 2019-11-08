@@ -129,12 +129,12 @@ The core tidyverse includes the packages that you're likely to use in everyday d
 
 ```r
 library(tidyverse)
-#> ── Attaching packages ───────────────────────────────────── tidyverse 1.2.1 ──
-#> ✔ ggplot2 3.2.0.9000      ✔ purrr   0.3.2      
-#> ✔ tibble  2.1.3           ✔ dplyr   0.8.2      
-#> ✔ tidyr   0.8.99.9000     ✔ stringr 1.4.0      
-#> ✔ readr   1.3.1           ✔ forcats 0.4.0
-#> ── Conflicts ──────────────────────────────────────── tidyverse_conflicts() ──
+#> ── Attaching packages ───────────────────────────────────────────── tidyverse 1.2.1 ──
+#> ✔ ggplot2 3.2.1     ✔ purrr   0.3.3
+#> ✔ tibble  2.1.3     ✔ dplyr   0.8.3
+#> ✔ tidyr   1.0.0     ✔ stringr 1.4.0
+#> ✔ readr   1.3.1     ✔ forcats 0.4.0
+#> ── Conflicts ──────────────────────────────────────────────── tidyverse_conflicts() ──
 #> ✖ dplyr::filter() masks stats::filter()
 #> ✖ dplyr::lag()    masks stats::lag()
 ```
@@ -151,7 +151,7 @@ How do the component packages of the tidyverse fit together? We use the model of
 
 ![](data-science.png)
 
-Every analysis starts with data __import__: if you can't get your data into R, you can't do data science on it! Data import takes data stored in a file, database, or through a web application programming interface (API), and reads it into a data frame in R. Data import is supported by the core [readr](https://readr.tidyverse.org/) [@R-readr] package for flat files (like csv, tsv, and fwf). 
+Every analysis starts with data __import__: if you can't get your data into R, you can't do data science on it! Data import takes data stored in a file, database, or behind a web API, and reads it into a data frame in R. Data import is supported by the core [readr](https://readr.tidyverse.org/) [@R-readr] package for tabular files (like csv, tsv, and fwf). 
 
 Additional non-core packages, such as [readxl](https://readxl.tidyverse.org) [@R-readxl], [haven](https://haven.tidyverse.org) [@R-haven], [googledrive](https://googledrive.tidyverse.org/) [@R-googledrive], and [rvest](https://rvest.tidyverse.org/) [@R-rvest], make it possible to import data stored in other common formats or directly from the web.
 
