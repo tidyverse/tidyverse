@@ -1,0 +1,23 @@
+<!-- Pull requests to update Licenses for tidyverse packages -->
+- blob https://github.com/tidyverse/blob/pull/14
+- dplyr https://github.com/tidyverse/dplyr/pull/4610
+- forcats https://github.com/tidyverse/forcats/pull/218
+- ggplot2 https://github.com/tidyverse/ggplot2/pull/3615
+- glue https://github.com/tidyverse/glue/pull/152
+- googledrive https://github.com/tidyverse/googledrive/pull/282
+- haven https://github.com/tidyverse/haven/pull/484
+- hms https://github.com/tidyverse/hms/pull/77
+- lubridate https://github.com/tidyverse/lubridate/pull/808
+- magrittr https://github.com/tidyverse/magrittr/pull/201
+- modelr https://github.com/tidyverse/modelr/pull/102
+- purrr https://github.com/tidyverse/purrr/pull/719
+- readr https://github.com/tidyverse/readr/pull/1045
+- readxl https://github.com/tidyverse/readxl/pull/595
+- reprex https://github.com/tidyverse/reprex/pull/292
+- rvest https://github.com/tidyverse/rvest/pull/257
+- stringr https://github.com/tidyverse/stringr/pull/317
+- tibble https://github.com/tidyverse/tibble/pull/674
+- tidyr (not neeeded)
+- tidyverse https://github.com/tidyverse/tidyverse/pull/201
+- dbplyr https://github.com/tidyverse/dbplyr/pull/374
+- dtplyr https://github.com/tidyverse/dtplyr/pull/119
