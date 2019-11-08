@@ -1,10 +1,10 @@
 > In my opinion, the _tidyverse R_ package provides two additional functionalities that are not discussed in the manuscript. Firstly, attaching the _tidyverse R_ package will ensure that tidyverse packages are attached in the correct order. This is not trivial for beginners (e.g. attaching the _plyr_ and _dplyr R_ packages in the incorrect order will cause issues). Secondly, attaching the _tidyverse R_ package will inform the user about namespace conflicts in a concise and informative manner. This is very useful when many tidyverse and non-tidyverse packages are attached. For instance, conflicts arise when the _tidyverse R_ package is attached following the _raster R_ package because both the _tidyr R_ package---a core tidyverse package---and the _raster R_ package contain `extract()` functions. I think the _tidyverse R_ package is exceptionally useful when evaluated on its standalone merits---that is, disregarding the usefulness of the other packages that comprise the tidyverse---and I think readers would benefit from knowing about these functionalities.
 
-We've added a sentence mentioning the "report" given when attaching the tidyverse package.
+We've added a sentence mentioning the "report" given when attaching the tidyverse package. But generally the order of packages within the tidyverse isn't so important (especially as over time we deliberately work to remove conflicts).
 
 > Perhaps it is worth providing a citation for R? I realize that many readers will likely already be familiar with R to some extent, but perhaps this be useful for readers that are less familiar with R?
 
-We've added a citation at first mention, as well as a more thorough description of the relaitonship between the tidyverse and base R.
+We've added a citation in the new related work paragraph, which also includes a more thorough description of the relaitonship between the tidyverse and base R.
 
 > This manuscript is about describing (i) the collection of packages referred to as the tidyverse (covered in the **Components** and **Philosophy** sections) and (ii) the _tidyverse R_ package (covered in the **Tidyverse package** section). The **Summary** section does a fantastic job of summarizing the tidyverse collection of packages but I feel like it could provide more information about the _tidyverse R_ package itself. Perhaps the purpose of the _tidyverse R_ package could be mentioned in the **Summary** section?
 
@@ -44,11 +44,11 @@ Done!
 
 > This is a bit nitpicky but I do not think that data are necessarily "stored" in an API? I would say that data are accessed through an API? Apologies if I'm just plain wrong.
 
-We've tried to work around this by saying "through a web application programming interface."
+We've tried to work around this by saying "behind a web API".
 
 > My impression is that terms like "data frame" and "flat file" will be very useful for individuals with experience in programming _R_, _Python_, or _SQL_. If such individuals are the intended audience for this manuscript, then using such terminology is ideal. If a broader audience is intended, then perhaps using different terms (or clarifying these terms) will be useful (e.g. terms like "tabular" or "spreadsheet" may be more informative for a broader audience).
 
-We've left this one as is, since spreadsheet might imply functionality outside of readr.
+We agree that "tabular" is a bit than "flat" so we've changed this.
 
 > It appears that the term "data" is being used to refer to a singular entity, though some would argue that the term "data" is a plural. I do not know the grammar rules to which this journal subscribes, so I thought I would raise this point just in case.
 
@@ -64,7 +64,7 @@ Now changed to "make it possible to import data stored in other common formats o
 
 > The manuscript contains many embedded links which mean that URLs are not shown in the text (e.g. [like this](https://google.com)). I am not familiar enough with the correct reference style for this journal, so I thought I would raise this point just in case.
 
-Though we give links to individual pkgdown sites in the body of the manuscript, all packages have full citations.
+Also well as links to individual websites, all packages also have full citations.
 
 > Perhaps "core tidyr package provides" might be useful to be consistent with the rest of the manuscript (e.g. "the core readr package", line 139)?
 

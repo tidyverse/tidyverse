@@ -4,6 +4,8 @@ I've added a sentence to the intro with more details on what we cover. I've left
 
 > The JOSS review is not just on the 3 page paper, it is on the entire software ecosystem. In this case, that includes a massive amount of useful resources. Each core package has adaquate to excellent documentation and links to external resources.
 
+Thanks! 
+
 > My impression is this will be a useful paper for people to cite when they used tidyverse tools in their analysis. It is a short paper, but contains many useful links and references. I would recommend this paper to be published, but I offer the following impressions (they can be addressed or ignored):
 
 > 1. Discussing the pros and cons of using the "tidyverse" package versus loading individual packages would be useful. It is stated that the "tidyverse" is intended for the general workflow of a data project. However, it might be worth mentioning that it probably is not ideal for using as a dependency in package development. I'm sure there are other examples and issues that should be considered.
@@ -20,12 +22,11 @@ We've mentioned the total number, but I'd prefer to avoid too much discussion of
 
 > 4. Consider adding a link to data.tables, fst, and feather in the sentence "Additional non-core packages".
 
-Thanks for spotting that we missed feather; I've added a citation.
-
-TODO: comparison sentence or paragraph?
+Thanks for spotting that we missed feather; I've added a citation. We've also added a paragraph on related work that mentions data.table, and hopefully makes it clear why we think a comparison to fst isn't quite right here.
 
 > 5. This is a bit more far-fetched, and could easily be considered out of scope of this paper....but... This might be a good venue for laying out some of the lessons learned over the years from developing all these packages. For example, how and when does the tidyverse team decide to break backwards compatibility? It might be nice to hear more about how to make a package more human centered. The last paragraph lays out some general ideas, but are there specific tactics for package developers to coordinate all that feedback that you all recommend? (I can only imagine that project management is critical for all these packages to be coordinated so well....)
-
-I think that's a book's worth of material :) Please stay tuned to <http://design.tidyverse.org/> where I'll be attempting to get all this knowledge out of our collective heads and into text in the next 2-3 years.
-
+> 
 > Each individual repo for core tidyverse packages serves as great examples of how to manage a package in a human centered way....if there were a few specific examples for inspiring other package developers to follow, that would be great.
+
+I think that's a book's worth of material :) So please stay tuned to <http://design.tidyverse.org/> where I'll be attempting to get all this knowledge out of our collective heads and into text in the next 2-3 years.
+
