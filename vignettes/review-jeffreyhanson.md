@@ -64,7 +64,7 @@ Now changed to "make it possible to import data stored in other common formats o
 
 > The manuscript contains many embedded links which mean that URLs are not shown in the text (e.g. [like this](https://google.com)). I am not familiar enough with the correct reference style for this journal, so I thought I would raise this point just in case.
 
-Also well as links to individual websites, all packages also have full citations.
+As well as links to individual websites, all packages also have full citations.
 
 > Perhaps "core tidyr package provides" might be useful to be consistent with the rest of the manuscript (e.g. "the core readr package", line 139)?
 
