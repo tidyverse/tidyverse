@@ -188,8 +188,8 @@ Surrounding all these tools is __programming__. Programming is a cross-cutting t
   reproducible examples.
 
 * [magrittr](https://magrittr.tidyverse.org) [@R-magrittr], which provides 
-  the pipe, `%>%`, used throughout the tidyverse. The pipe is a tool for
-  function composition, making it easier to solve large problems by breaking 
+  the pipe operator, `%>%`, used throughout the tidyverse. The pipe is a tool 
+  for function composition, making it easier to solve large problems by breaking 
   them into small pieces.
 
 # Design principles
