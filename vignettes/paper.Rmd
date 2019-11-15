@@ -44,6 +44,7 @@ authors:
   orcid: 0000-0002-5147-4711
   affiliation: 1
 - name: Evan Miller
+  affiliation: 13
 - name: Stephan Milton Bache
   affiliation: 3
 - name: Kirill Müller
@@ -97,6 +98,8 @@ affiliations:
    index: 11
  - name: University of Wisconsin, Madison
    index: 12
+ - name: None
+   index: 13
 date: 08 November 2019
 bibliography: paper.bib
 ---
