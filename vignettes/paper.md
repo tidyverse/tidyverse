@@ -50,6 +50,8 @@ authors:
 - name: Kirill Müller
   orcid: 0000-0002-1416-3412
   affiliation: 2
+- name: Jeroen Ooms
+  affiliation: 14
 - name: David Robinson
   affiliation: 5
 - name: Dana Paige Seidel
@@ -100,6 +102,8 @@ affiliations:
    index: 12
  - name: None
    index: 13
+ - name: Berkeley Institute for Data Science, University of California, Berkeley
+   index: 14
 date: 08 November 2019
 bibliography: paper.bib
 ---
@@ -132,19 +136,19 @@ The core tidyverse includes the packages that you're likely to use in everyday d
 
 ```r
 library(tidyverse)
-#> ── Attaching packages ───────────────────────────────────────────── tidyverse 1.2.1 ──
+#> ── Attaching packages ───────────────────────────────────────────────────────────── tidyverse 1.2.1 ──
 #> ✔ ggplot2 3.2.1     ✔ purrr   0.3.3
 #> ✔ tibble  2.1.3     ✔ dplyr   0.8.3
 #> ✔ tidyr   1.0.0     ✔ stringr 1.4.0
 #> ✔ readr   1.3.1     ✔ forcats 0.4.0
-#> ── Conflicts ──────────────────────────────────────────────── tidyverse_conflicts() ──
+#> ── Conflicts ──────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
 #> ✖ dplyr::filter() masks stats::filter()
 #> ✖ dplyr::lag()    masks stats::lag()
 ```
 
 This is a convenient shortcut for attaching the core packages, produces a short report that gives the package versions you're using, and succinctly informs you of any conflicts with previously loaded packages. As of tidyverse version 1.2.0, the core packages include dplyr [@R-dplyr], forcats [@R-forcats], ggplot2 [@ggplot2], purrr [@R-purrr], readr [@R-readr], stringr [@R-stringr], tibble [@R-tibble], and tidyr [@R-tidyr]. 
 
-Non-core packages are installed with `install.packages("tidyverse")`, but are not attached by `library(tidyverse)`. They play more specialised roles, so will be attached by the analyst as needed. The non-core packages are: blob [@R-blob], feather [@R-feather], glue [@R-glue], googledrive [@R-googledrive], haven [@R-haven], hms [@R-hms], lubridate [@R-lubridate], magrittr [@R-magrittr], modelr [@R-modelr], readxl [@R-readxl], reprex [@R-reprex], and rvest [@R-rvest].
+Non-core packages are installed with `install.packages("tidyverse")`, but are not attached by `library(tidyverse)`. They play more specialised roles, so will be attached by the analyst as needed. The non-core packages are: blob [@R-blob], feather [@R-feather], jsonlite [@R-jsonlite], glue [@R-glue], googledrive [@R-googledrive], haven [@R-haven], hms [@R-hms], lubridate [@R-lubridate], magrittr [@R-magrittr], modelr [@R-modelr], readxl [@R-readxl], reprex [@R-reprex], and rvest [@R-rvest].
 
 The tidyverse package is designed with an eye for teaching: `install.packages("tidyverse")` gets you a "batteries-included" set of 87 packages (at time of writing). This large set of dependencies means that it is not appropriate to use the tidyverse package within another package; instead, we recommend that package authors import only the specific packages that they use.
 
