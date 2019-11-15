@@ -102,7 +102,7 @@ affiliations:
    index: 12
  - name: None
    index: 13
- - name: Berkeley Institute for Data Science, University of California, Berkeley
+ - name: University of California, Berkeley
    index: 14
 date: 08 November 2019
 bibliography: paper.bib
