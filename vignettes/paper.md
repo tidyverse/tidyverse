@@ -112,7 +112,7 @@ bibliography: paper.bib
 
 # Summary
 
-![](tidyverse-logo.png)
+<img src="tidyverse-logo.png" width="120px" />
 
 At a high level, the tidyverse is a language for solving data science challenges with R code. Its primary goal is to facilitate a conversation between a human and a computer about data. Less abstractly, the tidyverse is a collection of R packages that share a high-level design philosophy and low-level grammar and data structures, so that learning one package makes it easier to learn the next. 
 
@@ -156,7 +156,7 @@ The tidyverse package is designed with an eye for teaching: `install.packages("t
 
 How do the component packages of the tidyverse fit together? We use the model of data science tools from "R for Data Science" [@r4ds]:
 
-![](data-science.png)
+<img src="data-science.png" width="80%" />
 
 Every analysis starts with data __import__: if you can't get your data into R, you can't do data science on it! Data import takes data stored in a file, database, or behind a web API, and reads it into a data frame in R. Data import is supported by the core [readr](https://readr.tidyverse.org/) [@R-readr] package for tabular files (like csv, tsv, and fwf). 
 
