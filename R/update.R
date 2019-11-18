@@ -33,6 +33,35 @@ tidyverse_update <- function(recursive = FALSE, repos = getOption("repos")) {
   invisible()
 }
 
+#' Get a situation report on the tidyverse
+#'
+#' This function gives a quick overview of the versions of R and RStudio as
+#' well as all tidyverse packages. It's primarily designed to help you get
+#' a quick idea of what's going on when you're helping someone else debug
+#' a problem.
+#'
+#' @export
+tidyverse_sitrep <- function() {
+  cli::cat_rule("R & RStudio")
+  if (rstudioapi::isAvailable()) {
+    cli::cat_bullet("RStudio: ", rstudioapi::getVersion())
+  }
+  cli::cat_bullet("R: ", getRversion())
+
+  deps <- tidyverse_deps()
+  package_pad <- format(deps$package)
+  packages <- ifelse(
+    deps$behind,
+    paste0(cli::col_yellow(cli::style_bold(package_pad)), " (", deps$local, " < ", deps$cran, ")"),
+    paste0(package_pad, " (", deps$cran, ")")
+  )
+
+  cli::cat_rule("Core packages")
+  cli::cat_bullet(packages[deps$package %in% core])
+  cli::cat_rule("Non-core packages")
+  cli::cat_bullet(packages[!deps$package %in% core])
+}
+
 #' List all tidyverse dependencies
 #'
 #' @param recursive If \code{TRUE}, will also list all dependencies of

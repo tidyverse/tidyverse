@@ -20,6 +20,9 @@
 
 * `tidyverse_packages()` corrently returns packages names (#93, #106, @coatless)
 
+* `tidyverse_sitrep()` gives you a situtation report on your install of 
+  the tidyverse (#203)
+
 # tidyverse 1.2.1
 
 * Require modern versions of all packages (#85)
