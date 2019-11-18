@@ -11,7 +11,9 @@
   triggering conflited shims (#136).
 
 * `tidyverse_deps()` now succeeds even if a dependency of a depedency 
-  is missing (#152, @PoGibas)
+  is missing (#152, @PoGibas). It no longer includes dependencies that
+  are needed by the tidyverse package but are not strictly part of the
+  tidyverse (i.e. cli, crayon, and rstudioapi).
 
 * `tidyverse_deps()` and `tidyverse_update()` gain a new `repos` argument
   that gets passed to the base function `available.packages()` (@zkamvar, #82)
