@@ -6,6 +6,7 @@ output:
 tags:
 - data science
 - R
+author: Hadley Wickham, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D'Agostino McGowan, Romain François, Garrett Grolemund, Alex Hayes, Lionel Henry, Jim Hester, Max Kuhn, Thomas Lin Pedersen, Evan Miller, Stephan Milton Bache, Kirill Müller, Jeroen Ooms, David Robinson, Dana Paige Seidel, Vitalie Spinu, Kohske Takahashi, Davis Vaughan, Claus Wilke, Kara Woo, Hiroaki Yutani
 authors:
 - name: Hadley Wickham
   orcid: 0000-0003-4757-117X
@@ -104,8 +105,12 @@ affiliations:
    index: 13
  - name: University of California, Berkeley
    index: 14
-date: 08 November 2019
+date: 19 November 2019
 bibliography: paper.bib
+vignette: >
+  %\VignetteIndexEntry{Welcome to the tidyverse!}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
 
 ```{r, include = FALSE}
