@@ -1,4 +1,4 @@
-# tidyverse 1.2.1.9000
+# tidyverse 1.3.0
 
 * The tidyverse now has an associated paper at the 
   [Journal of Open Source Software](http://joss.theoj.org/) that you can
