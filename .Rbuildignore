@@ -13,3 +13,4 @@
 ^codemeta\.json$
 ^\.github$
 ^LICENSE\.md$
+^CRAN-RELEASE$
