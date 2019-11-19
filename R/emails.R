@@ -29,8 +29,15 @@ make_email <- function(to, package) {
 }
 
 tidyverse_dependency_dissuade <- function() {
-  maintainers <- get("revdep_maintainers", asNamespace("revdepcheck"))()
-  emails <- purrr::imap(maintainers, make_email)
+  pkgs <- tools::package_dependencies("tidyverse",
+    which = c("Depends", "Imports", "Suggests"),
+    reverse = TRUE
+  )[[1]]
+
+  db <- tools::CRAN_package_db()
+  maintainers <- db$Maintainer[match(pkgs, db$Package)]
+
+  emails <- purrr::map2(maintainers, pkgs, make_email)
   purrr::walk(emails, ~ try(get("gm_send_message", asNamespace("gmailr"))(.x)))
 }
 
