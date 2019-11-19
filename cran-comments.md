@@ -1,3 +1,7 @@
+This is a resubmission; the DOI is no longer a URL.
+
+---
+
 ## Test environments
 
 * local: darwin15.6.0-3.6.0
