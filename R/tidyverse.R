@@ -24,9 +24,9 @@
 NULL
 
 
-release_questions <- function() {
+release_bullets <- function() {
   c(
-    "Have you run `usethis::use_tidy_versions(TRUE)`?",
-    "Have you tested with RStudio 1.0?"
+    '`usethis::use_latest_dependencies(TRUE, "CRAN")`',
+    '`tidyverse_dependency_dissuade()`'
   )
 }

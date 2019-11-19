@@ -49,6 +49,7 @@ Imports:
 Suggests: 
     covr,
     feather,
+    glue,
     knitr,
     rmarkdown,
     testthat
