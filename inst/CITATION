@@ -1,0 +1,12 @@
+bibentry(
+  "Article",
+  title = "Welcome to the {tidyverse}",
+  author = "Hadley Wickham, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D'Agostino McGowan, Romain François, Garrett Grolemund, Alex Hayes, Lionel Henry, Jim Hester, Max Kuhn, Thomas Lin Pedersen, Evan Miller, Stephan Milton Bache, Kirill Müller, Jeroen Ooms, David Robinson, Dana Paige Seidel, Vitalie Spinu, Kohske Takahashi, Davis Vaughan, Claus Wilke, Kara Woo, Hiroaki Yutani",
+  year = 2019,
+  journal = "Journal of Open Source Software",
+  volume = 4,
+  number = 43,
+  pages = 1686,
+  doi = "https://doi.org/10.21105/joss.01686",
+  textVersion = "Wickham et al., (2019). Welcome to the tidyverse. Journal of Open Source Software, 4(43), 1686, https://doi.org/10.21105/joss.01686"
+)

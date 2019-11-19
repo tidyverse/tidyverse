@@ -1,5 +1,10 @@
 # tidyverse 1.2.1.9000
 
+* The tidyverse now has an associated paper at the 
+  [Journal of Open Source Software](http://joss.theoj.org/) that you can
+  use to cite the tidyverse if you use it in a paper - see 
+  `citation("tidyverse")` for details.
+
 * Eliminate repeats in the package list when loading an odd number of 
   packages (#94, #100, @dchiu911)
 
