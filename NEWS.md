@@ -25,7 +25,7 @@
 * `tidyverse_deps()` and `tidyverse_update()` gain a new `repos` argument
   that gets passed to the base function `available.packages()` (@zkamvar, #82)
 
-* `tidyverse_packages()` corrently returns packages names (#93, #106, @coatless)
+* `tidyverse_packages()` currently returns packages names (#93, #106, @coatless)
 
 * `tidyverse_sitrep()` gives you a situtation report on your install of 
   the tidyverse (#203)
