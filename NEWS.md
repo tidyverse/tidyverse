@@ -15,9 +15,9 @@
 
 * If conflicted package is loaded, omit display of conflicts. 
   This includes fix to `tidyverse_conflicts()` to avoid accidentally
-  triggering conflited shims (#136).
+  triggering conflicted shims (#136).
 
-* `tidyverse_deps()` now succeeds even if a dependency of a depedency 
+* `tidyverse_deps()` now succeeds even if a dependency of a dependency 
   is missing (#152, @PoGibas). It no longer includes dependencies that
   are needed by the tidyverse package but are not strictly part of the
   tidyverse (i.e. cli, crayon, and rstudioapi).
@@ -25,9 +25,9 @@
 * `tidyverse_deps()` and `tidyverse_update()` gain a new `repos` argument
   that gets passed to the base function `available.packages()` (@zkamvar, #82)
 
-* `tidyverse_packages()` corrently returns packages names (#93, #106, @coatless)
+* `tidyverse_packages()` correctly returns packages names (#93, #106, @coatless)
 
-* `tidyverse_sitrep()` gives you a situtation report on your install of 
+* `tidyverse_sitrep()` gives you a situation report on your install of 
   the tidyverse (#203)
 
 # tidyverse 1.2.1
