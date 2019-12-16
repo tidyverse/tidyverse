@@ -31,7 +31,7 @@ install.packages("tidyverse")
 
 # Or the development version from GitHub
 # install.packages("devtools")
-devtools::install_github("hadley/tidyverse")
+devtools::install_github("tidyverse/tidyverse")
 ```
 
 ## Usage
