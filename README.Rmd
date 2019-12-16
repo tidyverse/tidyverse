@@ -83,22 +83,22 @@ As well as the core tidyverse, installing this package also installs a selection
 *   Working with specific types of vectors:
 
     * [hms](https://github.com/rstats-db/hms), for times.
-    * [lubridate](https://github.com/hadley/lubridate), for date/times.
+    * [lubridate](https://github.com/tidyverse/lubridate), for date/times.
     
 *   Importing other types of data:
 
-    * [feather](http://github.com/wesm/feather), for sharing with Python and other languages.
-    * [haven](https://github.com/hadley/haven), for SPSS, SAS and Stata files.
-    * [httr](https://github.com/hadley/httr), for web apis.
-    * [jsonlite](https://github.com/jeroenooms/jsonlite) for JSON.
-    * [readxl](https://github.com/hadley/readxl), for `.xls` and `.xlsx` files.
-    * [rvest](https://github.com/hadley/rvest), for web scraping.
-    * [xml2](https://github.com/hadley/xml2), for XML.
+    * [feather](https://github.com/wesm/feather), for sharing with Python and other languages.
+    * [haven](https://github.com/tidyverse/haven), for SPSS, SAS and Stata files.
+    * [httr](https://github.com/r-lib/httr), for web apis.
+    * [jsonlite](https://github.com/jeroen/jsonlite) for JSON.
+    * [readxl](https://github.com/tidyverse/readxl), for `.xls` and `.xlsx` files.
+    * [rvest](https://github.com/tidyverse/rvest), for web scraping.
+    * [xml2](https://github.com/r-lib/xml2), for XML.
 
 *   Modelling
 
-    * [modelr](https://github.com/hadley/modelr), for modelling within a pipeline
-    * [broom](https://github.com/dgrtwo/broom), for turning models into 
+    * [modelr](https://github.com/tidyverse/modelr), for modelling within a pipeline
+    * [broom](https://github.com/tidymodels/broom), for turning models into 
       tidy data
 
 ## Code of Conduct
