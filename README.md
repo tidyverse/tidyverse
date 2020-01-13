@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# tidyverse <a href='https:/tidyverse.tidyverse.org'><img src='man/figures/logo.png' align="right" height="138.5" /></a>
+# tidyverse <a href='https://tidyverse.tidyverse.org'><img src='man/figures/logo.png' align="right" height="138.5" /></a>
 
 <!-- badges: start -->
 
@@ -31,19 +31,19 @@ install.packages("tidyverse")
 
 # Or the development version from GitHub
 # install.packages("devtools")
-devtools::install_github("hadley/tidyverse")
+devtools::install_github("tidyverse/tidyverse")
 ```
 
 ## Usage
 
 `library(tidyverse)` will load the core tidyverse packages:
 
-  - [ggplot2](http://ggplot2.tidyverse.org), for data visualisation.
-  - [dplyr](http://dplyr.tidyverse.org), for data manipulation.
-  - [tidyr](http://tidyr.tidyverse.org), for data tidying.
-  - [readr](http://readr.tidyverse.org), for data import.
-  - [purrr](http://purrr.tidyverse.org), for functional programming.
-  - [tibble](http://tibble.tidyverse.org), for tibbles, a modern
+  - [ggplot2](https://ggplot2.tidyverse.org), for data visualisation.
+  - [dplyr](https://dplyr.tidyverse.org), for data manipulation.
+  - [tidyr](https://tidyr.tidyverse.org), for data tidying.
+  - [readr](https://readr.tidyverse.org), for data import.
+  - [purrr](https://purrr.tidyverse.org), for functional programming.
+  - [tibble](https://tibble.tidyverse.org), for tibbles, a modern
     re-imagining of data frames.
   - [stringr](https://github.com/tidyverse/stringr), for strings.
   - [forcats](https://github.com/hadley/forcats), for factors.
@@ -53,14 +53,14 @@ have loaded:
 
 ``` r
 library(tidyverse)
-#> ── Attaching packages ────────────────────────────────────────────────────────────────────── tidyverse 1.2.1.9000 ──
-#> ✔ ggplot2 3.0.0           ✔ purrr   0.2.5      
-#> ✔ tibble  1.4.99.9005     ✔ dplyr   0.7.99.9000
-#> ✔ tidyr   0.8.1           ✔ stringr 1.3.1      
-#> ✔ readr   1.1.1           ✔ forcats 0.3.0
-#> ── Conflicts ────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
-#> ✖ dplyr::filter() masks stats::filter()
-#> ✖ dplyr::lag()    masks stats::lag()
+#> ── Attaching packages ────────────────────────────────────────────────── tidyverse 1.2.1.9000 ──
+#> ✓ ggplot2 3.2.1          ✓ purrr   0.3.3     
+#> ✓ tibble  2.1.3          ✓ dplyr   0.8.3     
+#> ✓ tidyr   1.0.0.9000     ✓ stringr 1.4.0     
+#> ✓ readr   1.3.1          ✓ forcats 0.4.0
+#> ── Conflicts ────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+#> x dplyr::filter() masks stats::filter()
+#> x dplyr::lag()    masks stats::lag()
 ```
 
 You can see conflicts created later with `tidyverse_conflicts()`:
@@ -73,10 +73,10 @@ library(MASS)
 #> 
 #>     select
 tidyverse_conflicts()
-#> ── Conflicts ────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
-#> ✖ dplyr::filter() masks stats::filter()
-#> ✖ dplyr::lag()    masks stats::lag()
-#> ✖ MASS::select()  masks dplyr::select()
+#> ── Conflicts ────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+#> x dplyr::filter() masks stats::filter()
+#> x dplyr::lag()    masks stats::lag()
+#> x MASS::select()  masks dplyr::select()
 ```
 
 And you can check that all tidyverse packages are up-to-date with
@@ -103,31 +103,31 @@ probably not in every analysis. This includes packages for:
   - Working with specific types of vectors:
     
       - [hms](https://github.com/rstats-db/hms), for times.
-      - [lubridate](https://github.com/hadley/lubridate), for
+      - [lubridate](https://github.com/tidyverse/lubridate), for
         date/times.
 
   - Importing other types of data:
     
-      - [feather](http://github.com/wesm/feather), for sharing with
+      - [feather](https://github.com/wesm/feather), for sharing with
         Python and other languages.
-      - [haven](https://github.com/hadley/haven), for SPSS, SAS and
+      - [haven](https://github.com/tidyverse/haven), for SPSS, SAS and
         Stata files.
-      - [httr](https://github.com/hadley/httr), for web apis.
-      - [jsonlite](https://github.com/jeroenooms/jsonlite) for JSON.
-      - [readxl](https://github.com/hadley/readxl), for `.xls` and
+      - [httr](https://github.com/r-lib/httr), for web apis.
+      - [jsonlite](https://github.com/jeroen/jsonlite) for JSON.
+      - [readxl](https://github.com/tidyverse/readxl), for `.xls` and
         `.xlsx` files.
-      - [rvest](https://github.com/hadley/rvest), for web scraping.
-      - [xml2](https://github.com/hadley/xml2), for XML.
+      - [rvest](https://github.com/tidyverse/rvest), for web scraping.
+      - [xml2](https://github.com/r-lib/xml2), for XML.
 
   - Modelling
     
-      - [modelr](https://github.com/hadley/modelr), for modelling within
-        a pipeline
-      - [broom](https://github.com/dgrtwo/broom), for turning models
+      - [modelr](https://github.com/tidyverse/modelr), for modelling
+        within a pipeline
+      - [broom](https://github.com/tidymodels/broom), for turning models
         into tidy data
 
 ## Code of Conduct
 
-Please note that the tidyverse project is released with a [Contributor Code of Conduct](https://tidyverse.tidyverse.org/CODE_OF_CONDUCT.html). 
+Please note that the tidyverse project is released with a [Contributor
+Code of Conduct](https://tidyverse.tidyverse.org/CODE_OF_CONDUCT.html).
 By contributing to this project, you agree to abide by its terms.
-
