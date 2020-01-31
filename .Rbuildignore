@@ -14,3 +14,6 @@
 ^\.github$
 ^LICENSE\.md$
 ^CRAN-RELEASE$
+^\.github/workflows/R-CMD-check\.yaml$
+^\.github/workflows/pr-commands\.yaml$
+^\.github/workflows/pkgdown\.yaml$
