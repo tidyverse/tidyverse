@@ -1,5 +1,7 @@
 # tidyverse (development version)
 
+* License changed to MIT (#235).
+
 # tidyverse 1.3.0
 
 * The tidyverse now has an associated paper at the 
