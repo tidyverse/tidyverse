@@ -20,7 +20,7 @@ tidyverse_update <- function(recursive = FALSE, repos = getOption("repos")) {
     return(invisible())
   }
 
-  cli::cat_line(cli::pluralize("The following {nrow(behind)} package{?s} {?is/are} out of date:"))
+  cli::cat_line(cli::pluralize("The following {cli::qty(nrow(behind))}package{?s} {?is/are} out of date:"))
   cli::cat_line()
   cli::cat_bullet(format(behind$package), " (", behind$local, " -> ", behind$cran, ")")
 
