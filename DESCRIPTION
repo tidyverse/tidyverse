@@ -14,7 +14,7 @@ Description: The 'tidyverse' is a set of packages that work in harmony
     'tidyverse' packages in a single step. Learn more about the
     'tidyverse' at <https://tidyverse.org>.
 License: MIT + file LICENSE
-URL: http://tidyverse.tidyverse.org,
+URL: https://tidyverse.tidyverse.org,
     https://github.com/tidyverse/tidyverse
 BugReports: https://github.com/tidyverse/tidyverse/issues
 Depends: 
