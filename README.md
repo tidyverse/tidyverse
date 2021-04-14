@@ -7,8 +7,7 @@
 
 [![CRAN
 status](https://www.r-pkg.org/badges/version/tidyverse)](https://cran.r-project.org/package=tidyverse)
-[![Travis build
-status](https://travis-ci.org/tidyverse/tidyverse.svg?branch=master)](https://travis-ci.org/tidyverse/tidyverse)
+[![R-CMD-check](https://github.com/tidyverse/tidyverse/workflows/R-CMD-check/badge.svg)](https://github.com/tidyverse/tidyverse/actions)
 [![Codecov test
 coverage](https://codecov.io/gh/tidyverse/tidyverse/branch/master/graph/badge.svg)](https://codecov.io/gh/tidyverse/tidyverse?branch=master)
 <!-- badges: end -->
@@ -38,27 +37,27 @@ devtools::install_github("tidyverse/tidyverse")
 
 `library(tidyverse)` will load the core tidyverse packages:
 
-  - [ggplot2](https://ggplot2.tidyverse.org), for data visualisation.
-  - [dplyr](https://dplyr.tidyverse.org), for data manipulation.
-  - [tidyr](https://tidyr.tidyverse.org), for data tidying.
-  - [readr](https://readr.tidyverse.org), for data import.
-  - [purrr](https://purrr.tidyverse.org), for functional programming.
-  - [tibble](https://tibble.tidyverse.org), for tibbles, a modern
+-   [ggplot2](https://ggplot2.tidyverse.org), for data visualisation.
+-   [dplyr](https://dplyr.tidyverse.org), for data manipulation.
+-   [tidyr](https://tidyr.tidyverse.org), for data tidying.
+-   [readr](https://readr.tidyverse.org), for data import.
+-   [purrr](https://purrr.tidyverse.org), for functional programming.
+-   [tibble](https://tibble.tidyverse.org), for tibbles, a modern
     re-imagining of data frames.
-  - [stringr](https://github.com/tidyverse/stringr), for strings.
-  - [forcats](https://github.com/hadley/forcats), for factors.
+-   [stringr](https://github.com/tidyverse/stringr), for strings.
+-   [forcats](https://github.com/hadley/forcats), for factors.
 
 You also get a condensed summary of conflicts with other packages you
 have loaded:
 
 ``` r
 library(tidyverse)
-#> ── Attaching packages ────────────────────────────────────────────────── tidyverse 1.2.1.9000 ──
-#> ✓ ggplot2 3.2.1          ✓ purrr   0.3.3     
-#> ✓ tibble  2.1.3          ✓ dplyr   0.8.3     
-#> ✓ tidyr   1.0.0.9000     ✓ stringr 1.4.0     
-#> ✓ readr   1.3.1          ✓ forcats 0.4.0
-#> ── Conflicts ────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+#> ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.0 ──
+#> ✓ ggplot2 3.3.3     ✓ purrr   0.3.4
+#> ✓ tibble  3.1.0     ✓ dplyr   1.0.5
+#> ✓ tidyr   1.1.3     ✓ stringr 1.4.0
+#> ✓ readr   1.4.0     ✓ forcats 0.5.1
+#> ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
 #> x dplyr::filter() masks stats::filter()
 #> x dplyr::lag()    masks stats::lag()
 ```
@@ -73,7 +72,7 @@ library(MASS)
 #> 
 #>     select
 tidyverse_conflicts()
-#> ── Conflicts ────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+#> ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
 #> x dplyr::filter() masks stats::filter()
 #> x dplyr::lag()    masks stats::lag()
 #> x MASS::select()  masks dplyr::select()
@@ -100,30 +99,30 @@ As well as the core tidyverse, installing this package also installs a
 selection of other packages that you’re likely to use frequently, but
 probably not in every analysis. This includes packages for:
 
-  - Working with specific types of vectors:
-    
-      - [hms](https://github.com/rstats-db/hms), for times.
-      - [lubridate](https://github.com/tidyverse/lubridate), for
+-   Working with specific types of vectors:
+
+    -   [hms](https://github.com/rstats-db/hms), for times.
+    -   [lubridate](https://github.com/tidyverse/lubridate), for
         date/times.
 
-  - Importing other types of data:
-    
-      - [feather](https://github.com/wesm/feather), for sharing with
-        Python and other languages.
-      - [haven](https://github.com/tidyverse/haven), for SPSS, SAS and
-        Stata files.
-      - [httr](https://github.com/r-lib/httr), for web apis.
-      - [jsonlite](https://github.com/jeroen/jsonlite) for JSON.
-      - [readxl](https://github.com/tidyverse/readxl), for `.xls` and
-        `.xlsx` files.
-      - [rvest](https://github.com/tidyverse/rvest), for web scraping.
-      - [xml2](https://github.com/r-lib/xml2), for XML.
+-   Importing other types of data:
 
-  - Modelling
-    
-      - [modelr](https://github.com/tidyverse/modelr), for modelling
+    -   [feather](https://github.com/wesm/feather), for sharing with
+        Python and other languages.
+    -   [haven](https://github.com/tidyverse/haven), for SPSS, SAS and
+        Stata files.
+    -   [httr](https://github.com/r-lib/httr), for web apis.
+    -   [jsonlite](https://github.com/jeroen/jsonlite) for JSON.
+    -   [readxl](https://github.com/tidyverse/readxl), for `.xls` and
+        `.xlsx` files.
+    -   [rvest](https://github.com/tidyverse/rvest), for web scraping.
+    -   [xml2](https://github.com/r-lib/xml2), for XML.
+
+-   Modelling
+
+    -   [modelr](https://github.com/tidyverse/modelr), for modelling
         within a pipeline
-      - [broom](https://github.com/tidymodels/broom), for turning models
+    -   [broom](https://github.com/tidymodels/broom), for turning models
         into tidy data
 
 ## Code of Conduct
