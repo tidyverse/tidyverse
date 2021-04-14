@@ -27,6 +27,8 @@ Imports:
     dplyr (>= 1.0.5),
     dtplyr (>= 1.1.0),
     forcats (>= 0.5.1),
+    googledrive (>= 1.0.1),
+    googlesheets4 (>= 0.3.0),
     ggplot2 (>= 3.3.3),
     haven (>= 2.3.1),
     hms (>= 1.0.0),
