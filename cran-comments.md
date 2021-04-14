@@ -12,16 +12,8 @@ This is a false positive - the majority of packages are maintained by me or my t
 
 ## revdepcheck results
 
-We checked 91 reverse dependencies (84 from CRAN + 7 from BioConductor), comparing R CMD check results across CRAN and dev versions of this package.
+We checked 147 reverse dependencies, comparing R CMD check results across CRAN and dev versions of this package.
 
  * We saw 0 new problems
- * We failed to check 4 packages
+ * We failed to check 0 packages
 
-Issues with CRAN packages are summarised below.
-
-### Failed to check
-
-* heatwaveR    (NA)
-* specklestar  (NA)
-* updog        (NA)
-* weibulltools (NA)
