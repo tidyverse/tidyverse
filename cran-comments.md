@@ -1,17 +1,14 @@
-This is a resubmission; the DOI is no longer a URL.
-
----
-
-## Test environments
-
-* local: darwin15.6.0-3.6.0
-* travis: 3.1, 3.2, 3.3, oldrel, release, devel
-* r-hub: windows-x86_64-devel, ubuntu-gcc-release, fedora-clang-devel
-* win-builder: windows-x86_64-devel
-
 ## R CMD check results
 
-0 errors | 0 warnings | 0 notes
+0 errors | 0 warnings | 1 notes
+
+> checking package dependencies ... NOTE
+  Imports includes 29 non-default packages.
+  Importing from so many packages makes the package vulnerable to any of
+  them becoming unavailable.  Move as many as possible to Suggests and
+  use conditionally.
+
+This is a false positive - the majority of packages are maintained by me or my team, so there's little risk of them becoming unavailable.
 
 ## revdepcheck results
 
