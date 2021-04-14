@@ -25,6 +25,7 @@ Imports:
     crayon (>= 1.4.1),
     dbplyr (>= 2.1.1),
     dplyr (>= 1.0.5),
+    dtplyr (>= 1.1.0),
     forcats (>= 0.5.1),
     ggplot2 (>= 3.3.3),
     haven (>= 2.3.1),
