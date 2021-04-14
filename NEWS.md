@@ -1,6 +1,7 @@
 # tidyverse (development version)
 
 * tidyverse now installs dtplyr (#216), googledrive, and googlesheets4 (#229).
+  All packages have been bumped to their latest versions.
 
 * License changed to MIT (#235).
 
