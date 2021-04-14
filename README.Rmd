@@ -23,7 +23,7 @@ knitr::opts_chunk$set(
 
 The tidyverse is a set of packages that work in harmony because they share common data representations and API design. The __tidyverse__ package is designed to make it easy to install and load core packages from the tidyverse in a single command.
 
-If you'd like to learn how to use the tidyverse effectively, the best place to start is [R for data science](http://r4ds.had.co.nz).
+If you'd like to learn how to use the tidyverse effectively, the best place to start is [R for data science](https://r4ds.had.co.nz).
 
 ## Installation
 
@@ -47,7 +47,7 @@ devtools::install_github("tidyverse/tidyverse")
 * [purrr](https://purrr.tidyverse.org), for functional programming.
 * [tibble](https://tibble.tidyverse.org), for tibbles, a modern re-imagining of data frames.
 * [stringr](https://github.com/tidyverse/stringr), for strings.
-* [forcats](https://github.com/hadley/forcats), for factors.
+* [forcats](https://github.com/tidyverse/forcats), for factors.
 
 You also get a condensed summary of conflicts with other packages you have loaded:
 
@@ -82,7 +82,7 @@ As well as the core tidyverse, installing this package also installs a selection
 
 *   Working with specific types of vectors:
 
-    * [hms](https://github.com/rstats-db/hms), for times.
+    * [hms](https://github.com/tidyverse/hms), for times.
     * [lubridate](https://github.com/tidyverse/lubridate), for date/times.
     
 *   Importing other types of data:

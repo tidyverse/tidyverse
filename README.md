@@ -20,7 +20,7 @@ package is designed to make it easy to install and load core packages
 from the tidyverse in a single command.
 
 If you’d like to learn how to use the tidyverse effectively, the best
-place to start is [R for data science](http://r4ds.had.co.nz).
+place to start is [R for data science](https://r4ds.had.co.nz).
 
 ## Installation
 
@@ -45,14 +45,14 @@ devtools::install_github("tidyverse/tidyverse")
 -   [tibble](https://tibble.tidyverse.org), for tibbles, a modern
     re-imagining of data frames.
 -   [stringr](https://github.com/tidyverse/stringr), for strings.
--   [forcats](https://github.com/hadley/forcats), for factors.
+-   [forcats](https://github.com/tidyverse/forcats), for factors.
 
 You also get a condensed summary of conflicts with other packages you
 have loaded:
 
 ``` r
 library(tidyverse)
-#> ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.0 ──
+#> ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──
 #> ✓ ggplot2 3.3.3     ✓ purrr   0.3.4
 #> ✓ tibble  3.1.0     ✓ dplyr   1.0.5
 #> ✓ tidyr   1.1.3     ✓ stringr 1.4.0
@@ -101,7 +101,7 @@ probably not in every analysis. This includes packages for:
 
 -   Working with specific types of vectors:
 
-    -   [hms](https://github.com/rstats-db/hms), for times.
+    -   [hms](https://github.com/tidyverse/hms), for times.
     -   [lubridate](https://github.com/tidyverse/lubridate), for
         date/times.
 

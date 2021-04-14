@@ -8,7 +8,7 @@
 # tidyverse 1.3.0
 
 * The tidyverse now has an associated paper at the 
-  [Journal of Open Source Software](http://joss.theoj.org/) that you can
+  [Journal of Open Source Software](https://joss.theoj.org/) that you can
   use to cite the tidyverse if you use it in a paper - see 
   `citation("tidyverse")` for details.
 
