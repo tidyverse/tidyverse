@@ -18,7 +18,7 @@ URL: https://tidyverse.tidyverse.org,
     https://github.com/tidyverse/tidyverse
 BugReports: https://github.com/tidyverse/tidyverse/issues
 Depends: 
-    R (>= 3.2)
+    R (>= 3.3)
 Imports: 
     broom (>= 0.7.6),
     cli (>= 2.4.0),
@@ -61,3 +61,4 @@ VignetteBuilder:
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1
+Config/Needs/Website: tidyverse/tidytemplate
