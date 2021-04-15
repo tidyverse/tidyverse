@@ -1,3 +1,7 @@
+This is a re-submission that fixes a redirected url.
+
+---
+
 ## R CMD check results
 
 0 errors | 0 warnings | 1 notes
