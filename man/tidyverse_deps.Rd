@@ -11,7 +11,7 @@ tidyverse_deps(recursive = FALSE, repos = getOption("repos"))
 tidyverse packages.}
 
 \item{repos}{The repositories to use to check for updates.
-Defaults to \code{getOptions("repos")}.}
+Defaults to \code{getOption("repos")}.}
 }
 \description{
 List all tidyverse dependencies
