@@ -67,7 +67,7 @@ tidyverse_sitrep <- function() {
 #' @param recursive If \code{TRUE}, will also list all dependencies of
 #'   tidyverse packages.
 #' @param repos The repositories to use to check for updates.
-#'   Defaults to \code{getOptions("repos")}.
+#'   Defaults to \code{getOption("repos")}.
 #' @export
 tidyverse_deps <- function(recursive = FALSE, repos = getOption("repos")) {
   pkgs <- utils::available.packages(repos = repos)
