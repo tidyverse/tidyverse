@@ -419,7 +419,7 @@
     }
   ],
   "contIntegration": "https://travis-ci.org/tidyverse/tidyverse",
-  "releaseNotes": "https://github.com/tidyverse/tidyverse/blob/master/NEWS.md",
-  "readme": "https://github.com/tidyverse/tidyverse/blob/master/README.md",
+  "releaseNotes": "https://github.com/tidyverse/tidyverse/blob/main/NEWS.md",
+  "readme": "https://github.com/tidyverse/tidyverse/blob/main/README.md",
   "fileSize": "61.931KB"
 }
