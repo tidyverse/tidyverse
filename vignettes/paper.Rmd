@@ -108,7 +108,7 @@ affiliations:
 date: 19 November 2019
 bibliography: paper.bib
 vignette: >
-  %\VignetteIndexEntry{Welcome to the tidyverse}
+  %\VignetteIndexEntry{Welcome to the Tidyverse}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
