@@ -68,8 +68,8 @@ And you can check that all tidyverse packages are up-to-date with `tidyverse_upd
 tidyverse_update()
 #> The following packages are out of date:
 #>  * broom (0.7.5 -> 0.7.10)
-#>  * DBI   (1.0.0 -> 1.1.1)
 #>  * cpp11 (0.4.0 -> 0.4.2)
+#>  * DBI   (1.0.0 -> 1.1.1)
 #> Update now?
 #> 
 #> 1: Yes
