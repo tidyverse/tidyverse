@@ -1,27 +1,11 @@
-msg <- function(..., startup = FALSE) {
+msg <- function(x, startup = FALSE) {
   if (startup) {
     if (!isTRUE(getOption("tidyverse.quiet"))) {
-      packageStartupMessage(text_col(...))
+      rlang::inform(x, class = "packageStartupMessage")
     }
   } else {
-    message(text_col(...))
+    rlang::inform(x)
   }
-}
-
-text_col <- function(x) {
-  # If RStudio not available, messages already printed in black
-  if (!rstudioapi::isAvailable()) {
-    return(x)
-  }
-
-  if (!rstudioapi::hasFun("getThemeInfo")) {
-    return(x)
-  }
-
-  theme <- rstudioapi::getThemeInfo()
-
-  if (isTRUE(theme$dark)) crayon::white(x) else crayon::black(x)
-
 }
 
 #' List all packages in the tidyverse
