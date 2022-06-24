@@ -55,7 +55,7 @@ tidyverse_conflict_message <- function(x) {
 
 #' @export
 print.tidyverse_conflicts <- function(x, ..., startup = FALSE) {
-  rlang::inform(tidyverse_conflict_message(x))
+  cli::cat_line(tidyverse_conflict_message(x))
   invisible(x)
 }
 
