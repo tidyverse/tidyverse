@@ -1,0 +1,11 @@
+pandoc: 2.14.2
+pkgdown: 2.0.5
+pkgdown_sha: ~
+articles:
+  manifesto: manifesto.html
+  paper: paper.html
+last_built: 2022-07-01T02:14Z
+urls:
+  reference: https://tidyverse.tidyverse.org/reference
+  article: https://tidyverse.tidyverse.org/articles
+
