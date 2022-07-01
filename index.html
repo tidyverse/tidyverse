@@ -142,13 +142,13 @@
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
 <span><span class="co">#&gt; ── Attaching packages ────────────────────────────────── tidyverse 1.3.1.9000 ──</span></span>
-<span><span class="co">#&gt; ✓ ggplot2 3.3.3     ✓ purrr   0.3.4</span></span>
-<span><span class="co">#&gt; ✓ tibble  3.1.5     ✓ dplyr   1.0.7</span></span>
-<span><span class="co">#&gt; ✓ tidyr   1.1.3     ✓ stringr 1.4.0</span></span>
-<span><span class="co">#&gt; ✓ readr   2.0.2     ✓ forcats 0.5.1</span></span>
+<span><span class="co">#&gt; ✔ ggplot2 3.3.6     ✔ purrr   0.3.4</span></span>
+<span><span class="co">#&gt; ✔ tibble  3.1.7     ✔ dplyr   1.0.9</span></span>
+<span><span class="co">#&gt; ✔ tidyr   1.2.0     ✔ stringr 1.4.0</span></span>
+<span><span class="co">#&gt; ✔ readr   2.1.2     ✔ forcats 0.5.1</span></span>
 <span><span class="co">#&gt; ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──</span></span>
-<span><span class="co">#&gt; x dplyr::filter() masks stats::filter()</span></span>
-<span><span class="co">#&gt; x dplyr::lag()    masks stats::lag()</span></span></code></pre></div>
+<span><span class="co">#&gt; ✖ dplyr::filter() masks stats::filter()</span></span>
+<span><span class="co">#&gt; ✖ dplyr::lag()    masks stats::lag()</span></span></code></pre></div>
 <p>You can see conflicts created later with <code><a href="reference/tidyverse_conflicts.html">tidyverse_conflicts()</a></code>:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="http://www.stats.ox.ac.uk/pub/MASS4/" class="external-link">MASS</a></span><span class="op">)</span></span>
@@ -159,9 +159,9 @@
 <span><span class="co">#&gt;     select</span></span>
 <span><span class="fu"><a href="reference/tidyverse_conflicts.html">tidyverse_conflicts</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="co">#&gt; ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──</span></span>
-<span><span class="co">#&gt; x dplyr::filter() masks stats::filter()</span></span>
-<span><span class="co">#&gt; x dplyr::lag()    masks stats::lag()</span></span>
-<span><span class="co">#&gt; x MASS::select()  masks dplyr::select()</span></span></code></pre></div>
+<span><span class="co">#&gt; ✖ dplyr::filter() masks stats::filter()</span></span>
+<span><span class="co">#&gt; ✖ dplyr::lag()    masks stats::lag()</span></span>
+<span><span class="co">#&gt; ✖ MASS::select()  masks dplyr::select()</span></span></code></pre></div>
 <p>And you can check that all tidyverse packages are up-to-date with <code><a href="reference/tidyverse_update.html">tidyverse_update()</a></code>:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/tidyverse_update.html">tidyverse_update</a></span><span class="op">(</span><span class="op">)</span></span>
