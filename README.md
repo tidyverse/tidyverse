@@ -9,7 +9,7 @@
 status](https://www.r-pkg.org/badges/version/tidyverse)](https://cran.r-project.org/package=tidyverse)
 [![R-CMD-check](https://github.com/tidyverse/tidyverse/workflows/R-CMD-check/badge.svg)](https://github.com/tidyverse/tidyverse/actions)
 [![Codecov test
-coverage](https://codecov.io/gh/tidyverse/tidyverse/branch/main/graph/badge.svg)](https://codecov.io/gh/tidyverse/tidyverse?branch=main)
+coverage](https://codecov.io/gh/tidyverse/tidyverse/branch/main/graph/badge.svg)](https://app.codecov.io/gh/tidyverse/tidyverse?branch=main)
 <!-- badges: end -->
 
 ## Overview
