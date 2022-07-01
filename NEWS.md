@@ -1,5 +1,7 @@
 # tidyverse (development version)
 
+* Text version of the citation now lists all authors (#269).
+
 * All packages have been bumped to their latest versions.
 
 * Messaging uses modern approach to avoid red text in RStudio (#296).

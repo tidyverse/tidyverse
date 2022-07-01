@@ -8,5 +8,4 @@ bibentry(
   number = 43,
   pages = 1686,
   doi = "10.21105/joss.01686",
-  textVersion = "Wickham et al., (2019). Welcome to the tidyverse. Journal of Open Source Software, 4(43), 1686, https://doi.org/10.21105/joss.01686"
 )
