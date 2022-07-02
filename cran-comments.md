@@ -1,7 +1,3 @@
-This is a re-submission that fixes a redirected url.
-
----
-
 ## R CMD check results
 
 0 errors | 0 warnings | 1 notes
@@ -15,6 +11,8 @@ This is a re-submission that fixes a redirected url.
 This is a false positive - the majority of packages are maintained by me or my team, so there's little risk of them becoming unavailable.
 
 ## revdepcheck results
+
+
 
 We checked 147 reverse dependencies, comparing R CMD check results across CRAN and dev versions of this package.
 
