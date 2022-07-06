@@ -14,3 +14,4 @@
 ^\.github$
 ^LICENSE\.md$
 ^CRAN-RELEASE$
+^CRAN-SUBMISSION$

@@ -4,7 +4,6 @@
 # Suppress R CMD check note
 #' @importFrom broom tidy
 #' @importFrom dbplyr db_collect
-#' @importFrom dtplyr lazy_dt
 #' @importFrom forcats fct_c
 #' @importFrom ggplot2 ggplot
 #' @importFrom googledrive drive_find
