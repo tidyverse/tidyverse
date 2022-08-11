@@ -1,5 +1,7 @@
 # tidyverse (development version)
 
+* Add lubridate to the core tidyverse (#157).
+
 # tidyverse 1.3.2
 
 * Text version of the citation now lists all authors (#269).

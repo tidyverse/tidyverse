@@ -80,8 +80,18 @@ confirm_conflict <- function(packages, name) {
 
 ls_env <- function(env) {
   x <- ls(pos = env)
-  if (identical(env, "package:dplyr")) {
+
+  # intersect, setdiff, setequal, union come from generics
+  if (env %in% c("package:dplyr", "package:lubridate")) {
     x <- setdiff(x, c("intersect", "setdiff", "setequal", "union"))
   }
+
+  if (env == "package:lubridate") {
+    x <- setdiff(x, c(
+      "as.difftime", # lubridate makes into an S4 generic
+      "date"         # matches base behaviour
+    ))
+  }
+
   x
 }
