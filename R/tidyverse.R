@@ -2,29 +2,31 @@
 "_PACKAGE"
 
 # Suppress R CMD check note
-#' @importFrom broom tidy
-#' @importFrom dbplyr db_collect
-#' @importFrom forcats fct_c
-#' @importFrom ggplot2 ggplot
-#' @importFrom googledrive drive_find
-#' @importFrom googlesheets4 read_sheet
-#' @importFrom haven read_sas
-#' @importFrom hms hms
-#' @importFrom httr GET
-#' @importFrom jsonlite fromJSON
-#' @importFrom lubridate ymd
-#' @importFrom modelr add_predictions
-#' @importFrom pillar pillar
-#' @importFrom readr read_csv
-#' @importFrom readxl read_excel
-#' @importFrom reprex reprex
-#' @importFrom rlang qq_show
-#' @importFrom rvest html_node
-#' @importFrom stringr str_c
-#' @importFrom tidyr spread
-#' @importFrom xml2 read_xml
-NULL
-
+# Namespace in Imports field not imported from: PKG
+#   All declared Imports should be used.
+ignore_unused_imports <- function() {
+  broom::tidy
+  dbplyr::db_collect
+  forcats::fct_c
+  ggplot2::ggplot
+  googledrive::drive_find
+  googlesheets4::read_sheet
+  haven::read_sas
+  hms::hms
+  httr::GET
+  jsonlite::fromJSON
+  lubridate::ymd
+  modelr::add_predictions
+  pillar::pillar
+  readr::read_csv
+  readxl::read_excel
+  reprex::reprex
+  rlang::qq_show
+  rvest::html_node
+  stringr::str_c
+  tidyr::spread
+  xml2::read_xml
+}
 
 release_bullets <- function() {
   c(
