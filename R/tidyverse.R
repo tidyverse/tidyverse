@@ -26,7 +26,6 @@ ignore_unused_imports <- function() {
   stringr::str_c
   tidyr::spread
   xml2::read_xml
-  invisible()
 }
 
 release_bullets <- function() {
