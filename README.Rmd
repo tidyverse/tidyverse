@@ -48,6 +48,7 @@ devtools::install_github("tidyverse/tidyverse")
 * [tibble](https://tibble.tidyverse.org), for tibbles, a modern re-imagining of data frames.
 * [stringr](https://github.com/tidyverse/stringr), for strings.
 * [forcats](https://github.com/tidyverse/forcats), for factors.
+* [lubridate](https://github.com/tidyverse/lubridate), for date/times.
 
 You also get a condensed summary of conflicts with other packages you have loaded:
 
@@ -83,7 +84,6 @@ As well as the core tidyverse, installing this package also installs a selection
 *   Working with specific types of vectors:
 
     * [hms](https://github.com/tidyverse/hms), for times.
-    * [lubridate](https://github.com/tidyverse/lubridate), for date/times.
     
 *   Importing other types of data:
 
