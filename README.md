@@ -46,6 +46,8 @@ devtools::install_github("tidyverse/tidyverse")
     re-imagining of data frames.
 -   [stringr](https://github.com/tidyverse/stringr), for strings.
 -   [forcats](https://github.com/tidyverse/forcats), for factors.
+-   [lubridate](https://github.com/tidyverse/lubridate), for
+    date/times.
 
 You also get a condensed summary of conflicts with other packages you
 have loaded:
@@ -102,8 +104,6 @@ probably not in every analysis. This includes packages for:
 -   Working with specific types of vectors:
 
     -   [hms](https://github.com/tidyverse/hms), for times.
-    -   [lubridate](https://github.com/tidyverse/lubridate), for
-        date/times.
 
 -   Importing other types of data:
 
