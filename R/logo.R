@@ -1,7 +1,7 @@
 
 #' The tidyverse logo, using ASCII or Unicode characters
 #'
-#' Use [crayon::strip_style()] to get rid of the colors.
+#' Use [cli::ansi_strip()] to get rid of the colors.
 #'
 #' @param unicode Whether to use Unicode symbols. Default is `TRUE`
 #'   on UTF-8 platforms.
@@ -11,7 +11,7 @@
 #' @examples
 #' tidyverse_logo()
 
-tidyverse_logo <- function(unicode = l10n_info()$`UTF-8`) {
+tidyverse_logo <- function(unicode = cli::is_utf8_output()) {
   logo <- c(
     "0 __  _    __   1    2           3  4 ",
     " / /_(_)__/ /_ ___  _____ _______ ___ ",
@@ -25,14 +25,14 @@ tidyverse_logo <- function(unicode = l10n_info()$`UTF-8`) {
   cols <- c("red", "yellow", "green", "magenta", "cyan",
             "yellow", "green", "white", "magenta", "cyan")
 
-  col_hexa <- purrr::map2(hexa, cols, ~ crayon::make_style(.y)(.x))
+  col_hexa <- purrr::map2(hexa, cols, ~ cli::make_ansi_style(.y)(.x))
 
   for (i in 0:9) {
     pat <- paste0("\\b", i, "\\b")
     logo <- sub(pat, col_hexa[[i + 1]], logo)
   }
 
-  structure(crayon::blue(logo), class = "tidyverse_logo")
+  structure(cli::col_blue(logo), class = "tidyverse_logo")
 }
 
 #' @export

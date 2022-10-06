@@ -84,7 +84,7 @@ tidyverse_deps <- function(recursive = FALSE, repos = getOption("repos")) {
   )
   pkg_deps <- setdiff(pkg_deps, base_pkgs)
 
-  tool_pkgs <- c("cli", "crayon", "rstudioapi")
+  tool_pkgs <- c("cli", "rstudioapi")
   pkg_deps <- setdiff(pkg_deps, tool_pkgs)
 
   cran_version <- lapply(pkgs[pkg_deps, "Version"], base::package_version)
