@@ -19,6 +19,7 @@ ignore_unused_imports <- function() {
   lubridate::ymd
   modelr::add_predictions
   pillar::pillar
+  ragg::agg_png
   readr::read_csv
   readxl::read_excel
   reprex::reprex

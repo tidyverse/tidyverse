@@ -1,5 +1,7 @@
 # tidyverse (development version)
 
+* tidyverse now installs ragg (#310).
+
 * Add lubridate to the core tidyverse (#157).
 
 # tidyverse 1.3.2
