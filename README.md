@@ -36,16 +36,12 @@ install.packages("tidyverse")
 <div class=".pkgdown-devel">
 
 ``` r
-# Or the development version from GitHub
-# install.packages("devtools")
-devtools::install_github("tidyverse/tidyverse")
+# Install the development version from GitHub
+# install.packages("pak")
+pak::pak("tidyverse/tidyverse")
 ```
 
 </div>
-
-If you’re compiling from source, you can run
-`pak::pkg_system_requirements("tidyverse")`, to see the complete set of
-system packages needed on your machine.
 
 If you’re compiling from source, you can run
 `pak::pkg_system_requirements("tidyverse")`, to see the complete set of
