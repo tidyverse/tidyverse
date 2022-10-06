@@ -1,5 +1,8 @@
 # tidyverse (development version)
 
+* `tidyverse_sitrep()` correctly displays installed package versions and 
+  highlights development versions of pacakges (#222).
+
 * tidyverse now installs ragg (#310).
 
 * Add lubridate to the core tidyverse (#157).

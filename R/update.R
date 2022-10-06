@@ -55,7 +55,7 @@ tidyverse_sitrep <- function() {
   packages <- ifelse(
     deps$behind,
     paste0(cli::col_yellow(cli::style_bold(package_pad)), " (", deps$local, " < ", deps$cran, ")"),
-    paste0(package_pad, " (", deps$cran, ")")
+    paste0(cli::col_blue(package_pad), " (", highlight_version(deps$local), ")")
   )
 
   cli::cat_rule("Core packages")
@@ -87,7 +87,7 @@ tidyverse_deps <- function(recursive = FALSE, repos = getOption("repos")) {
   tool_pkgs <- c("cli", "rstudioapi")
   pkg_deps <- setdiff(pkg_deps, tool_pkgs)
 
-  cran_version <- lapply(pkgs[pkg_deps, "Version"], base::package_version)
+  cran_version <- lapply(pkgs[pkg_deps, "Version"], package_version)
   local_version <- lapply(pkg_deps, packageVersion)
 
   behind <- purrr::map2_lgl(cran_version, local_version, `>`)

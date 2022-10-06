@@ -29,11 +29,12 @@ tidyverse_attach_message <- function(to_load) {
 
   header <- cli::rule(
     left = cli::style_bold("Attaching core tidyverse packages"),
-    right = paste0("tidyverse ", package_version("tidyverse"))
+    right = paste0("tidyverse ", package_version_h("tidyverse"))
   )
 
   to_load <- sort(to_load)
-  versions <- vapply(to_load, package_version, character(1))
+  versions <- vapply(to_load, package_version_h, character(1))
+
   packages <- paste0(
     cli::col_green(cli::symbol$tick), " ", cli::col_blue(format(to_load)), " ",
     cli::ansi_align(versions, max(cli::ansi_nchar(versions)))
@@ -48,11 +49,19 @@ tidyverse_attach_message <- function(to_load) {
   paste0(header, "\n", paste(info, collapse = "\n"))
 }
 
-package_version <- function(x) {
-  version <- as.character(unclass(utils::packageVersion(x))[[1]])
+package_version_h <- function(pkg) {
+  highlight_version(utils::packageVersion(pkg))
+}
 
-  if (length(version) > 3) {
-    version[4:length(version)] <- cli::col_red(as.character(version[4:length(version)]))
+highlight_version <- function(x) {
+  x <- as.character(x)
+
+  is_dev <- function(x) {
+    x <- suppressWarnings(as.numeric(x))
+    !is.na(x) & x >= 9000
   }
-  paste0(version, collapse = ".")
+
+  pieces <- strsplit(x, ".", fixed = TRUE)
+  pieces <- lapply(pieces, function(x) ifelse(is_dev(x), cli::col_red(x), x))
+  vapply(pieces, paste, collapse = ".", FUN.VALUE = character(1))
 }
