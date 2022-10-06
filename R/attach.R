@@ -28,10 +28,11 @@ tidyverse_attach_message <- function(to_load) {
   }
 
   header <- cli::rule(
-    left = crayon::bold("Attaching packages"),
+    left = crayon::bold("Attaching core tidyverse packages"),
     right = paste0("tidyverse ", package_version("tidyverse"))
   )
 
+  to_load <- sort(to_load)
   versions <- vapply(to_load, package_version, character(1))
   packages <- paste0(
     crayon::green(cli::symbol$tick), " ", crayon::blue(format(to_load)), " ",
