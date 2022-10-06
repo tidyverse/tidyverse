@@ -4,7 +4,7 @@
 \alias{tidyverse_logo}
 \title{The tidyverse logo, using ASCII or Unicode characters}
 \usage{
-tidyverse_logo(unicode = l10n_info()$`UTF-8`)
+tidyverse_logo(unicode = cli::is_utf8_output())
 }
 \arguments{
 \item{unicode}{Whether to use Unicode symbols. Default is \code{TRUE}
