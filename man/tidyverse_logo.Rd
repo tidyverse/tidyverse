@@ -11,7 +11,7 @@ tidyverse_logo(unicode = l10n_info()$`UTF-8`)
 on UTF-8 platforms.}
 }
 \description{
-Use \code{\link[crayon:strip_style]{crayon::strip_style()}} to get rid of the colors.
+Use \code{\link[cli:ansi_strip]{cli::ansi_strip()}} to get rid of the colors.
 }
 \examples{
 tidyverse_logo()

@@ -1,4 +1,4 @@
-# multiplication works
+# useful conflicts message
 
     Code
       tidyverse_conflicts(c("base", "stats"))
