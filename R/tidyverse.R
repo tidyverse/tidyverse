@@ -6,6 +6,7 @@
 #   All declared Imports should be used.
 ignore_unused_imports <- function() {
   broom::tidy
+  conflicted::conflict_prefer
   dbplyr::db_collect
   dtplyr::lazy_dt
   forcats::fct_c

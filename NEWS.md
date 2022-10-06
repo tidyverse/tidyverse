@@ -1,5 +1,8 @@
 # tidyverse (development version)
 
+* We now advertise `library(conflicted)` because it resolves many conflict
+  problems and silences tidyverse's automated report (#218).
+
 * `tidyverse_sitrep()` correctly displays installed package versions and 
   highlights development versions of pacakges (#222).
 

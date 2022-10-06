@@ -55,7 +55,16 @@ tidyverse_conflict_message <- function(x) {
     collapse = "\n"
   )
 
-  paste0(header, "\n", bullets)
+  conflicted <- paste0(
+    cli::col_cyan(cli::symbol$info), " ",
+    cli::format_inline("Use the {.href [conflicted package](http://conflicted.r-lib.org/)} to force all conflicts to become errors"
+  ))
+
+  paste0(
+    header, "\n",
+    bullets, "\n",
+    conflicted
+  )
 }
 
 #' @export
