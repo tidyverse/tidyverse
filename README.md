@@ -24,14 +24,28 @@ place to start is [R for data science](https://r4ds.had.co.nz).
 
 ## Installation
 
+<div class=".pkgdown-release">
+
 ``` r
 # Install from CRAN
 install.packages("tidyverse")
+```
 
+</div>
+
+<div class=".pkgdown-devel">
+
+``` r
 # Or the development version from GitHub
 # install.packages("devtools")
 devtools::install_github("tidyverse/tidyverse")
 ```
+
+</div>
+
+If you’re compiling from source, you can run
+`pak::pkg_system_requirements("tidyverse")`, to see the complete set of
+system packages needed on your machine.
 
 If you’re compiling from source, you can run
 `pak::pkg_system_requirements("tidyverse")`, to see the complete set of
@@ -95,10 +109,9 @@ tidyverse_update()
 #>  * broom (0.4.0 -> 0.4.1)
 #>  * DBI   (0.4.1 -> 0.5)
 #>  * Rcpp  (0.12.6 -> 0.12.7)
-#> Update now?
-#> 
-#> 1: Yes
-#> 2: No
+#>  
+#> Start a clean R session then run:
+#> install.packages(c("broom", "DBI", "Rcpp"))
 ```
 
 ## Packages

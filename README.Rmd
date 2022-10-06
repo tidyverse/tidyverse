@@ -27,14 +27,22 @@ If you'd like to learn how to use the tidyverse effectively, the best place to s
 
 ## Installation
 
+::: .pkgdown-release
 ```{r eval = FALSE}
 # Install from CRAN
 install.packages("tidyverse")
+```
+:::
 
+::: .pkgdown-devel
+```{r eval = FALSE}
 # Or the development version from GitHub
 # install.packages("devtools")
 devtools::install_github("tidyverse/tidyverse")
 ```
+:::
+
+If you're compiling from source, you can run `pak::pkg_system_requirements("tidyverse")`, to see the complete set of system packages needed on your machine.
 
 If you're compiling from source, you can run `pak::pkg_system_requirements("tidyverse")`, to see the complete set of system packages needed on your machine.
 
@@ -73,10 +81,9 @@ tidyverse_update()
 #>  * broom (0.4.0 -> 0.4.1)
 #>  * DBI   (0.4.1 -> 0.5)
 #>  * Rcpp  (0.12.6 -> 0.12.7)
-#> Update now?
-#> 
-#> 1: Yes
-#> 2: No
+#>  
+#> Start a clean R session then run:
+#> install.packages(c("broom", "DBI", "Rcpp"))
 ```
 
 ## Packages
