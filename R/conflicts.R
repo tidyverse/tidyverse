@@ -9,11 +9,19 @@
 #' existing code.
 #'
 #' @export
+#' @param only Set this to a character vector to restrict to conflicts only
+#'   with these packages.
 #' @examples
 #' tidyverse_conflicts()
-tidyverse_conflicts <- function() {
+tidyverse_conflicts <- function(only = NULL) {
   envs <- grep("^package:", search(), value = TRUE)
   envs <- purrr::set_names(envs)
+
+  if (!is.null(only)) {
+    only <- union(only, core)
+    envs <- envs[names(envs) %in% paste0("package:", only)]
+  }
+
   objs <- invert(lapply(envs, ls_env))
 
   conflicts <- purrr::keep(objs, ~ length(.x) > 1)
@@ -28,8 +36,6 @@ tidyverse_conflicts <- function() {
 }
 
 tidyverse_conflict_message <- function(x) {
-  if (length(x) == 0) return("")
-
   header <- cli::rule(
     left = crayon::bold("Conflicts"),
     right = "tidyverse_conflicts()"

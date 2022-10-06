@@ -50,6 +50,7 @@ Suggests:
     covr,
     feather,
     glue,
+    mockr,
     knitr,
     rmarkdown,
     testthat (>= 3.0.0)

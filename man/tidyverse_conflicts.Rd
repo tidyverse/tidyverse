@@ -4,7 +4,11 @@
 \alias{tidyverse_conflicts}
 \title{Conflicts between the tidyverse and other packages}
 \usage{
-tidyverse_conflicts()
+tidyverse_conflicts(only = NULL)
+}
+\arguments{
+\item{only}{Set this to a character vector to restrict to conflicts only
+with these packages.}
 }
 \description{
 This function lists all the conflicts between packages in the tidyverse

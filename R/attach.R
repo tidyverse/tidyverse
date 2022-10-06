@@ -9,23 +9,27 @@ core_unloaded <- function() {
 # loaded from before. https://github.com/tidyverse/tidyverse/issues/171
 same_library <- function(pkg) {
   loc <- if (pkg %in% loadedNamespaces()) dirname(getNamespaceInfo(pkg, "path"))
-  do.call(
-    "library",
-    list(pkg, lib.loc = loc, character.only = TRUE, warn.conflicts = FALSE)
-  )
+  library(pkg, lib.loc = loc, character.only = TRUE, warn.conflicts = FALSE)
 }
 
 tidyverse_attach <- function() {
   to_load <- core_unloaded()
-  if (length(to_load) == 0)
-    return(invisible())
 
-  msg(
-    cli::rule(
-      left = crayon::bold("Attaching packages"),
-      right = paste0("tidyverse ", package_version("tidyverse"))
-    ),
-    startup = TRUE
+  suppressPackageStartupMessages(
+    lapply(to_load, same_library)
+  )
+
+  invisible(to_load)
+}
+
+tidyverse_attach_message <- function(to_load) {
+  if (length(to_load) == 0) {
+    return(NULL)
+  }
+
+  header <- cli::rule(
+    left = crayon::bold("Attaching packages"),
+    right = paste0("tidyverse ", package_version("tidyverse"))
   )
 
   versions <- vapply(to_load, package_version, character(1))
@@ -40,13 +44,7 @@ tidyverse_attach <- function() {
   col1 <- seq_len(length(packages) / 2)
   info <- paste0(packages[col1], "     ", packages[-col1])
 
-  msg(paste(info, collapse = "\n"), startup = TRUE)
-
-  suppressPackageStartupMessages(
-    lapply(to_load, same_library)
-  )
-
-  invisible()
+  paste0(header, "\n", paste(info, collapse = "\n"))
 }
 
 package_version <- function(x) {
