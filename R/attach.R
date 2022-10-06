@@ -17,6 +17,18 @@ tidyverse_attach <- function() {
   if (length(to_load) == 0)
     return(invisible())
 
+  if (!is_loading_for_tests()) {
+    tidyverse_attach_message(to_load)
+  }
+
+  suppressPackageStartupMessages(
+    lapply(to_load, same_library)
+  )
+
+  invisible()
+}
+
+tidyverse_attach_message <- function(to_load) {
   msg(
     cli::rule(
       left = crayon::bold("Attaching packages"),
@@ -38,12 +50,6 @@ tidyverse_attach <- function() {
   info <- paste0(packages[col1], "     ", packages[-col1])
 
   msg(paste(info, collapse = "\n"), startup = TRUE)
-
-  suppressPackageStartupMessages(
-    lapply(to_load, same_library)
-  )
-
-  invisible()
 }
 
 package_version <- function(x) {
@@ -53,4 +59,8 @@ package_version <- function(x) {
     version[4:length(version)] <- crayon::red(as.character(version[4:length(version)]))
   }
   paste0(version, collapse = ".")
+}
+
+is_loading_for_tests <- function() {
+  !interactive() && identical(Sys.getenv("DEVTOOLS_LOAD"), "tidyverse")
 }

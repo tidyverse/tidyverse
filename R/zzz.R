@@ -5,7 +5,7 @@
 
   tidyverse_attach()
 
-  if (!"package:conflicted" %in% search()) {
+  if (!"package:conflicted" %in% search() && !is_loading_for_tests()) {
     x <- tidyverse_conflicts()
     msg(tidyverse_conflict_message(x), startup = TRUE)
   }
