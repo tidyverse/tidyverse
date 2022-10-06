@@ -11,7 +11,7 @@
 #' @examples
 #' tidyverse_logo()
 
-tidyverse_logo <- function(unicode = l10n_info()$`UTF-8`) {
+tidyverse_logo <- function(unicode = cli::is_utf8_output()) {
   logo <- c(
     "0 __  _    __   1    2           3  4 ",
     " / /_(_)__/ /_ ___  _____ _______ ___ ",
