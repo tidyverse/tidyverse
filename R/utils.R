@@ -1,11 +1,12 @@
-msg <- function(x, startup = FALSE) {
-  if (startup) {
-    if (!isTRUE(getOption("tidyverse.quiet"))) {
-      rlang::inform(x, class = "packageStartupMessage")
-    }
-  } else {
-    rlang::inform(x)
+inform_startup <- function(msg, ...) {
+  if (is.null(msg)) {
+    return()
   }
+  if (isTRUE(getOption("tidyverse.quiet"))) {
+    return()
+  }
+
+  rlang::inform(msg, ..., class = "packageStartupMessage")
 }
 
 #' List all packages in the tidyverse

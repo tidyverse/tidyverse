@@ -14,27 +14,18 @@ same_library <- function(pkg) {
 
 tidyverse_attach <- function() {
   to_load <- core_unloaded()
-  if (length(to_load) == 0)
-    return(invisible())
-
-  if (!is_loading_for_tests()) {
-    tidyverse_attach_message(to_load)
-  }
 
   suppressPackageStartupMessages(
     lapply(to_load, same_library)
   )
 
-  invisible()
+  invisible(to_load)
 }
 
 tidyverse_attach_message <- function(to_load) {
-  msg(
-    cli::rule(
-      left = crayon::bold("Attaching packages"),
-      right = paste0("tidyverse ", package_version("tidyverse"))
-    ),
-    startup = TRUE
+  header <- cli::rule(
+    left = crayon::bold("Attaching packages"),
+    right = paste0("tidyverse ", package_version("tidyverse"))
   )
 
   versions <- vapply(to_load, package_version, character(1))
@@ -49,7 +40,7 @@ tidyverse_attach_message <- function(to_load) {
   col1 <- seq_len(length(packages) / 2)
   info <- paste0(packages[col1], "     ", packages[-col1])
 
-  msg(paste(info, collapse = "\n"), startup = TRUE)
+  paste(header, "\n", paste(info, collapse = "\n"))
 }
 
 package_version <- function(x) {
@@ -59,8 +50,4 @@ package_version <- function(x) {
     version[4:length(version)] <- crayon::red(as.character(version[4:length(version)]))
   }
   paste0(version, collapse = ".")
-}
-
-is_loading_for_tests <- function() {
-  !interactive() && identical(Sys.getenv("DEVTOOLS_LOAD"), "tidyverse")
 }
