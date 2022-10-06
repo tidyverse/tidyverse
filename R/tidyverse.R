@@ -7,6 +7,7 @@
 ignore_unused_imports <- function() {
   broom::tidy
   dbplyr::db_collect
+  dtplyr::lazy_dt
   forcats::fct_c
   ggplot2::ggplot
   googledrive::drive_find
