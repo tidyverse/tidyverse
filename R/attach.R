@@ -23,6 +23,10 @@ tidyverse_attach <- function() {
 }
 
 tidyverse_attach_message <- function(to_load) {
+  if (length(to_load) == 0) {
+    return(NULL)
+  }
+
   header <- cli::rule(
     left = crayon::bold("Attaching packages"),
     right = paste0("tidyverse ", package_version("tidyverse"))
@@ -40,7 +44,7 @@ tidyverse_attach_message <- function(to_load) {
   col1 <- seq_len(length(packages) / 2)
   info <- paste0(packages[col1], "     ", packages[-col1])
 
-  paste(header, "\n", paste(info, collapse = "\n"))
+  paste0(header, "\n", paste(info, collapse = "\n"))
 }
 
 package_version <- function(x) {
