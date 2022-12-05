@@ -32,7 +32,6 @@ Imports:
     httr (>= 1.4.2),
     jsonlite (>= 1.7.2),
     lubridate (>= 1.8.0),
-    magrittr (>= 2.0.1),
     modelr (>= 0.1.8),
     pillar (>= 1.6.4),
     purrr (>= 0.3.4),
@@ -51,6 +50,7 @@ Suggests:
     covr,
     feather,
     glue,
+    magrittr,
     mockr,
     knitr,
     rmarkdown,
@@ -60,4 +60,4 @@ VignetteBuilder:
 Config/Needs/website: tidyverse/tidytemplate
 Config/testthat/edition: 3
 Encoding: UTF-8
-RoxygenNote: 7.2.1
+RoxygenNote: 7.2.2
