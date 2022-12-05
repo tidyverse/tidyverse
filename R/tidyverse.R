@@ -15,7 +15,6 @@ ignore_unused_imports <- function() {
   hms::hms
   httr::GET
   jsonlite::fromJSON
-  lubridate::ymd
   modelr::add_predictions
   pillar::pillar
   ragg::agg_png

@@ -28,7 +28,6 @@ Imports:
     hms (>= 1.1.2),
     httr (>= 1.4.4),
     jsonlite (>= 1.8.3),
-    lubridate (>= 1.9.0),
     modelr (>= 0.1.10),
     pillar (>= 1.8.1),
     ragg (>= 1.2.4),
