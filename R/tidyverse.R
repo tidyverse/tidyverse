@@ -9,8 +9,6 @@ ignore_unused_imports <- function() {
   conflicted::conflict_prefer
   dbplyr::db_collect
   dtplyr::lazy_dt
-  forcats::fct_c
-  ggplot2::ggplot
   googledrive::drive_find
   googlesheets4::read_sheet
   haven::read_sas
@@ -21,13 +19,10 @@ ignore_unused_imports <- function() {
   modelr::add_predictions
   pillar::pillar
   ragg::agg_png
-  readr::read_csv
   readxl::read_excel
   reprex::reprex
   rlang::qq_show
   rvest::html_node
-  stringr::str_c
-  tidyr::spread
   xml2::read_xml
 }
 

@@ -24,8 +24,8 @@ tidyverse_packages <- function(include_self = TRUE) {
   if (include_self) {
     names <- c(names, "tidyverse")
   }
-
-  names
+  names <- setdiff(names, "tidycore")
+  union(names, core)
 }
 
 invert <- function(x) {

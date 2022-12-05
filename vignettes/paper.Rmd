@@ -162,12 +162,7 @@ Additional non-core packages, such as [readxl](https://readxl.tidyverse.org) [@R
 
 Next, we recommend that you __tidy__ your data, getting it into a consistent form that makes the rest of the analysis easier. Most functions in the tidyverse work with tidy data [@tidy-data], where every column is a variable, every row is an observation, and every cell contains a single value. If your data is not already in this form (almost always!), the core [tidyr](https://tidyr.tidyverse.org/) [@R-tidyr] package provides tools to tidy it up.
 
-```{r, include = FALSE}
-# Ensure pkgdown links to the right packages.
-library(dplyr)
-```
-
-Data __transformation__ is supported by the core [dplyr](https://dplyr.tidyverse.org/) [@R-dplyr] package. dplyr provides verbs that work with whole data frames, such as `mutate()` to create new variables, `filter()` to find observations matching given criteria, and `left_join()` and friends to combine multiple tables. dplyr is paired with packages that provide tools for specific column types: 
+Data __transformation__ is supported by the core [dplyr](https://dplyr.tidyverse.org/) [@R-dplyr] package. dplyr provides verbs that work with whole data frames, such as `dplyr::mutate()` to create new variables, `dplyr::filter()` to find observations matching given criteria, and `dplyr::left_join()` and friends to combine multiple tables. dplyr is paired with packages that provide tools for specific column types: 
 
 * [stringr](https://stringr.tidyverse.org) for strings.
 * [forcats](https://forcats.tidyverse.org) for factors, R's categorical data 

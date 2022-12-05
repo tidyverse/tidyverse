@@ -13,7 +13,7 @@
 tidyverse_update <- function(recursive = FALSE, repos = getOption("repos")) {
 
   deps <- tidyverse_deps(recursive, repos)
-  behind <- dplyr::filter(deps, behind)
+  behind <- subset(deps, behind)
 
   if (nrow(behind) == 0) {
     cli::cat_line("All tidyverse packages up-to-date")

@@ -21,43 +21,39 @@ Imports:
     conflicted,
     cli (>= 3.1.0),
     dbplyr (>= 2.1.1),
-    dplyr (>= 1.0.7),
     dtplyr (>= 1.2.0),
-    forcats (>= 0.5.1),
-    ggplot2 (>= 3.3.5),
     googledrive (>= 2.0.0),
     googlesheets4 (>= 1.0.0),
     haven (>= 2.4.3),
     hms (>= 1.1.1),
     httr (>= 1.4.2),
-    jsonlite (>= 1.7.2),
+    jsonlite,
     lubridate (>= 1.8.0),
     modelr (>= 0.1.8),
     pillar (>= 1.6.4),
-    purrr (>= 0.3.4),
     ragg,
-    readr (>= 2.1.1),
     readxl (>= 1.3.1),
     reprex (>= 2.0.1),
-    rlang (>= 0.4.12),
     rstudioapi (>= 0.13),
     rvest (>= 1.0.2),
-    stringr (>= 1.4.0),
-    tibble (>= 3.1.6),
-    tidyr (>= 1.1.4),
+    tidycore,
     xml2 (>= 1.3.3)
 Suggests: 
     covr,
     feather,
     glue,
+    purrr,
     magrittr,
     mockr,
     knitr,
+    rlang,
     rmarkdown,
+    tibble,
     testthat (>= 3.0.0)
 VignetteBuilder: 
     knitr
 Config/Needs/website: tidyverse/tidytemplate
 Config/testthat/edition: 3
+Remotes: tidyverse/tidycore
 Encoding: UTF-8
 RoxygenNote: 7.2.2
