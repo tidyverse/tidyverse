@@ -210,6 +210,6 @@ Similarly, the tidyverse is not just the collection of packages --- it is also t
 
 # Acknowledgments
 
-The tidyverse would not be possible without the immense work of the [R-core team](https://www.r-project.org/contributors.html) who maintain the R language and we are deeply indebted to them. We are also grateful for the financial support of [RStudio, Inc](https://www.rstudio.com/).
+The tidyverse would not be possible without the immense work of the [R-core team](https://www.r-project.org/contributors.html) who maintain the R language and we are deeply indebted to them. We are also grateful for the financial support of [RStudio, Inc](https://posit.co/) (now Posit Software, PBC).
 
 # References
