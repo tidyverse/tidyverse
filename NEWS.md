@@ -11,7 +11,7 @@
   (#218).
 
 * `tidyverse_sitrep()` correctly displays installed package versions and 
-  highlights development versions of pacakges (#222).
+  highlights development versions of packages (#222).
 
 # tidyverse 1.3.2
 
