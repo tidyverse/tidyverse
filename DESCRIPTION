@@ -3,7 +3,7 @@ Title: Easily Install and Load the 'Tidyverse'
 Version: 2.0.0.9000
 Authors@R: c(
     person("Hadley", "Wickham", , "hadley@rstudio.com", role = c("aut", "cre")),
-    person("RStudio", role = c("cph", "fnd"))
+    person("Posit, PBC", role = c("cph", "fnd"))
   )
 Description: The 'tidyverse' is a set of packages that work in harmony
     because they share common data representations and 'API' design. This
