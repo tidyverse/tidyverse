@@ -17,6 +17,8 @@ home:
 
 news:
   releases:
+  - text: "Version 2.0.0"
+    href: https://www.tidyverse.org/blog/2023/03/tidyverse-2-0-0/
   - text: "Version 1.3.0"
     href: https://www.tidyverse.org/blog/2019/11/tidyverse-1-3-0/
   - text: "Version 1.2.0"
