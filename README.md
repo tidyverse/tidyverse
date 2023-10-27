@@ -20,7 +20,7 @@ package is designed to make it easy to install and load core packages
 from the tidyverse in a single command.
 
 If you’d like to learn how to use the tidyverse effectively, the best
-place to start is [R for data science](https://r4ds.had.co.nz).
+place to start is [R for Data Science (2e)](https://r4ds.hadley.nz/).
 
 ## Installation
 
@@ -67,12 +67,12 @@ have loaded:
 
 ``` r
 library(tidyverse)
-#> ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-#> ✔ dplyr     1.1.0     ✔ readr     2.1.4
+#> ── Attaching core tidyverse packages ─────────────────── tidyverse 2.0.0.9000 ──
+#> ✔ dplyr     1.1.3     ✔ readr     2.1.4
 #> ✔ forcats   1.0.0     ✔ stringr   1.5.0
-#> ✔ ggplot2   3.4.1     ✔ tibble    3.1.8
+#> ✔ ggplot2   3.4.3     ✔ tibble    3.2.1
 #> ✔ lubridate 1.9.2     ✔ tidyr     1.3.0
-#> ✔ purrr     1.0.1     
+#> ✔ purrr     1.0.2     
 #> ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
 #> ✖ dplyr::filter() masks stats::filter()
 #> ✖ dplyr::lag()    masks stats::lag()
