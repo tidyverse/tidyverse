@@ -33,7 +33,6 @@ Imports:
     jsonlite (>= 1.8.7),
     lubridate (>= 1.9.3),
     magrittr (>= 2.0.3),
-    modelr (>= 0.1.11),
     pillar (>= 1.9.0),
     purrr (>= 1.0.2),
     ragg (>= 1.2.6),
