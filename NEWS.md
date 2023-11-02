@@ -1,5 +1,7 @@
 # tidyverse (development version)
 
+* Drop modelr since it's superseded.
+
 # tidyverse 2.0.0
 
 * lubridate is now a member of the core tidyverse (#157)!
