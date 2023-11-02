@@ -2,7 +2,7 @@ Package: tidyverse
 Title: Easily Install and Load the 'Tidyverse'
 Version: 2.0.0.9000
 Authors@R: c(
-    person("Hadley", "Wickham", , "hadley@rstudio.com", role = c("aut", "cre")),
+    person("Hadley", "Wickham", , "hadley@posit.co", role = c("aut", "cre")),
     person("Posit Software, PBC", role = c("cph", "fnd"))
   )
 Description: The 'tidyverse' is a set of packages that work in harmony
