@@ -1,13 +1,13 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# tidyverse <a href='https://tidyverse.tidyverse.org'><img src='man/figures/logo.png' align="right" height="138.5" /></a>
+# tidyverse <a href='https://tidyverse.tidyverse.org'><img src='man/figures/logo.png' align="right" height="138" /></a>
 
 <!-- badges: start -->
 
 [![CRAN
 status](https://www.r-pkg.org/badges/version/tidyverse)](https://cran.r-project.org/package=tidyverse)
-[![R-CMD-check](https://github.com/tidyverse/tidyverse/workflows/R-CMD-check/badge.svg)](https://github.com/tidyverse/tidyverse/actions)
+[![R-CMD-check](https://github.com/tidyverse/tidyverse/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/tidyverse/tidyverse/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
 coverage](https://codecov.io/gh/tidyverse/tidyverse/branch/main/graph/badge.svg)](https://app.codecov.io/gh/tidyverse/tidyverse?branch=main)
 <!-- badges: end -->
@@ -20,7 +20,7 @@ package is designed to make it easy to install and load core packages
 from the tidyverse in a single command.
 
 If you’d like to learn how to use the tidyverse effectively, the best
-place to start is [R for data science](https://r4ds.had.co.nz).
+place to start is [R for Data Science (2e)](https://r4ds.hadley.nz/).
 
 ## Installation
 
@@ -67,12 +67,12 @@ have loaded:
 
 ``` r
 library(tidyverse)
-#> ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-#> ✔ dplyr     1.1.0     ✔ readr     2.1.4
+#> ── Attaching core tidyverse packages ─────────────────── tidyverse 2.0.0.9000 ──
+#> ✔ dplyr     1.1.3     ✔ readr     2.1.4
 #> ✔ forcats   1.0.0     ✔ stringr   1.5.0
-#> ✔ ggplot2   3.4.1     ✔ tibble    3.1.8
-#> ✔ lubridate 1.9.2     ✔ tidyr     1.3.0
-#> ✔ purrr     1.0.1     
+#> ✔ ggplot2   3.4.4     ✔ tibble    3.2.1
+#> ✔ lubridate 1.9.3     ✔ tidyr     1.3.0
+#> ✔ purrr     1.0.2     
 #> ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
 #> ✖ dplyr::filter() masks stats::filter()
 #> ✖ dplyr::lag()    masks stats::lag()
