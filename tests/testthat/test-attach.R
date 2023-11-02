@@ -3,7 +3,7 @@ test_that("if no packages, shows nothing", {
 })
 
 test_that("message lists all core tidyverse packages", {
-  mockr::local_mock(package_version_h = function(x) "1.0.0")
+  local_mocked_bindings(package_version_h = function(x) "1.0.0")
   expect_snapshot(cat(tidyverse_attach_message(core)))
 })
 
