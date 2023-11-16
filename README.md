@@ -44,7 +44,7 @@ pak::pak("tidyverse/tidyverse")
 </div>
 
 If you’re compiling from source, you can run
-`pak::pkg_system_requirements("tidyverse")`, to see the complete set of
+`pak::pkg_sysreqs('tidyverse')`, to see the complete set of
 system packages needed on your machine.
 
 ## Usage
