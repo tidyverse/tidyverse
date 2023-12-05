@@ -32,7 +32,8 @@ tidyverse_conflicts <- function(only = NULL) {
   conflict_funs <- purrr::imap(conflicts, confirm_conflict)
   conflict_funs <- purrr::compact(conflict_funs)
 
-  structure(conflict_funs, class = "tidyverse_conflicts")
+  class(conflict_funs) <- "tidyverse_conflicts"
+  conflict_funs
 }
 
 tidyverse_conflict_message <- function(x) {
@@ -57,8 +58,8 @@ tidyverse_conflict_message <- function(x) {
 
   conflicted <- paste0(
     cli::col_cyan(cli::symbol$info), " ",
-    cli::format_inline("Use the {.href [conflicted package](http://conflicted.r-lib.org/)} to force all conflicts to become errors"
-  ))
+    cli::format_inline("Use the {.href [conflicted package](http://conflicted.r-lib.org/)} to force all conflicts to become errors")
+  )
 
   paste0(
     header, "\n",
