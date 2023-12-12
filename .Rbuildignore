@@ -12,6 +12,7 @@
 ^codecov\.yml$
 ^codemeta\.json$
 ^\.github$
+^\.lintr$
 ^LICENSE\.md$
 ^CRAN-RELEASE$
 ^CRAN-SUBMISSION$
