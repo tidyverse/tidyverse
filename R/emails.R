@@ -23,7 +23,7 @@ make_email <- function(to, package) {
   get("gm_mime", asNamespace("gmailr"))(
     from = "hadley@rstudio.com",
     to = to,
-    subject = glue::glue('{package} and the tidyverse'),
+    subject = glue::glue("{package} and the tidyverse"),
     body = body
   )
 }
@@ -41,5 +41,5 @@ tidyverse_dependency_dissuade <- function() {
   purrr::walk(emails, ~ try(get("gm_send_message", asNamespace("gmailr"))(.x)))
 }
 
-# gm_auth_configure(path = "path/to/oauth.json")
-# tidyverse_dependency_dissuade()
+# > gm_auth_configure(path = "path/to/oauth.json")
+# > tidyverse_dependency_dissuade()

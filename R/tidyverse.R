@@ -34,6 +34,6 @@ ignore_unused_imports <- function() {
 release_bullets <- function() {
   c(
     '`usethis::use_latest_dependencies(TRUE, "CRAN")`',
-    '`tidyverse_dependency_dissuade()`'
+    "`tidyverse_dependency_dissuade()`"
   )
 }

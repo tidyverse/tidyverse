@@ -88,7 +88,7 @@ tidyverse_deps <- function(recursive = FALSE, repos = getOption("repos")) {
   pkg_deps <- setdiff(pkg_deps, tool_pkgs)
 
   cran_version <- lapply(pkgs[pkg_deps, "Version"], package_version)
-  local_version <- lapply(pkg_deps, packageVersion)
+  local_version <- lapply(pkg_deps, safe_package_version)
 
   behind <- purrr::map2_lgl(cran_version, local_version, `>`)
 
@@ -100,7 +100,7 @@ tidyverse_deps <- function(recursive = FALSE, repos = getOption("repos")) {
   )
 }
 
-packageVersion <- function(pkg) {
+safe_package_version <- function(pkg) {
   if (rlang::is_installed(pkg)) {
     utils::packageVersion(pkg)
   } else {
