@@ -154,8 +154,8 @@ How do the component packages of the tidyverse fit together? We use the model of
 
 ```{r}
 #| fig-alt: |
-#|   A diagram displaying the data science cycle: Import -> Tidy -> Understand 
-#|   (which has the phases Transform -> Visualize -> Model in a cycle) -> 
+#|   A diagram displaying the data science cycle: Import -> Tidy -> Understand
+#|   (which has the phases Transform -> Visualize -> Model in a cycle) ->
 #|   Communicate. Surrounding all of these is Communicate.
 #| out-width: 80%
 #| echo: false

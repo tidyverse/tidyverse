@@ -1,4 +1,14 @@
-core <- c("ggplot2", "tibble", "tidyr", "readr", "purrr", "dplyr", "stringr", "forcats", "lubridate")
+core <- c(
+  "ggplot2",
+  "tibble",
+  "tidyr",
+  "readr",
+  "purrr",
+  "dplyr",
+  "stringr",
+  "forcats",
+  "lubridate"
+)
 
 core_unloaded <- function() {
   search <- paste0("package:", core)
