@@ -31,8 +31,16 @@ If you'd like to learn how to use the tidyverse effectively, the best place to s
 ::: .pkgdown-release
 ```{r eval = FALSE}
 # Install from CRAN
-install.packages("tidyverse")
+install.packages("pak")
 ```
+
+If you have any problems installing tidyverse, we recommend trying with [pak](https://pak.r-lib.org) since it is likely to help diagnose the problem:
+
+```{r eval = FALSE}
+# install.packages("pak")
+pak::pak("tidyverse")
+```
+
 :::
 
 ::: .pkgdown-devel
@@ -47,7 +55,7 @@ If you're compiling from source, you can run `pak::pkg_system_requirements("tidy
 
 ## Usage
 
-`library(tidyverse)` will load the core tidyverse packages: 
+`library(tidyverse)` will load the core tidyverse packages:
 
 * [ggplot2](https://ggplot2.tidyverse.org), for data visualisation.
 * [dplyr](https://dplyr.tidyverse.org), for data manipulation.
@@ -80,7 +88,7 @@ tidyverse_update()
 #>  * broom (0.4.0 -> 0.4.1)
 #>  * DBI   (0.4.1 -> 0.5)
 #>  * Rcpp  (0.12.6 -> 0.12.7)
-#>  
+#>
 #> Start a clean R session then run:
 #> install.packages(c("broom", "DBI", "Rcpp"))
 ```
@@ -92,7 +100,7 @@ As well as the core tidyverse, installing this package also installs a selection
 *   Working with specific types of vectors:
 
     * [hms](https://github.com/tidyverse/hms), for times.
-    
+
 *   Importing other types of data:
 
     * [feather](https://github.com/wesm/feather), for sharing with Python and other languages.
@@ -106,10 +114,10 @@ As well as the core tidyverse, installing this package also installs a selection
 *   Modelling
 
     * [modelr](https://github.com/tidyverse/modelr), for modelling within a pipeline
-    * [broom](https://github.com/tidymodels/broom), for turning models into 
+    * [broom](https://github.com/tidymodels/broom), for turning models into
       tidy data
 
 ## Code of Conduct
 
-Please note that the tidyverse project is released with a [Contributor Code of Conduct](https://tidyverse.tidyverse.org/CODE_OF_CONDUCT.html). 
+Please note that the tidyverse project is released with a [Contributor Code of Conduct](https://tidyverse.tidyverse.org/CODE_OF_CONDUCT.html).
 By contributing to this project, you agree to abide by its terms.
