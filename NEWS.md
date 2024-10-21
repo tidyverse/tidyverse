@@ -1,16 +1,18 @@
 # tidyverse (development version)
 
+* tidyverse now requires R 4.0.0.
+
 # tidyverse 2.0.0
 
 * lubridate is now a member of the core tidyverse (#157)!
 
 * tidyverse now installs ragg (#310).
 
-* Loading the tidyverse now advertises `library(conflicted)` because it 
-  resolves many conflict problems and silences tidyverse's automated report 
+* Loading the tidyverse now advertises `library(conflicted)` because it
+  resolves many conflict problems and silences tidyverse's automated report
   (#218).
 
-* `tidyverse_sitrep()` correctly displays installed package versions and 
+* `tidyverse_sitrep()` correctly displays installed package versions and
   highlights development versions of packages (#222).
 
 # tidyverse 1.3.2
@@ -30,22 +32,22 @@
 
 # tidyverse 1.3.0
 
-* The tidyverse now has an associated paper at the 
+* The tidyverse now has an associated paper at the
   [Journal of Open Source Software](https://joss.theoj.org/) that you can
-  use to cite the tidyverse if you use it in a paper - see 
+  use to cite the tidyverse if you use it in a paper - see
   `citation("tidyverse")` for details.
 
-* Eliminate repeats in the package list when loading an odd number of 
+* Eliminate repeats in the package list when loading an odd number of
   packages (#94, #100, @dchiu911)
 
-* Packages attached from same library they were initially loaded from 
+* Packages attached from same library they were initially loaded from
   (#171, @gabrocsardi)
 
-* If conflicted package is loaded, omit display of conflicts. 
+* If conflicted package is loaded, omit display of conflicts.
   This includes fix to `tidyverse_conflicts()` to avoid accidentally
   triggering conflicted shims (#136).
 
-* `tidyverse_deps()` now succeeds even if a dependency of a dependency 
+* `tidyverse_deps()` now succeeds even if a dependency of a dependency
   is missing (#152, @PoGibas). It no longer includes dependencies that
   are needed by the tidyverse package but are not strictly part of the
   tidyverse (i.e. cli, crayon, and rstudioapi).
@@ -55,7 +57,7 @@
 
 * `tidyverse_packages()` correctly returns packages names (#93, #106, @coatless)
 
-* `tidyverse_sitrep()` gives you a situation report on your install of 
+* `tidyverse_sitrep()` gives you a situation report on your install of
   the tidyverse (#203)
 
 # tidyverse 1.2.1
@@ -76,20 +78,20 @@
 
 ## Other improvements
 
-* On attach, tidyverse now makes better use of the horizontal space, 
+* On attach, tidyverse now makes better use of the horizontal space,
   printing packages and versions in two columns (#59). It only prints
   packages that it attaches, not packages that you've already attached.
   Development versions are highlighted in red.
-  
-    You can now suppress this startup message by setting 
+
+    You can now suppress this startup message by setting
     `options(tidyverse.quiet = TRUE)`
 
 * `tidyverse_conflicts()` now prints all conflicts that involve at least
   one tidyverse package; Previously it only omitted any intra-tidyverse
-  conflicts (#26). I've also tweaked the display of conflicts to hopefully 
+  conflicts (#26). I've also tweaked the display of conflicts to hopefully
   make it more clear which function is the "winner".
 
-* `tidyverse_update()` now just gives you the code you need to update the 
+* `tidyverse_update()` now just gives you the code you need to update the
   packges, since in general it's not possible to update packages that are
   already loaded.
 
@@ -106,7 +108,7 @@
 * Added a `NEWS.md` file to track changes to the package.
 
 * Membership changes:
-  
+
   * Removed DBI (since very different API, #16)
   * Added feather (#15)
 
