@@ -31,8 +31,16 @@ If you'd like to learn how to use the tidyverse effectively, the best place to s
 ::: .pkgdown-release
 ```{r eval = FALSE}
 # Install from CRAN
-install.packages("tidyverse")
+install.packages("pak")
 ```
+
+If you have any problems installing tidyverse, we recommend trying with [pak](https://pak.r-lib.org) since it is likely to help diagnose the problem:
+
+```{r eval = FALSE}
+# install.packages("pak")
+pak::pak("tidyverse")
+```
+
 :::
 
 ::: .pkgdown-devel

@@ -28,7 +28,16 @@ place to start is [R for Data Science (2e)](https://r4ds.hadley.nz/).
 
 ``` r
 # Install from CRAN
-install.packages("tidyverse")
+install.packages("pak")
+```
+
+If you have any problems installing tidyverse, we recommend trying with
+[pak](https://pak.r-lib.org) since it is likely to help diagnose the
+problem:
+
+``` r
+# install.packages("pak")
+pak::pak("tidyverse")
 ```
 
 </div>
