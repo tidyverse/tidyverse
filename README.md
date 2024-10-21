@@ -131,8 +131,6 @@ probably not in every analysis. This includes packages for:
 
 - Importing other types of data:
 
-  - [feather](https://github.com/wesm/feather), for sharing with Python
-    and other languages.
   - [haven](https://github.com/tidyverse/haven), for SPSS, SAS and Stata
     files.
   - [httr](https://github.com/r-lib/httr), for web apis.
@@ -144,8 +142,6 @@ probably not in every analysis. This includes packages for:
 
 - Modelling
 
-  - [modelr](https://github.com/tidyverse/modelr), for modelling within
-    a pipeline
   - [broom](https://github.com/tidymodels/broom), for turning models
     into tidy data
 

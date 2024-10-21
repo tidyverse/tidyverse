@@ -18,7 +18,6 @@ ignore_unused_imports <- function() {
   httr::GET
   jsonlite::fromJSON
   lubridate::ymd
-  modelr::add_predictions
   pillar::pillar
   ragg::agg_png
   readr::read_csv

@@ -1,5 +1,6 @@
 # tidyverse (development version)
 
+* Drop modelr since it's superseded.
 * tidyverse now requires R 4.0.0.
 
 # tidyverse 2.0.0
