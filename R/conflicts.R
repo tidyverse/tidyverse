@@ -27,7 +27,7 @@ tidyverse_conflicts <- function(only = NULL) {
   conflicts <- purrr::keep(objs, ~ length(.x) > 1)
 
   tidy_names <- paste0("package:", tidyverse_packages())
-  conflicts <- purrr::keep(conflicts, ~ any(.x %in% tidy_names))
+  conflicts <- purrr::keep(conflicts, function(pkg) any(pkg %in% tidy_names))
 
   conflict_funs <- purrr::imap(conflicts, confirm_conflict)
   conflict_funs <- purrr::compact(conflict_funs)
@@ -50,7 +50,9 @@ tidyverse_conflict_message <- function(x) {
   )
 
   winner <- pkgs %>% purrr::map_chr(1)
-  funs <- format(paste0(cli::col_blue(winner), "::", cli::col_green(paste0(names(x), "()"))))
+  funs <- format(paste0(
+    cli::col_blue(winner), "::", cli::col_green(paste0(names(x), "()"))
+  ))
   bullets <- paste0(
     cli::col_red(cli::symbol$cross), " ", funs, " masks ", other_calls,
     collapse = "\n"
@@ -58,7 +60,9 @@ tidyverse_conflict_message <- function(x) {
 
   conflicted <- paste0(
     cli::col_cyan(cli::symbol$info), " ",
-    cli::format_inline("Use the {.href [conflicted package](http://conflicted.r-lib.org/)} to force all conflicts to become errors")
+    "Use the ",
+    cli::format_inline("{.href [conflicted package](http://conflicted.r-lib.org/)}"),
+    " to force all conflicts to become errors"
   )
 
   paste0(

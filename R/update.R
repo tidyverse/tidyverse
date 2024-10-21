@@ -24,7 +24,9 @@ tidyverse_update <- function(recursive = FALSE, repos = getOption("repos")) {
     "The following {cli::qty(nrow(behind))}package{?s} {?is/are} out of date:"
   ))
   cli::cat_line()
-  cli::cat_bullet(format(behind$package), " (", behind$local, " -> ", behind$cran, ")")
+  cli::cat_bullet(
+    format(behind$package), " (", behind$local, " -> ", behind$cran, ")"
+  )
 
   cli::cat_line()
   cli::cat_line("Start a clean R session then run:")
@@ -54,8 +56,14 @@ tidyverse_sitrep <- function() {
   package_pad <- format(deps$package)
   packages <- ifelse(
     deps$behind,
-    paste0(cli::col_yellow(cli::style_bold(package_pad)), " (", deps$local, " < ", deps$cran, ")"),
-    paste0(cli::col_blue(package_pad), " (", highlight_version(deps$local), ")")
+    paste0(
+      cli::col_yellow(cli::style_bold(package_pad)),
+      " (", deps$local, " < ", deps$cran, ")"
+    ),
+    paste0(
+      cli::col_blue(package_pad),
+      " (", highlight_version(deps$local), ")"
+    )
   )
 
   cli::cat_rule("Core packages")
