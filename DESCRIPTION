@@ -23,6 +23,7 @@ Imports:
     dbplyr (>= 2.4.0),
     dplyr (>= 1.1.3),
     dtplyr (>= 1.3.1),
+    duckplyr (>= 1.0.0),
     forcats (>= 1.0.0),
     ggplot2 (>= 3.4.4),
     googledrive (>= 2.1.1),
@@ -48,7 +49,6 @@ Imports:
     xml2 (>= 1.3.5)
 Suggests: 
     covr (>= 3.6.1),
-    duckplyr (>= 0.4.1),
     feather (>= 0.3.5),
     glue (>= 1.6.2),
     knitr (>= 1.41),
