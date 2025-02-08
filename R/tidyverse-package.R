@@ -9,6 +9,7 @@ ignore_unused_imports <- function() {
   conflicted::conflict_prefer
   dbplyr::db_collect
   dtplyr::lazy_dt
+  duckplyr::duckdb_tibble
   forcats::fct_c
   ggplot2::ggplot
   googledrive::drive_find
