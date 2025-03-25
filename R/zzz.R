@@ -1,6 +1,6 @@
 .onAttach <- function(...) {
-  attached <- tidyverse_attach()
   if (!is_loading_for_tests()) {
+    attached <- tidyverse_attach()
     inform_startup(tidyverse_attach_message(attached))
   }
 
