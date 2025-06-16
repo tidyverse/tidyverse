@@ -58,7 +58,7 @@ Suggests:
 VignetteBuilder: 
     knitr
 Remotes: 
-    duckdb=duckdb/duckdb-r
+    duckdb=duckdb/duckdb-r@b-4.1
 Config/Needs/website: tidyverse/tidytemplate
 Config/testthat/edition: 3
 Encoding: UTF-8
