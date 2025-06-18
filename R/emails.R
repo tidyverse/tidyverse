@@ -38,7 +38,7 @@ tidyverse_dependency_dissuade <- function() {
   maintainers <- db$Maintainer[match(pkgs, db$Package)]
 
   emails <- purrr::map2(maintainers, pkgs, make_email)
-  purrr::walk(emails, ~ try(get("gm_send_message", asNamespace("gmailr"))(.x)))
+  purrr::walk(emails, \(email) try(get("gm_send_message", asNamespace("gmailr"))(email)))
 }
 
 # > gm_auth_configure(path = "path/to/oauth.json")

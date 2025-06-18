@@ -15,7 +15,7 @@ URL: https://tidyverse.tidyverse.org,
     https://github.com/tidyverse/tidyverse
 BugReports: https://github.com/tidyverse/tidyverse/issues
 Depends: 
-    R (>= 4.0)
+    R (>= 4.1)
 Imports: 
     broom (>= 1.0.5),
     cli (>= 3.6.1),

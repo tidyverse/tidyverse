@@ -24,7 +24,7 @@ tidyverse_conflicts <- function(only = NULL) {
 
   objs <- invert(lapply(envs, ls_env))
 
-  conflicts <- purrr::keep(objs, ~ length(.x) > 1)
+  conflicts <- purrr::keep(objs, \(obj) length(obj) > 1)
 
   tidy_names <- paste0("package:", tidyverse_packages())
   conflicts <- purrr::keep(conflicts, function(pkg) any(pkg %in% tidy_names))
@@ -42,14 +42,14 @@ tidyverse_conflict_message <- function(x) {
     right = "tidyverse_conflicts()"
   )
 
-  pkgs <- x %>% purrr::map(~ gsub("^package:", "", .))
-  others <- pkgs %>% purrr::map(`[`, -1)
+  pkgs <- x |> purrr::map(\(x) gsub("^package:", "", x))
+  others <- pkgs |> purrr::map(`[`, -1)
   other_calls <- purrr::map2_chr(
     others, names(others),
-    ~ paste0(cli::col_blue(.x), "::", .y, "()", collapse = ", ")
+    \(pkg, fun) paste0(cli::col_blue(pkg), "::", fun, "()", collapse = ", ")
   )
 
-  winner <- pkgs %>% purrr::map_chr(1)
+  winner <- pkgs |> purrr::map_chr(1)
   funs <- format(paste0(
     cli::col_blue(winner), "::", cli::col_green(paste0(names(x), "()"))
   ))
@@ -81,8 +81,8 @@ print.tidyverse_conflicts <- function(x, ..., startup = FALSE) {
 #' @importFrom magrittr %>%
 confirm_conflict <- function(packages, name) {
   # Only look at functions
-  objs <- packages %>%
-    purrr::map(~ get(name, pos = .)) %>%
+  objs <- packages |>
+    purrr::map(\(pkg) get(name, pos = pkg)) |>
     purrr::keep(is.function)
 
   if (length(objs) <= 1)
