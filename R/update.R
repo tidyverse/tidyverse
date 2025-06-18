@@ -11,7 +11,6 @@
 #' tidyverse_update()
 #' }
 tidyverse_update <- function(recursive = FALSE, repos = getOption("repos")) {
-
   deps <- tidyverse_deps(recursive, repos)
   behind <- dplyr::filter(deps, behind)
 
@@ -25,7 +24,12 @@ tidyverse_update <- function(recursive = FALSE, repos = getOption("repos")) {
   ))
   cli::cat_line()
   cli::cat_bullet(
-    format(behind$package), " (", behind$local, " -> ", behind$cran, ")"
+    format(behind$package),
+    " (",
+    behind$local,
+    " -> ",
+    behind$cran,
+    ")"
   )
 
   cli::cat_line()
@@ -58,11 +62,17 @@ tidyverse_sitrep <- function() {
     deps$behind,
     paste0(
       cli::col_yellow(cli::style_bold(package_pad)),
-      " (", deps$local, " < ", deps$cran, ")"
+      " (",
+      deps$local,
+      " < ",
+      deps$cran,
+      ")"
     ),
     paste0(
       cli::col_blue(package_pad),
-      " (", highlight_version(deps$local), ")"
+      " (",
+      highlight_version(deps$local),
+      ")"
     )
   )
 
@@ -86,8 +96,19 @@ tidyverse_deps <- function(recursive = FALSE, repos = getOption("repos")) {
   pkg_deps <- unique(sort(unlist(deps)))
 
   base_pkgs <- c(
-    "base", "compiler", "datasets", "graphics", "grDevices", "grid",
-    "methods", "parallel", "splines", "stats", "stats4", "tools", "tcltk",
+    "base",
+    "compiler",
+    "datasets",
+    "graphics",
+    "grDevices",
+    "grid",
+    "methods",
+    "parallel",
+    "splines",
+    "stats",
+    "stats4",
+    "tools",
+    "tcltk",
     "utils"
   )
   pkg_deps <- setdiff(pkg_deps, base_pkgs)
