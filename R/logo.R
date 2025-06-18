@@ -27,7 +27,7 @@ tidyverse_logo <- function(unicode = cli::is_utf8_output()) {
   cols <- c("red", "yellow", "green", "magenta", "cyan",
             "yellow", "green", "white", "magenta", "cyan")
 
-  col_hexa <- purrr::map2(hexa, cols, ~ cli::make_ansi_style(.y)(.x))
+  col_hexa <- purrr::map2(hexa, cols, \(text, colour) cli::make_ansi_style(colour)(text))
 
   for (i in 0:9) {
     pat <- paste0("\\b", i, "\\b")
