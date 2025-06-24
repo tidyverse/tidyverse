@@ -1,4 +1,3 @@
-
 #' The tidyverse logo, using ASCII or Unicode characters
 #'
 #' Use [cli::ansi_strip()] to get rid of the colors.
@@ -22,12 +21,26 @@ tidyverse_logo <- function(unicode = cli::is_utf8_output()) {
   )
 
   hexa <- c("*", ".", "o", "*", ".", "*", ".", "o", ".", "*")
-  if (unicode) hexa <- c("*" = "\u2b22", "o" = "\u2b21", "." = ".")[hexa]
+  if (unicode) {
+    hexa <- c("*" = "\u2b22", "o" = "\u2b21", "." = ".")[hexa]
+  }
 
-  cols <- c("red", "yellow", "green", "magenta", "cyan",
-            "yellow", "green", "white", "magenta", "cyan")
+  cols <- c(
+    "red",
+    "yellow",
+    "green",
+    "magenta",
+    "cyan",
+    "yellow",
+    "green",
+    "white",
+    "magenta",
+    "cyan"
+  )
 
-  col_hexa <- purrr::map2(hexa, cols, ~ cli::make_ansi_style(.y)(.x))
+  col_hexa <- purrr::map2(hexa, cols, \(text, colour) {
+    cli::make_ansi_style(colour)(text)
+  })
 
   for (i in 0:9) {
     pat <- paste0("\\b", i, "\\b")

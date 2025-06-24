@@ -46,7 +46,10 @@ tidyverse_attach_message <- function(to_load) {
   versions <- vapply(to_load, package_version_h, character(1))
 
   packages <- paste0(
-    cli::col_green(cli::symbol$tick), " ", cli::col_blue(format(to_load)), " ",
+    cli::col_green(cli::symbol$tick),
+    " ",
+    cli::col_blue(format(to_load)),
+    " ",
     cli::ansi_align(versions, max(cli::ansi_nchar(versions)))
   )
 

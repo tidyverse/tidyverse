@@ -1,7 +1,8 @@
 make_email <- function(to, package) {
   name <- gsub(" <.*>", "", to)
 
-  body <- glue::glue("
+  body <- glue::glue(
+    "
   Dear {name},
 
   Your package, {package}, lists the tidyverse in either Depends,
@@ -18,7 +19,8 @@ make_email <- function(to, package) {
   Thanks!
 
   Hadley
-  ")
+  "
+  )
 
   get("gm_mime", asNamespace("gmailr"))(
     from = "hadley@rstudio.com",
@@ -29,7 +31,8 @@ make_email <- function(to, package) {
 }
 
 tidyverse_dependency_dissuade <- function() {
-  pkgs <- tools::package_dependencies("tidyverse",
+  pkgs <- tools::package_dependencies(
+    "tidyverse",
     which = c("Depends", "Imports", "Suggests"),
     reverse = TRUE
   )[[1]]
@@ -38,7 +41,9 @@ tidyverse_dependency_dissuade <- function() {
   maintainers <- db$Maintainer[match(pkgs, db$Package)]
 
   emails <- purrr::map2(maintainers, pkgs, make_email)
-  purrr::walk(emails, ~ try(get("gm_send_message", asNamespace("gmailr"))(.x)))
+  purrr::walk(emails, \(email) {
+    try(get("gm_send_message", asNamespace("gmailr"))(email))
+  })
 }
 
 # > gm_auth_configure(path = "path/to/oauth.json")
